@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- job-detail  -->
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="row">
+        <!-- background-job -->
+        <div class="content">
+          <div class="col-12">
+            <div class="hj-job-cover"></div>
+          </div>
+
+          <div class=" col-12 hj-job-header  d-md-flex  justify-content-between p-3 ">
+            <div class="d-flex flex-grow-1">
+                <div class="border-img">
+                  <img class="img-job" src="https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/de/0a/de0a8f36-8302-4f8d-bbf3-5e32badcf0f4/hrinc_sq_logo.png" width="80px" alt="">
+                </div>
+                <div class="hj job-title mx-4 ">
+                  <h4 class="" style="color: var(--secondary-color);">Chief Accountant</h4>
+                  <span>HRINC (Cambodia) Co., Ltd</span><br>
+                  <span>Job location: Phnom Penh</span><br>
+                  <span class="hj-clickable">Login to see salary</span>
+                </div>
+              </div>
+              <div class="">
+                <button class="hj-btn">Login to Apply </button>
+                <button class="hj-btn" style="border:1px solid var(--primary-color); color:white;">Login to Apply </button>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                  <mat-icon>more_vert</mat-icon>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                      <mat-icon>save</mat-icon>
+                      <span>Save</span>
+                    </button>
+                    <button mat-menu-item [matMenuTriggerFor]="invertebrates">
+                      <mat-icon>share</mat-icon>
+                      <span>Share</span>
+                    </button>
+                    <mat-menu #invertebrates="matMenu">
+                      <button mat-menu-item>
+                        <mat-icon>facebook</mat-icon>
+                        <span>Facebook</span>
+                      </button>
+                      <button mat-menu-item>
+                        <mat-icon>facebook</mat-icon>
+                        <span>Facebook</span>
+                      </button>
+                      <button mat-menu-item>
+                        <mat-icon>facebook</mat-icon>
+                        <span>Facebook</span>
+                      </button>
+                    </mat-menu>
+
+
+                    <mat-menu #menu="matMenu">
+                      <mat-icon>link</mat-icon>
+                      <span>Copy Link</span>
+                    </mat-menu>
+                    <button mat-menu-item>
+                      <mat-icon>link</mat-icon>
+                      <span>Copy Link</span>
+                    </button>
+                  </mat-menu>
+                </button>
+
+              </div>
+              <div>
+                <div class="special-job">Premium</div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="content">
+      <div class="col-12 col-lg-4">
+        hi
+      </div>
+    </div>
+  </div>
+    </body>
+    </html>

@@ -1,0 +1,239 @@
+
+
+
+  <!-- slide  -->
+  <swiper
+  [slidesPerView]="1"
+  [spaceBetween]="50"
+  [navigation]="true"
+  [pagination]="{ clickable: true }"
+  >
+  <ng-template swiperSlide><img src="assets/image/slide/fortune.jpg" height="400px" alt="" ></ng-template>
+  <ng-template swiperSlide><img src="assets/image/slide//hrinc.jpg" height="400px" alt=""></ng-template>
+  <ng-template swiperSlide><img src="assets/image/slide/hrinctac.png" height="400px" alt=""></ng-template>
+  <ng-template swiperSlide><img src="assets/image/slide/investing.jpg" height="400px" alt=""></ng-template>
+  <ng-template swiperSlide><img src="assets/image/slide/trust.jpg" height="400px" alt=""></ng-template>
+
+</swiper>
+<!--end slide  -->
+
+
+<!-- Category-job  -->
+<div class="content">
+  <div class="row">
+    <div class="col-lg-4 col-md-6">
+      <mat-form-field appearance="outline"class="w-100" >
+        <mat-label>Keywords, job titles, company name</mat-label>
+        <input matInput placeholder="Job Title, Company">
+      </mat-form-field>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+      <mat-form-field appearance="outline"class="w-100" >
+        <mat-label>Job Function</mat-label>
+        <mat-select>
+          <input matInput placeholder="Search">
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+      <mat-form-field appearance="outline"class="w-100" >
+        <mat-label>Job's Location</mat-label>
+        <mat-select>
+          <input matInput placeholder="Search">
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-lg-2 col-md-6">
+      <a class="nav-link " ><button mat-flat-button class="border text-light py-4 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
+    </div>
+  </div>
+
+  <mat-tab-group fitInkBarToContent mat-stretch-tabs="false" mat-align-tabs="center" >
+    <mat-tab label="Function" >
+<div class="row overflow-hidden w-100">
+  <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
+  </div>
+</div>
+
+    </mat-tab>
+    <mat-tab label="Industry" >
+      <div class="row overflow-hidden w-100">
+        <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+            <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Location">
+      <div class="row overflow-hidden w-100">
+        <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+            <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
+        </div>
+
+      </div>
+
+    </mat-tab>
+    <mat-tab label="Salary">
+      <div class="row overflow-hidden w-100">
+        <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+            <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Period">
+      <div class="row overflow-hidden w-100">
+        <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+            <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
+        </div>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>
+<!-- end Category-job  -->
+
+<!-- quote  -->
+  <div class="content mx-0 my-4 row   py-3 " *ngFor="let hj_quote of quote">
+    <span class="col-xl-10 col-lg-9 col-md-8 col-sm-7  fs-5 text-center align-self-center ">"{{hj_quote.quote_letter}}" <span class="fw-bold">-{{hj_quote.quote_name}}</span> </span>
+    <button mat-flat-button class="col-xl-2 col-lg-3 gy-3 gy-sm-0  col-md-4 col-sm-5 border  text-light py-4 rounded-pill " style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Get Quotations</button>
+  </div>
+<!--end quote  -->
+
+  <!-- Premium Employers  -->
+  <div class="content p-0 px-4 py-3 d-none d-md-block">
+      <p class="px-3">Premium Employers</p>
+      <mat-divider class="mb-4"></mat-divider>
+      <div class="row hj-img">
+        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block mt-2">
+          <img src="https://ad.hrincjob.com/www/images/2bed9162e2a880bb7af4de26ed14f09b.png" width="100%" alt="">
+        </div>
+        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
+
+          <img src="https://ad.hrincjob.com/www/images/fbec46197c5308f913fa7eda2c199d2a.png" width="100%" alt="">
+        </div>
+        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
+
+          <img src="https://ad.hrincjob.com/www/images/8ea09ddfb6b233997c66f3469c9edf0a.png" width="100%" alt="">
+        </div>
+        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
+          <img src="https://ad.hrincjob.com/www/images/45517f55127773f501f2adf27e91ba8a.jpg" width="100%" alt="">
+
+        </div>
+        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
+
+          <img src="https://ad.hrincjob.com/www/images/4bf25385a644b221bcdc158102aad404.png" width="100%" alt="">
+        </div>
+        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
+
+          <img src="https://ad.hrincjob.com/www/images/1d3f388dc51afee7ce6e42f771d78b55.png" width="100%" alt="">
+        </div>
+
+      </div>
+  </div>
+  <!-- End Premium Employers  -->
+
+
+  <div class=" row ">
+    <!-- Employers Who are Hiring -->
+    <div class="col-md-5 d-none d-md-block ">
+      <div class="content ">
+        <p class="px-4">Employers Who are Hiring</p>
+        <mat-divider></mat-divider>
+        <div class="row hj-img p-3">
+          <div class="col-3 hj-hover-img mt-4" *ngFor="let hj1 of jobData1">
+            <img src="{{hj1.sponsor}}" width="100%" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END Employers Who are Hiring  -->
+
+
+    <!-- Vacancies List -->
+    <div class="col-md-7 col-12">
+      <div class="content">
+        <div class="row mt-3">
+          <div class="col">
+            <p class="px-4">Vacancies List</p>
+          </div>
+          <div class="col ">
+            <p class="px-4 text-end">Vacancies List <mat-slide-toggle></mat-slide-toggle></p>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+                <div class="row  ms-1 m-0">
+                  <div class="col-xl-6 col-12 p-0 job-list overflow-hidden" *ngFor="let hj2 of jobData2">
+                    <div class=" d-flex py-2 border-end border-bottom px-0">
+                      <div class="d-flex job-title flex-grow-1">
+                        <div class="border-img ms-3 m-2" >
+                          <img src="{{hj2.logo}}" class=" img-fluid  img-job" alt="">
+                        </div>
+                        <div class="mx-2">
+                          <a class="nav-link" href="" routerLink="job-detail"><h5 class="card-title overflow-hidden"  matTooltipPosition="above" matTooltip="{{hj2.company}}">{{hj2.company}} </h5></a>
+                          <h6 class="card-subtitle overflow-hidden"matTooltipPosition="below" matTooltip="{{hj2.profile}} (cambodia) Co., Ltd">{{hj2.profile}} (cambodia) Co., Ltd</h6>
+                          <div class="card-text navbar">
+                                <a href="" class="nav-link"><i class="bi bi-calendar"></i> {{hj2.date}} {{hj2.datenum}}, 2023</a>&nbsp;&nbsp;&nbsp;
+                                <a href="" class="nav-link"> <span class=""><i class="bi bi-currency-dollar"> </i> Login to see salary</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <li class="nav-item navbar-nav btn-job">
+                        <a class="nav-link " routerLink="contact" ><button  matTooltip="Apply directly to Employers by uploading your applications" mat-flat-button class="border text-light py-2 rounded-pill" style="background-color: var(--primary-color); font-size:12px;" >Apply Directly</button></a>
+                      </li>
+                      <div class="special-job">
+                        <span>Premium</span>
+                      </div>
+
+                      <button [matMenuTriggerFor]="menu" mat-icon-button class="">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>thumb_up</mat-icon>
+                          <span>Like</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>save</mat-icon>
+                          <span>Save</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>check</mat-icon>
+                          <span>Apply now</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>check</mat-icon>
+                          <span>Apply Directly</span>
+                        </button>
+                        <mat-menu #animals="matMenu">
+                          <button mat-menu-item [matMenuTriggerFor]="invertebrates">
+                            Share
+                          </button>
+                          <mat-menu #invertebrates="matMenu">
+                            <button mat-menu-item><mat-icon>facebook</mat-icon> Facebook</button>
+                            <button mat-menu-item><mat-icon>facebook</mat-icon> Facebook</button>
+                          </mat-menu>
+                        </mat-menu>
+                        <button mat-menu-item>
+                          <mat-icon>link</mat-icon>
+                          <span>Copy Link</span>
+                        </button>
+                      </mat-menu>
+                    </div>
+                  </div>
+                </div>
+            </div>
+         </div>
+    <!-- end Vacancies List -->
+  </div>
+
+
+
+
+

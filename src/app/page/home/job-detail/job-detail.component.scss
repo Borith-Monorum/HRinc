@@ -1,0 +1,29 @@
+.hj-job-cover{
+  background-image: url(https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/2f/ff/2fffa053-9bd4-4611-8188-8f542ffc7c1f/employer_profile_cover.jpg);
+  width: 100%;
+  height: 160px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.border-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img-job{
+  background-color: white;
+  width: 90px;
+  height: 90px;
+  object-position: center;
+  border:1px solid #ddd;
+  padding: 10px 10px;
+  border-radius:7px;
+  }
+.hj-job-header{
+  margin-right:0px;
+  position: relative;
+  top: 0;
+}

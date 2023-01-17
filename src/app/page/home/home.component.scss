@@ -1,0 +1,132 @@
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+.swiper{
+  width: 100%;
+
+}
+.swiper-slide img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  // object-position: center;
+}
+
+  :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hj-img .hj-hover-img{
+    position: relative;
+    z-index: 1;
+    top: 0;
+  }
+  .hj-img .hj-hover-img:hover{
+    cursor: pointer;
+    z-index: 1;
+    transition: all .2s ease-out;
+    top: -4px;
+    box-shadow: 0px 4px 8px #ddd;
+    background-color: #fff;
+  }
+
+
+  // Related Jobs
+  .card-title{
+    font-size: 16px;
+    font-family: "Gilroy" Helvetica, Arial, sans-serif;
+    margin: 5px 0px;
+    color: var(--secondary-color);
+
+  }
+  .card-subtitle{
+    font-family: "Gilroy" Helvetica, Arial, sans-serif;
+
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: thin;
+  }
+  .card-text{
+    font-size:12px;
+    font-family: "Gilroy" Helvetica, Arial, sans-serif;
+  }
+  .job-list{
+    margin-right:0px;
+    position: relative;
+    top: 0;
+  }
+  .job-list .btn-job{
+    position: absolute;
+    top: 20px;
+    right: -155px
+  }
+  .job-list:hover .btn-job{
+
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    transition:.1s ease-out;
+  }
+  .img-job{
+  width: 100%;
+  object-position: center;
+
+  }
+
+  .job-list .special-job{
+    background-color: red;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    border-radius: 999px 0 999px 0;
+    padding: 3px 0 3px 0;
+    width: 80px;
+    text-align:center;
+    color: white;
+    background-color: #e16d48;
+    font-size: 12px;
+  }
+
+  .border-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:7px;
+    height: 60px;
+    width: 60px;
+    border:1px solid #ddd;
+    padding: 10px 10px;
+  }
+
+  @keyframes badge_float {50%{top:-5px;}
+                   100%{top:1px;}};
+  .hj-badge{
+    position:relative;
+    background-color: var(--primary-color);
+    padding: 2px 7px;
+    border-radius: 99px;
+    color: white;
+    // animation: badge_float ease 1s infinite;
+    top: 0px;
+    height: 100px;
+  }
+   .hj-list:hover .hj-badge{
+    animation: badge_float ease 1s infinite;
+  }
+
+  .hj-clickable:hover{
+    text-decoration: underline;
+    color: var(--primary-color);
+  }
+
+
+  //sticky
+.sticky{
+  position: sticky;
+  top: 0;
+}

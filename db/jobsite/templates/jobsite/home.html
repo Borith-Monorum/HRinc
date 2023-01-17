@@ -1,0 +1,17 @@
+{% extends 'jobsite/main.html' %}
+{% block content %}
+
+<hr class="my-5">
+<div class="flex justify-center">
+    <div class="text-white w-[350px] text-center">
+        <h1>Job Function</h1>
+        <hr class="mt-5">
+        {% for jobFunctionTitle in jobFunction_Titles %}
+        <a class="text-red-500 hover:scale-95 transform duration-300" href="{% url 'detail' %}?q={{ jobFunctionTitle.job_title }}">{{ jobFunctionTitle.job_title }}</a>
+        <div>{{ jobFunctionTitle.job_title }}</div>
+        <hr class="my-2">
+        {% endfor %}
+    </div>
+</div>
+<hr class="mt-5">
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'jobsite/main.html' %}
+{% block content %}
+<div class="flex justify-center bg-gray-900">
+    <form method="POST" action="" class="bg-gray-600 w-[950px]">
+        <div class="text-white ml-5">
+            <h1>Job Function</h1>
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="text-gray-900 ">
+                    {{ field.label }}
+                    <br>
+                </div>
+                <div class="text-black w-[550px]">
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <input type="submit" class="my-5">
+        </div>
+    </form>
+</div>
+
+<hr>
+{% endblock %}
+
+

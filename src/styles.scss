@@ -1,0 +1,118 @@
+
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$project1-primary: mat.define-palette(mat.$indigo-palette);
+$project1-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$project1-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$project1-theme: mat.define-light-theme((
+  color: (
+    primary: $project1-primary,
+    accent: $project1-accent,
+    warn: $project1-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($project1-theme);
+
+/* You can add global styles to this file, and also import other style files */
+.special-job{
+  background-color: red;
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  border-radius: 999px 0 999px 0;
+  padding: 3px 0 3px 0;
+  width: 80px;
+  text-align:center;
+  color: white;
+  background-color: #e16d48;
+  font-size: 12px;
+}
+
+.hj-btn{
+  background-color: #20c9f9;
+  color: white;
+  font-size: 14px;
+  border:1px solid #20c9f9;
+  border-radius: 999px;
+  padding: 10px 15px;
+  margin: 0 5px;
+
+}
+.hj-btn:hover{
+  background-color: #00bbef;
+  color: white;
+  font-size: 14px;
+  border:1px solid #20c9f9;
+  border-radius: 999px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  transition: .1s;
+}
+.hj-btn:active{
+  background-color: #0589ae;
+}
+
+.hj-clickable{
+  color: var(--secondary-color);
+  cursor: pointer;
+  line-height: 2.5;
+}
+.hj-com-name{
+  font-size: 16px;
+  color: #333;
+}
+
+*{
+  padding: 0 ;
+  margin: 0;
+  // transition: all .3s ;
+  font-family:'Gilroy' Arial, Helvetica, sans-serif;
+}
+body{
+
+
+  background-color: #f6fbfc;
+
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root{
+  --primary-color: #20c9f9;
+ --secondary-color: #0589ae;
+
+
+}
+
+.content{
+  overflow: hidden;
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0 rgb(195, 194, 194);
+  background-color: #fff;
+}
+
