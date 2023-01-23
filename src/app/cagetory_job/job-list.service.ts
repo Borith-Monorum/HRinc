@@ -1,12 +1,19 @@
 import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
 import { Injectable } from '@angular/core';
-import {Faker, faker} from '@faker-js/faker'
+import {Faker, faker} from '@faker-js/faker';
+import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class JobListService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+  apiurl="https://api.npoint.io/c531b8b75ebbf14467e4";
+  homeapi():Observable<any> {
+    return this.http.get(`${this.apiurl}`);
+  }
+
   //jobdetail
   jobdetail =[
     {
@@ -277,6 +284,10 @@ quote_detail=[
   datenum: faker.helpers.arrayElement(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']),
  },
   ]
+
+
+  //job search
+  
 }
 
 

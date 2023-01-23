@@ -32,7 +32,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/popup.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -101,7 +103,9 @@
 
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/popup.js"
+             
             ]
           }
         }

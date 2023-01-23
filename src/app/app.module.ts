@@ -28,9 +28,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { JobDetailComponent } from './page/home/job-detail/job-detail.component';
+import { JobDetailComponent } from './page/home/more/job-detail/job-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-import { JobCategoryComponent } from './page/home/job-category/job-category.component';
+import { JobCategoryComponent } from './page/home/more/job-category/job-category.component';
+import { PopupComponent } from './sharepage/popup/popup.component';
+import {NgToastModule} from 'ng-angular-popup';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +46,7 @@ import { JobCategoryComponent } from './page/home/job-category/job-category.comp
     DialogExampleComponent,
     JobDetailComponent,
     JobCategoryComponent,
+    PopupComponent,
 
   ],
 
@@ -70,6 +74,8 @@ import { JobCategoryComponent } from './page/home/job-category/job-category.comp
     MatCardModule,
     MatTooltipModule,
     HttpClientModule,
+    NgToastModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,12 @@
 
+<!-- popup-->
+<div class="popup">
+      <button mat-mini-fab (click)="onclick()" color="primary" id="close"><mat-icon></mat-icon>{{close}}</button>
+  <img src="assets/image/popup/promotions2022-sm.jpg" alt="">
+</div>
 
-
+<!--end popup-->
+<script src="assets/popup.js"></script>
   <!-- slide  -->
   <swiper
   [slidesPerView]="1"
@@ -19,7 +25,7 @@
 
 
 <!-- Category-job  -->
-<div class="content">
+<div class="content p-3 pt-4">
   <div class="row">
     <div class="col-lg-4 col-md-6">
       <mat-form-field appearance="outline"class="w-100" >
@@ -27,18 +33,41 @@
         <input matInput placeholder="Job Title, Company">
       </mat-form-field>
     </div>
-
+    <!-- job Function  -->
     <div class="col-lg-3 col-md-6">
       <mat-form-field appearance="outline"class="w-100" >
         <mat-label>Job Function</mat-label>
         <mat-select>
-          <input matInput placeholder="Search">
-          <mat-option value="one">First option</mat-option>
-          <mat-option value="two">Second option</mat-option>
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Search">
+          </mat-form-field>
+          <mat-option value="one">Agriculture & Forestry</mat-option>
+          <mat-option value="two">Call for Proposal / Bidding</mat-option>
+          <mat-option value="three">Clearance</mat-option>
+          <mat-option value="four">Operations Compliance</mat-option>
+          <mat-option value="four">Vendor Management</mat-option>
+          <mat-option value="four">Managerial Positions</mat-option>
+          <mat-option value="four">Accounting / Finance</mat-option>
+          <mat-option value="four">Administrative / Support</mat-option>
+          <mat-option value="four">Architect / Design</mat-option>
+          <mat-option value="four">Banking / Financial Service</mat-option>
+          <mat-option value="four">Business Development</mat-option>
+          <mat-option value="four">Call Center / Customer Care</mat-option>
+          <mat-option value="four">Cleaning / Safeguard</mat-option>
+          <mat-option value="four">Community and Social Services</mat-option>
+          <mat-option value="four">Consulting / Freelancing</mat-option>
+          <mat-option value="four">Driving / Delivery</mat-option>
+          <mat-option value="four">Education / Training</mat-option>
+          <mat-option value="four">Engineering</mat-option>
+          <mat-option value="four">Food and beverage</mat-option>
+          <mat-option value="four">Healthcar services</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
+    <!--end job Function  -->
 
+    <!-- Job's location -->
     <div class="col-lg-3 col-md-6">
       <mat-form-field appearance="outline"class="w-100" >
         <mat-label>Job's Location</mat-label>
@@ -49,6 +78,8 @@
         </mat-select>
       </mat-form-field>
     </div>
+      <!--end Job's location -->
+
     <div class="col-lg-2 col-md-6">
       <a class="nav-link " ><button mat-flat-button class="border text-light py-4 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
     </div>
@@ -100,17 +131,19 @@
 <!-- end Category-job  -->
 
 <!-- quote  -->
-  <div class="content mx-0 my-4 row   py-3 " *ngFor="let hj_quote of quote">
+  <div class="content mx-0 my-4 row py-3 px-3" *ngFor="let hj_quote of quote">
     <span class="col-xl-10 col-lg-9 col-md-8 col-sm-7  fs-5 text-center align-self-center ">"{{hj_quote.quote_letter}}" <span class="fw-bold">-{{hj_quote.quote_name}}</span> </span>
-    <button mat-flat-button class="col-xl-2 col-lg-3 gy-3 gy-sm-0  col-md-4 col-sm-5 border  text-light py-4 rounded-pill " style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Get Quotations</button>
+    <button mat-flat-button class="col-xl-2 col-lg-3 gy-3  gy-sm-0 col-md-4 col-sm-5 border  text-light py-4 rounded-pill " style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Get Quotations</button>
   </div>
 <!--end quote  -->
 
   <!-- Premium Employers  -->
-  <div class="content p-0 px-4 py-3 d-none d-md-block">
-      <p class="px-3">Premium Employers</p>
+  <div class="content p-0 py-3 d-none d-md-block">
+    <div class="row px-3">
+      <p class="col-12 px-3">Premium Employers</p>
+    </div>
       <mat-divider class="mb-4"></mat-divider>
-      <div class="row hj-img">
+      <div class="row hj-img px-3">
         <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block mt-2">
           <img src="https://ad.hrincjob.com/www/images/2bed9162e2a880bb7af4de26ed14f09b.png" width="100%" alt="">
         </div>
@@ -140,11 +173,11 @@
   <!-- End Premium Employers  -->
 
 
-  <div class=" row ">
+  <div class=" row  my-4">
     <!-- Employers Who are Hiring -->
     <div class="col-md-5 d-none d-md-block ">
       <div class="content ">
-        <p class="px-4">Employers Who are Hiring</p>
+        <p class="px-4 pt-3">Employers Who are Hiring</p>
         <mat-divider></mat-divider>
         <div class="row hj-img p-3">
           <div class="col-3 hj-hover-img mt-4" *ngFor="let hj1 of jobData1">
@@ -169,23 +202,23 @@
         </div>
         <mat-divider></mat-divider>
                 <div class="row  ms-1 m-0">
-                  <div class="col-xl-6 col-12 p-0 job-list overflow-hidden" *ngFor="let hj2 of jobData2">
+                  <div class="col-xl-6 col-12 p-0 job-list overflow-hidden" *ngFor="let hj2 of showAllData">
                     <div class=" d-flex py-2 border-end border-bottom px-0">
                       <div class="d-flex job-title flex-grow-1">
                         <div class="border-img ms-3 m-2" >
-                          <img src="{{hj2.logo}}" class=" img-fluid  img-job" alt="">
+                          <img src="{{hj2.logo_profile}}" class=" img-fluid  img-job" alt="">
                         </div>
                         <div class="mx-2">
-                          <a class="nav-link" href="" routerLink="job-detail"><h5 class="card-title overflow-hidden"  matTooltipPosition="above" matTooltip="{{hj2.company}}">{{hj2.company}} </h5></a>
-                          <h6 class="card-subtitle overflow-hidden"matTooltipPosition="below" matTooltip="{{hj2.profile}} (cambodia) Co., Ltd">{{hj2.profile}} (cambodia) Co., Ltd</h6>
+                          <a class="nav-link" href="" routerLink="job-detail"><h5 class="card-title overflow-hidden"matTooltipClass="example-tooltip"  matTooltipPosition="above" matTooltip="{{hj2.job_name}}">{{hj2.job_name}} </h5></a>
+                          <h6 class="card-subtitle overflow-hidden text-truncate "matTooltipClass="example-tooltip" style="max-width: 170px;" matTooltipPosition="below" matTooltip="Click to view {{hj2.job_profile}} profile">{{hj2.job_profile}} </h6>
                           <div class="card-text navbar">
-                                <a href="" class="nav-link"><i class="bi bi-calendar"></i> {{hj2.date}} {{hj2.datenum}}, 2023</a>&nbsp;&nbsp;&nbsp;
+                                <a href="" class="nav-link"><i class="bi bi-calendar"></i> {{hj2.month}} {{hj2.day}}, {{hj2.year}}</a>&nbsp;&nbsp;&nbsp;
                                 <a href="" class="nav-link"> <span class=""><i class="bi bi-currency-dollar"> </i> Login to see salary</span></a>
                           </div>
                         </div>
                       </div>
                       <li class="nav-item navbar-nav btn-job">
-                        <a class="nav-link " routerLink="contact" ><button  matTooltip="Apply directly to Employers by uploading your applications" mat-flat-button class="border text-light py-2 rounded-pill" style="background-color: var(--primary-color); font-size:12px;" >Apply Directly</button></a>
+                        <a class="nav-link " routerLink="contact" ><button matTooltipClass="example-tooltip"  matTooltip="Apply directly to Employers by uploading your applications" mat-flat-button class="border text-light py-2 rounded-pill" style="background-color: var(--primary-color); font-size:12px;" >Apply Directly</button></a>
                       </li>
                       <div class="special-job">
                         <span>Premium</span>
@@ -232,8 +265,9 @@
          </div>
     <!-- end Vacancies List -->
   </div>
-
-
-
-
+<div class="row">
+  <div class="col-lg-3 col-12" *ngfor="let item of showAllData">
+  <p>{{item.name}}</p>
+  </div>
+</div>
 
