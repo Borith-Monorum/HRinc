@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./popup.component.scss']
 })
 export class PopupComponent {
+constructor(){}
+  displayNotification:boolean=false;
+  closeNotification(){
+    this.displayNotification = true;
+  }
 
 }

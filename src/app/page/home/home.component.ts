@@ -40,7 +40,7 @@ showAllData:any=[]
     {
       this.service.homeapi().subscribe((result)=>{
         console.log(result,'result#');
-        if(result.length > 0 || result.length === 0){
+        if(result.length = 20){
           this.showAllData = result;
         }
       })
@@ -49,16 +49,4 @@ showAllData:any=[]
 
 
 
-
-
-
-
-
-
-
-
-public close = "x";
-onclick(){
-  this.close = "";
-}
 }

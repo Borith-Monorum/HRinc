@@ -1,13 +1,7 @@
 
-<!-- popup-->
-<div class="popup">
-      <button mat-mini-fab (click)="onclick()" color="primary" id="close"><mat-icon></mat-icon>{{close}}</button>
-  <img src="assets/image/popup/promotions2022-sm.jpg" alt="">
-</div>
+<app-popup></app-popup>
 
-<!--end popup-->
-<script src="assets/popup.js"></script>
-  <!-- slide  -->
+
   <swiper
   [slidesPerView]="1"
   [spaceBetween]="50"
@@ -19,7 +13,7 @@
   <ng-template swiperSlide><img src="assets/image/slide/hrinctac.png" height="400px" alt=""></ng-template>
   <ng-template swiperSlide><img src="assets/image/slide/investing.jpg" height="400px" alt=""></ng-template>
   <ng-template swiperSlide><img src="assets/image/slide/trust.jpg" height="400px" alt=""></ng-template>
-
+  
 </swiper>
 <!--end slide  -->
 
@@ -131,9 +125,11 @@
 <!-- end Category-job  -->
 
 <!-- quote  -->
-  <div class="content mx-0 my-4 row py-3 px-3" *ngFor="let hj_quote of quote">
-    <span class="col-xl-10 col-lg-9 col-md-8 col-sm-7  fs-5 text-center align-self-center ">"{{hj_quote.quote_letter}}" <span class="fw-bold">-{{hj_quote.quote_name}}</span> </span>
-    <button mat-flat-button class="col-xl-2 col-lg-3 gy-3  gy-sm-0 col-md-4 col-sm-5 border  text-light py-4 rounded-pill " style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Get Quotations</button>
+<div class="content mx-0 my-4 row py-3 px-3" *ngFor="let hj_quote of quote">
+  <span class="col-xl-10 col-lg-9 col-md-8 col-sm-7  fs-5 text-center align-self-center ">"{{hj_quote.quote_letter}}" <span class="fw-bold">-{{hj_quote.quote_name}}</span> </span>
+  <button mat-flat-button class="quote col-xl-2 col-lg-3 gy-3  gy-sm-0 col-md-4 col-sm-5 border  text-light py-4 rounded-pill " style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Get Quotations</button>
+ 
+
   </div>
 <!--end quote  -->
 
@@ -261,6 +257,8 @@
                     </div>
                   </div>
                 </div>
+                <ng-content select=".quote"></ng-content>
+              
             </div>
          </div>
     <!-- end Vacancies List -->

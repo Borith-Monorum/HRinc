@@ -6,9 +6,11 @@ import { MenuComponent } from './page/menu/menu.component';
 import { JobDetailComponent } from './page/home/more/job-detail/job-detail.component';
 import { RouterModule, Routes } from '@angular/router';
 import { JobCategoryComponent } from './page/home/more/job-category/job-category.component';
+// import { PopupComponent} from './sharepage/popup/popup.component'; 
 const routes: Routes = [
   // {path: '',component:HomeComponent},
   {path:'', redirectTo: 'home',pathMatch: 'full' },
+  // {path: 'popup',component:PopupComponent},
   {path: 'home',component:HomeComponent},
   {path: 'aboutus',component:MenuComponent},
   {path: 'contactus',component:AboutComponent},

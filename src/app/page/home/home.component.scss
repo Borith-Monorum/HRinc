@@ -1,26 +1,7 @@
 @import 'swiper/scss';
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
-.popup{
-  position: relative;
-  transform: translate(-50% ,-50%);
-  left: 50%;
-  top: 50%;
- position: fixed;
- z-index: 2;
- background-color: white;
- transition: 1s;
- width: 40%;
-}
 
-.popup #close{
- top: 0;
- right: 0;
- position: absolute;
-}
-.popup img{
-  width: 100%;
-}
 .swiper{
   width: 100%;
 
@@ -150,7 +131,4 @@
 .sticky{
   position: sticky;
   top: 0;
-}
-.popup{
-  display: none;
 }
