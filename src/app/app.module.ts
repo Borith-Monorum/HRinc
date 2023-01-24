@@ -32,7 +32,7 @@ import { JobDetailComponent } from './page/home/more/job-detail/job-detail.compo
 import { HttpClientModule } from '@angular/common/http';
 import { JobCategoryComponent } from './page/home/more/job-category/job-category.component';
 import { PopupComponent } from './sharepage/popup/popup.component';
-import {NgToastModule} from 'ng-angular-popup';
+
 
 @NgModule({
   declarations: [
@@ -74,8 +74,8 @@ import {NgToastModule} from 'ng-angular-popup';
     MatCardModule,
     MatTooltipModule,
     HttpClientModule,
-    NgToastModule,
-    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
