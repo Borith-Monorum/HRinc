@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class PopupComponent {
 constructor(){}
-  displayNotification:boolean=false;
-  closeNotification(){
-    this.displayNotification = true;
-  }
 
 }

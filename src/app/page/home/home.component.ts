@@ -2,6 +2,8 @@
 import { Component,ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { JobListService } from 'src/app/cagetory_job/job-list.service';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from 'src/app/sharepage/popup/popup.component';
 
 
 // install Swiper modules
@@ -14,7 +16,10 @@ SwiperCore.use([Navigation, Pagination, ]);
 encapsulation: ViewEncapsulation.None
 })  
 export class HomeComponent {
-constructor(private service:JobListService){}
+constructor(
+  private service:JobListService,
+  public dialog: MatDialog){}
+
   jobData:any;
   jobData1:any;
   jobData2:any;
@@ -46,7 +51,10 @@ showAllData:any=[]
       })
     }
 
+    public show = this.dialog.open(PopupComponent);
 
+  }
+  
 
+  
 
-}
