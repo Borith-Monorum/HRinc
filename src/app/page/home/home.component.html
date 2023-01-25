@@ -1,9 +1,9 @@
 
-<!-- <app-popup></app-popup> -->
 
 
 
-  <swiper
+<!-- slide  -->
+<swiper
   [slidesPerView]="1"
   [spaceBetween]="50"
   [navigation]="true"
@@ -19,15 +19,17 @@
 <!--end slide  -->
 
 
-<!-- Category-job  -->
-<div class="content p-3 pt-4">
-  <div class="row">
+
+<div class="content p-3 pt-4 mt-3">
+  <div class="row mb-3">
+    <!-- Keywords, job titles, company name -->
     <div class="col-lg-4 col-md-6">
       <mat-form-field appearance="outline"class="w-100" >
         <mat-label>Keywords, job titles, company name</mat-label>
         <input matInput placeholder="Job Title, Company">
       </mat-form-field>
     </div>
+
     <!-- job Function  -->
     <div class="col-lg-3 col-md-6">
       <mat-form-field appearance="outline"class="w-100" >
@@ -60,11 +62,10 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <!--end job Function  -->
 
     <!-- Job's location -->
     <div class="col-lg-3 col-md-6">
-      <mat-form-field appearance="outline"class="w-100" >
+      <mat-form-field appearance="outline"class="w-100 p-0" >
         <mat-label>Job's Location</mat-label>
         <mat-select>
           <input matInput placeholder="Search">
@@ -73,66 +74,352 @@
         </mat-select>
       </mat-form-field>
     </div>
-      <!--end Job's location -->
-
-    <div class="col-lg-2 col-md-6">
-      <a class="nav-link " ><button mat-flat-button class="border text-light py-4 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
+    
+    <!-- Search Jobs  -->
+    <div class="col-lg-2 col-md-6 d-flex align-items-center">
+      <a class="nav-link " ><button mat-flat-button class="border text-light py-2 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
     </div>
   </div>
 
-  <mat-tab-group fitInkBarToContent mat-stretch-tabs="false" mat-align-tabs="center" >
-    <mat-tab label="Function" >
-<div class="row overflow-hidden w-100">
-  <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
-      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
-  </div>
-</div>
+<!-- Category-job  -->
+      <mat-tab-group fitInkBarToContent mat-stretch-tabs="false" mat-align-tabs="center" >
+            <!-- function  -->
+          <mat-tab label="Function" class="">
+            <div class="row overflow-hidden w-100 ">
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Clearance</a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Managerial Positions </a> <span class="hj-badge">{{hj.badge}}</span>
 
-    </mat-tab>
-    <mat-tab label="Industry" >
-      <div class="row overflow-hidden w-100">
-        <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
-            <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
-        </div>
-      </div>
-    </mat-tab>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Accounting / Finance </a> <span class="hj-badge">{{hj.badge}}</span>
 
-    <mat-tab label="Location">
-      <div class="row overflow-hidden w-100">
-        <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
-            <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
-        </div>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Administrative / Support</a> <span class="hj-badge">{{hj.badge}}</span>
 
-      </div>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Architect / Design </a> <span class="hj-badge">{{hj.badge}}</span>
 
-    </mat-tab>
-    <mat-tab label="Salary">
-      <div class="row overflow-hidden w-100">
-        <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
-            <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
-        </div>
-      </div>
-    </mat-tab>
-    <mat-tab label="Period">
-      <div class="row overflow-hidden w-100">
-        <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
-            <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">{{hj.job_list}}  </a> <span class="hj-badge">{{hj.badge}}</span>
-        </div>
-      </div>
-    </mat-tab>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Banking / Financial Service </a> <span class="hj-badge">{{hj.badge}}</span>
 
-  </mat-tab-group>
-</div>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Banking / Financial Service </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Call Center / Customer Care </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Cleaning / Safeguard </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Community and Social... </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Education / Training </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Engineering </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Healthcare Services </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Hospitality / Tourism</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Human Resources</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Information Technology </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Legal / Compliance </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Logistic</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Marketing</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Media and Communication</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Merchandising</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Operational Management</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Product Management</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Program / Project Management </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Procurement</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Quality Assurance </a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Research</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Sales</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Stock / Warehousing</a> <span class="hj-badge">{{hj.badge}}</span>
+
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Others</a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+            </div>
+            <!-- Industry  -->
+          </mat-tab>
+
+            <mat-tab label="Industry" >
+              <div class="row overflow-hidden w-100 ">
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Accounting / Audit / Tax... </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Consulting Services</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Advertising / Public... </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Automotive / Heavy Equipment </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Banking / Financial Service </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Beverages / Liquor  </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Chemical / Petrochemical </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Construction </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Education  </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Electronics / Electrical...  </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Energy / Mining</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> FMCG / Consumer Goods</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Food and Beverages</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Garments and Textiles </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">General Business Services </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> General Insurance</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Government</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Hospitality and Tourism</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Human Resources Consultancy</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Information Technology</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Jewelery / Gems / Watches</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Life Insurance </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Logistics </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Manufacturing</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Non-profit </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Oil and Gas</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Pharmaceutical / Health Care</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Property Development </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Real Estate</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Retail </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> Shopping Mall</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Software & IT Services  </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Telecommunication </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Trading / Distribution </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Transportation Services </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+
+              </div>
+            </mat-tab>
+
+            <!-- location  -->
+            <mat-tab label="Location">
+              <div class="row overflow-hidden w-100 ">
+                  
+                    <h6>Cambodia</h6>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                        <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Siem Reap</a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                        <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Kampong Cham</a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                        <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Preah Sihanouk Ville</a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Phnom Penh </a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+
+                  <div>
+                    <h6>Loas</h6>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Vientiane</a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h6>Myanmar</h6>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Yango</a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h6>China</h6>
+                    <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Hong Kong</a> <span class="hj-badge">{{hj.badge}}</span>
+                    </div>
+                  </div>
+            
+
+
+                    
+              </div>
+            </mat-tab>
+
+            <!-- salary  -->
+            <mat-tab label="Salary">
+              <div class="row overflow-hidden w-100 ">
+                <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link "> &lt;$300</a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">$300-$500 </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">$501-$999 </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">$1000-$2000 </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">>$2000 </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                  <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">
+                    >$6000  </a> <span class="hj-badge">{{hj.badge}}</span>
+                  </div>
+
+
+                  <div class="hj-list col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
+                      <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">
+                        > Negotiable </a> <span class="hj-badge">{{hj.badge}}</span>
+                  </div>
+
+              </div>
+            </mat-tab>
+            
+            <!-- Period  -->
+            <mat-tab label="Period">
+              <div class="row overflow-hidden w-100 ">
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-4" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">This Week </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-4" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">Last </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+                <div class="hj-list  col-sm-6 col-md-4 col-lg-4" *ngFor="let hj of jobData">
+                    <a href="" routerLink="job-category" class="d-inline hj-clickable nav-link ">This Month </a> <span class="hj-badge">{{hj.badge}}</span>
+                </div>
+              </div>
+            </mat-tab>
+      </mat-tab-group>
 <!-- end Category-job  -->
+</div>
 
 <!-- quote  -->
-<div class="content mx-0 my-4 row py-3 px-3" *ngFor="let hj_quote of quote">
-  <span class="col-xl-10 col-lg-9 col-md-8 col-sm-7  fs-5 text-center align-self-center ">"{{hj_quote.quote_letter}}" <span class="fw-bold">-{{hj_quote.quote_name}}</span> </span>
-  <button mat-flat-button class="quote col-xl-2 col-lg-3 gy-3  gy-sm-0 col-md-4 col-sm-5 border  text-light py-4 rounded-pill " style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Get Quotations</button>
- 
-
+  <div class="content mx-0 my-4 row py-3 px-3" *ngFor="let hj_quote of quote">
+      <span class="col-xl-10 col-lg-9 col-md-8 col-sm-7  fs-5 text-center align-self-center ">"{{hj_quote.quote_letter}}" <span class="fw-bold">-{{hj_quote.quote_name}}</span> </span>
+      <button mat-flat-button class="quote col-xl-2 col-lg-3 gy-3   gy-sm-0 col-md-4 col-sm-5 border  text-light  rounded-pill " style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Get Quotations</button>
   </div>
 <!--end quote  -->
+
 
   <!-- Premium Employers  -->
   <div class="content p-0 py-3 d-none d-md-block">
@@ -170,7 +457,7 @@
   <!-- End Premium Employers  -->
 
 
-  <div class=" row  my-4">
+<div class=" row  my-4">
     <!-- Employers Who are Hiring -->
     <div class="col-md-5 d-none d-md-block ">
       <div class="content ">
@@ -258,12 +545,13 @@
                     </div>
                   </div>
                 </div>
-                <ng-content select=".quote"></ng-content>
+
               
             </div>
          </div>
     <!-- end Vacancies List -->
-  </div>
+</div>
+
 <div class="row">
   <div class="col-lg-3 col-12" *ngfor="let item of showAllData">
   <p>{{item.name}}</p>

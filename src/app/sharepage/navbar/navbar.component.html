@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-md bg-white border-bottom sticky-top">
   <div class="container ">
-    <a class="navbar-brand" href="#"><img src="https://www.hrincjobs.com/assets/images/logo.png" width="150px" alt=""></a>
+    <a class="navbar-brand" href="#"><img src="https://www.hrincjobs.com/assets/images/logo.png" width="120px" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse row" id="navbarSupportedContent">
       <div class="col-lg-7 col-md-12">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto  mb-lg-0">
           <li class="nav-item">
             <a class="nav-link " routerLink="home" routerLinkActive [routerLinkActiveOptions]="{exact:true}"><button mat-flat-button >Home</button></a>
           </li>
@@ -20,11 +20,7 @@
         <li class="nav-item">
           <a class="nav-link " ><button mat-flat-button [matMenuTriggerFor]="menu" routerLinkActive="active-link"><span class="fi fi-kh"></span> Cambodia <i class="bi bi-caret-down-fill"></i></button>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item routerLink="asean" *ngFor="let flag of flags" [value]="flag.value" ><span class="fi fi-kh"></span>{{flag.viewValue}}</button>
-              <!-- <button mat-menu-item routerLink="asean" ><span class="fi fi-la"></span> Laos</button>
-              <button mat-menu-item routerLink="asean" ><span class="fi fi-mm"></span> Myanmar</button>
-              <button mat-menu-item routerLink="asean" ><span class="fi fi-us"></span> ASEAN</button> -->
-              
+              <button mat-menu-item routerLink="asean" *ngFor="let flag of flags" [value]="flag.value" ><span class="fi fi-kh"></span>{{flag.viewValue}}</button>  
             </mat-menu>
           </a>
         </li>
@@ -33,7 +29,7 @@
     </div>
 
       <div class="col-lg-5 col-md-12">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+        <ul class="navbar-nav ms-auto  mb-lg-0 ">
           <li class="nav-item ">
             <a class="nav-link" routerLink="menu" ><button mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
               <mat-menu #menu1="matMenu">
@@ -42,13 +38,15 @@
               </mat-menu>
             </a>
           </li>
+          <div class="d-flex align-items-center">
+            <li class="nav-item ">
+              <a class="nav-link " routerLink="contact" ><button mat-flat-button class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon>shield</mat-icon>Employer</button></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " routerLink="contact" ><button mat-flat-button (click)="openDialog()" class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 ">attach_money</mat-icon> Get Quotations</button></a>
+            </li>
+          </div>
 
-          <li class="nav-item ">
-            <a class="nav-link " routerLink="contact" ><button mat-flat-button class="border text-light py-4 rounded-pill" style="background-color: var(--primary-color);" ><mat-icon>shield</mat-icon>Employer</button></a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link " routerLink="contact" ><button mat-flat-button (click)="openDialog()" class="border text-light py-4 rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 mb-1">attach_money</mat-icon> Get Quotations</button></a>
-          </li>
         </ul>
       </div>
     </div>

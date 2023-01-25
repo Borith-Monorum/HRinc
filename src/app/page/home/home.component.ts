@@ -2,8 +2,9 @@
 import { Component,ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { JobListService } from 'src/app/cagetory_job/job-list.service';
-import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from 'src/app/sharepage/popup/popup.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 
 // install Swiper modules
@@ -18,11 +19,12 @@ encapsulation: ViewEncapsulation.None
 export class HomeComponent {
 constructor(
   private service:JobListService,
-  public dialog: MatDialog){}
+  private dialog:MatDialog
+  ){}
 
   jobData:any;
   jobData1:any;
-  jobData2:any;
+  // jobData2:any;
   quote:any;
 
 
@@ -33,7 +35,7 @@ showAllData:any=[]
   ngOnInit(): void{
     this.jobData = this.service.jobdetail,
     this.jobData1 = this.service.jobdetail1,
-    this.jobData2 = this.service.jobdetail2,
+    // this.jobData2 = this.service.jobdetail2,
     this.quote = this.service.quote_detail,
     this.homeData();
     //api service
@@ -45,7 +47,7 @@ showAllData:any=[]
     {
       this.service.homeapi().subscribe((result)=>{
         console.log(result,'result#');
-        if(result.length = 20){
+        if(result.length > 0){
           this.showAllData = result;
         }
       })

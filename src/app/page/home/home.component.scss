@@ -34,6 +34,9 @@
   }
 
 
+  
+
+
   // Related Jobs
   .card-title{
     font-size: 16px;
@@ -108,15 +111,19 @@
   .hj-badge{
     position:relative;
     background-color: var(--primary-color);
-    padding: 2px 7px;
+    padding: 0px 7px;
     border-radius: 99px;
     color: white;
     // animation: badge_float ease 1s infinite;
     top: 0px;
     height: 100px;
+    margin: 0 5px;
+  }
+  .hj-list{
+    font-size: 14px;
   }
    .hj-list:hover .hj-badge{
-    animation: badge_float ease 1s infinite;
+    animation: badge_float ease .7s infinite;
   }
 
   .hj-clickable:hover{
@@ -131,4 +138,20 @@
 .sticky{
   position: sticky;
   top: 0;
+}
+
+//jobs input
+.mat-mdc-form-field-subscript-wrapper{
+  display: none;
+}
+.mat-mdc-text-field-wrapper {
+padding: 0;
+}
+
+//job-category
+.mat-mdc-tab-labels{
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+
+  
 }
