@@ -1,20 +1,18 @@
 .pop-up{
     position: relative;
-    transform: translate(-50% ,-50%);
-    left: 50%;
-    top: 50%;
-   position: fixed;
-   z-index: 2;
-   background-color: white;
-   transition: 1s;
-   width: 40%;
+  // display: none;
   }
 
   .pop-up .close{
-   top: 0;
-   right: 0;
-   position: absolute;
+  top: 0;
+  right: 0;
+  position: absolute;
   }
   .pop-up img{
     width: 100%;
   }
+
+.popup{
+  width: 700px;
+
+}

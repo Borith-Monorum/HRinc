@@ -8,30 +8,34 @@
 </head>
 <body>
   <!-- job-detail  -->
+  <div class="container-lg">
   <div class="row">
     <div class="col-12 col-lg-8">
+      <div class="content">
       <div class="row">
-        <!-- background-job -->
-        <div class="content">
-          <div class="col-12">
-            <div class="hj-job-cover"></div>
-          </div>
 
-          <div class=" col-12 hj-job-header  d-md-flex  justify-content-between p-3 ">
-            <div class="d-flex flex-grow-1">
-                <div class="border-img">
-                  <img class="img-job" src="https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/de/0a/de0a8f36-8302-4f8d-bbf3-5e32badcf0f4/hrinc_sq_logo.png" width="80px" alt="">
+            <!-- background-job -->
+          <div class="col-12"><div class="hj-job-cover"></div></div>
+            <!--END background-job -->
+
+            <!-- job-info  -->
+
+            <div class="sticky">
+              <div class=" col-12 hj-job-header  d-md-flex  justify-content-between p-3 ">
+              <div class="d-flex flex-grow-1">
+                <div class="borders-img ps-4">
+                  <img class="img-jobs" src="https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/de/0a/de0a8f36-8302-4f8d-bbf3-5e32badcf0f4/hrinc_sq_logo.png" width="80px" alt="">
                 </div>
                 <div class="hj job-title mx-4 ">
                   <h4 class="" style="color: var(--secondary-color);">Chief Accountant</h4>
-                  <span>HRINC (Cambodia) Co., Ltd</span><br>
-                  <span>Job location: Phnom Penh</span><br>
+                  <span class="hj-com-name">HRINC (Cambodia) Co., Ltd</span><br>
+                  <span class="job-location">Job location: Phnom Penh</span><br>
                   <span class="hj-clickable">Login to see salary</span>
                 </div>
               </div>
               <div class="">
                 <button class="hj-btn">Login to Apply </button>
-                <button class="hj-btn" style="border:1px solid var(--primary-color); color:white;">Login to Apply </button>
+                <button class="hj-btn" style="border:1px solid var(--primary-color); background-color: white; color:#023b4e;">Apply Directly</button>
                 <button mat-icon-button [matMenuTriggerFor]="menu">
                   <mat-icon>more_vert</mat-icon>
                   <mat-menu #menu="matMenu">
@@ -57,8 +61,6 @@
                         <span>Facebook</span>
                       </button>
                     </mat-menu>
-
-
                     <mat-menu #menu="matMenu">
                       <mat-icon>link</mat-icon>
                       <span>Copy Link</span>
@@ -70,20 +72,217 @@
                   </mat-menu>
                 </button>
 
-              </div>
+
               <div>
                 <div class="special-job">Premium</div>
               </div>
+            </div>
+          </div>
+        </div>
+            <!-- end job-info  -->
+
+          <mat-tab-group fitInkBarToContent>
+            <mat-tab label="Job Description" class="">
+              <div class="p-5">
+                <p class="hj-label-header">Job Overview</p>
+
+              <!--Job Overview  -->
+                <div class="row border rounded mx-1  ">
+                  <div class="col-md-6 col-sm-12 border-bottom py-1 pb-2">
+                    <span class="hj-label">#Hring</span><br>
+                    <span class="hj-detail">2</span>
+                  </div>
+                  <div class="col-md-6 col-sm-12 border-bottom py-1 pb-2">
+                    <span class="hj-label">Job type</span><br>
+                    <span class="hj-detail">Job Permanent</span>
+                  </div>
+                  <div class="col-md-6 col-sm-12 border-bottom py-1 pb-2">
+                    <span class="hj-label">Exp.Level</span><br>
+                    <span class="hj-detail">C-Level</span>
+                  </div>
+                  <div class="col-md-6 col-sm-12 border-bottom py-1 pb-2">
+                    <span class="hj-label">Job Function</span><br>
+                    <span class="hj-detail">Managerial Positions</span>
+                  </div>
+                  <div class="col-md-6 col-sm-12 border-bottom py-1 pb-2">
+                    <span class="hj-label">Industry</span><br>
+                    <span class="hj-detail">FMCG / Consumer Goods</span>
+                  </div>
+                  <div class="col-md-6 col-sm-12 border-bottom py-1 pb-2">
+                    <span class="hj-label">Preferred Applicant</span><br>
+                    <span class="hj-detail">Local</span>
+                  </div>
+                  <div class="col-md-6 col-sm-12 border_b py-1 pb-2">
+                    <span class="hj-label">Required Language</span><br>
+                    <span class="hj-detail">English</span>
+                  </div>
+                  <div class="col-md-6 col-sm-12 py-1 pb-2">
+                    <span class="hj-label">Deadline</span><br>
+                    <span class="hj-detail">Feb 16, 2023</span>
+                  </div>
+                </div>
+              <!--end Job Overview  -->
+
+              <div class="hj-ident mt-3">
+                  <!-- top summary  -->
+                  <span class="hj-label-header ">Job Summary</span>
+                  <p >
+                    The COO role is a key member of the senior management team, reporting only to the Chief Executive Officer (CEO). He/she has to maintain control of diverse business operations, and he/she has to be an experienced and efficient leader.
+                  </p>
+                  <!--end top summary  -->
+
+                  <!-- Responsibilities and Duties -->
+                  <span class="hj-label-header">Responsibilities and Duties</span>
+                  <ul>
+                    <li>Establishes, implements, and communicates the strategic direction of the organization’s operational goals,        collaborating with other divisions and departments to carry out the organization’s goals and objectives.</li>
+
+                        <li>Oversee daily operations of the company and the work of executives (Sales, Marketing, and UW).</li>
+                        <li>Provides leadership to ensure all activities are consistent with our goals, guidelines, and culture by monitoring trends and evolving our strategy to keep up with changing customer</li>
+                        <li>Ensures that departmental decisions, project plans, and budgets such as those for staffing, development, and team execution align across the larger team.</li>
+                  </ul>
+                  <!--end Responsibilities and Duties -->
+
+                  <!-- Qualifications and Skills -->
+                  <span class="hj-label-header">Qualifications and Skills</span>
+                  <ul>
+                    <li>Proven experience in Chief Operating Office or relevant role</li>
+                    <li>Oversee daily operations of the company and the work of executives (Sales, Marketing, and UW).</li>
+                    <li>Demonstrable competency in strategic planning and business development.</li>
+                    <li>Working knowledge of data analysis and performance/operation metrics.</li>
+                    <li>Working knowledge of IT/Business infrastructure and MS Office</li>
+                  </ul>
+                  <!-- Qualifications and Skills -->
+                  <div>
+                    <span class="hj-label-header">How to apply</span>
+                    <div class="row">
+                      <div class="col-sm-6 col-12 my-1">
+                        <span class="hj-label">Name</span><br>
+                        <span class="hj-detail">HONG Sokheng</span>
+                      </div>
+                      <div class="col-sm-6 col-12 my-1">
+                        <span class="hj-label">Title</span><br>
+                        <span class="hj-detail">Manager, Recruitment Services</span>
+                      </div>
+                      <div class="col-sm-6 col-12 my-1">
+                        <span class="hj-label">Phone Number </span><br>
+                        <span class="hj-detail">+855 85990168 / +855 98922000</span>
+                      </div>
+                      <div class="col-sm-6 col-12 my-1">
+                        <span class="hj-label">Email</span><br>
+                        <span class="hj-detail">hong.sokheng@hrinc.com.kh</span>
+                      </div>
+                      <div class=" col-12 my-1">
+                        <span class="hj-label">Address</span><br>
+                        <span class="hj-detail">House #10, Street 242, Sangkat Chaktomuk, Khan Daun Penh, Phnom Penh, Cambodia.</span><br>
+                        <span><mat-icon class="material-symbols-outlined">list_art</mat-icon> Other opening vacancies from<a href="" color="color-primary">CC PENINSULA CO., LTD</a></span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </mat-tab>
+
+            <!-- benefits package  -->
+            <mat-tab label="Benefits Package">
+              <div class="row">
+                  <div class="col-12 col-md-4">Financial</div>
+                  <div class="col-12 col-md-4">Financial</div>
+                  <div class="col-12 col-md-4">Financial</div>
+              </div>
+            </mat-tab>
+            <!-- end benefits package   -->
+
+            <!-- Company Profile -->
+            <mat-tab label="Company Profile">
+
+            </mat-tab>
+            <!-- end company profile -->
+
+            <!-- company contact -->
+            <mat-tab label="Company Contact">
+
+            </mat-tab>
+            <!-- end company contact  -->
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-lg-4 col-12 ">
+      <div class="content m-0">
+        <div class="row m-0 job-item">
+          <div class=" col-12 p-0 job-list overflow-hidden" *ngFor="let hj2 of showAllData">
+            <div class=" d-flex py-2 border-end border-bottom px-0">
+              <div class="d-flex job-title flex-grow-1">
+                <div class=" border-img ms-3 m-2 bg-white" >
+                  <img src="{{hj2.logo_profile}}" class=" img-job" alt="">
+                </div>
+                <div class="mx-2">
+                  <a class="nav-link" href="" routerLink="job-detail"><h5 class="card-title  truncate"  matTooltipClass="example-tooltip"  matTooltipPosition="above" matTooltip="{{hj2.job_name}}">{{hj2.job_name}} </h5></a>
+                    <h6 class="subtitle  truncate "matTooltipClass="example-tooltip"  matTooltipPosition="below" matTooltip="Click to view {{hj2.job_profile}} profile"><span>{{hj2.job_profile}}</span> </h6>
+                  <div class="card-text navbar">
+                        <a href="" class="nav-link"><i class="bi bi-calendar"></i> {{hj2.date}}</a>&nbsp;
+                  </div>
+                </div>
+              </div>
+              <div class="special-job">
+                <span>Premium</span>
+              </div>
+
+
+              <!-- menu  -->
+              <div>
+
+              </div>
+              <button [matMenuTriggerFor]="menu" mat-icon-button class="">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>thumb_up</mat-icon>
+                  <span>Like</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>save</mat-icon>
+                  <span>Save</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>check</mat-icon>
+                  <span>Apply now</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>check</mat-icon>
+                  <span>Apply Directly</span>
+                </button>
+                <mat-menu #animals="matMenu">
+                  <button mat-menu-item [matMenuTriggerFor]="invertebrates">
+                    Share
+                  </button>
+                  <mat-menu #invertebrates="matMenu">
+                    <button mat-menu-item><mat-icon>facebook</mat-icon> Facebook</button>
+                    <button mat-menu-item><mat-icon>facebook</mat-icon> Facebook</button>
+                  </mat-menu>
+                </mat-menu>
+                <button mat-menu-item>
+                  <mat-icon>link</mat-icon>
+                  <span>Copy Link</span>
+                </button>
+              </mat-menu>
+                <!--end menu  -->
+            </div>
           </div>
         </div>
 
       </div>
     </div>
-    <div class="content">
-      <div class="col-12 col-lg-4">
-        hi
-      </div>
-    </div>
   </div>
+</div>
+
     </body>
     </html>

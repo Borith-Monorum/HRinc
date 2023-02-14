@@ -34,21 +34,20 @@
   }
 
 
-  // Related Jobs
-  .card-title{
-    font-size: 16px;
-    font-family: "Gilroy" Helvetica, Arial, sans-serif;
-    margin: 5px 0px;
-    color: var(--secondary-color);
 
+
+
+  // Related Jobs
+  .job-title{
+    padding: 0;
   }
+
   .card-subtitle{
     font-family: "Gilroy" Helvetica, Arial, sans-serif;
-
     font-size: 14px;
     color: #333;
     margin-bottom: 5px;
-    font-weight: thin;
+    font-weight: 100;
   }
   .card-text{
     font-size:12px;
@@ -74,7 +73,6 @@
   .img-job{
   width: 100%;
   object-position: center;
-
   }
 
   .job-list .special-job{
@@ -82,13 +80,13 @@
     position: absolute;
     bottom: 1px;
     right: 1px;
-    border-radius: 999px 0 999px 0;
+    border-radius: 999px 10px 999px 10px;
     padding: 3px 0 3px 0;
-    width: 80px;
+    width: 70px;
     text-align:center;
     color: white;
     background-color: #e16d48;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .border-img{
@@ -97,28 +95,90 @@
     justify-content: center;
     align-items: center;
     border-radius:7px;
-    height: 60px;
-    width: 60px;
+    height: 65px;
+    width: 65px;
     border:1px solid #ddd;
-    padding: 10px 10px;
+    padding: 3px;
   }
 
+// effect border
+
+          .gradient-border {
+            --border-width: 3px;
+
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 20px;
+            font-family: Lato, sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: white;
+            background: #222;
+            border-radius: var(--border-width);
+
+            &::after {
+              position: absolute;
+              content: "";
+              top: calc(-1 * var(--border-width));
+              left: calc(-1 * var(--border-width));
+              z-index: -1;
+              width: calc(100% + var(--border-width) * 2);
+              height: calc(100% + var(--border-width) * 2);
+              background: linear-gradient(
+                60deg,
+                hsl(224, 85%, 66%),
+                hsl(269, 85%, 66%),
+                hsl(314, 85%, 66%),
+                hsl(359, 85%, 66%),
+                hsl(44, 85%, 66%),
+                hsl(89, 85%, 66%),
+                hsl(134, 85%, 66%),
+                hsl(179, 85%, 66%)
+              );
+              background-size: 300% 300%;
+              background-position: 0 50%;
+              border-radius: calc(2 * var(--border-width));
+              animation: moveGradient 4s alternate infinite;
+            }
+          }
+
+          @keyframes moveGradient {
+            50% {
+              background-position: 100% 50%;
+            }
+          }
+
+
+// end effect border
+
+
   @keyframes badge_float {50%{top:-5px;}
-                   100%{top:1px;}};
+    100%{top:1px;}};
   .hj-badge{
     position:relative;
     background-color: var(--primary-color);
-    padding: 2px 7px;
+    padding: 0px 7px;
     border-radius: 99px;
     color: white;
     // animation: badge_float ease 1s infinite;
     top: 0px;
     height: 100px;
+    margin: 0 5px;
   }
-   .hj-list:hover .hj-badge{
-    animation: badge_float ease 1s infinite;
+  .hj-list{
+    font-size: 14px;
   }
-
+  .hj-list:hover .hj-badge{
+    animation: badge_float ease .7s infinite;
+  }
+  .hj-clickable{
+    color: var(--secondary-color);
+    cursor: pointer;
+    line-height: 2.5;
+  }
   .hj-clickable:hover{
     text-decoration: underline;
     color: var(--primary-color);
@@ -128,7 +188,33 @@
   }
 
   //sticky
-.sticky{
-  position: sticky;
-  top: 0;
+// .sticky{
+//   position: sticky;
+//   top: 0;
+// }
+
+//jobs input
+.mat-mdc-form-field-subscript-wrapper{
+  display: none;
+}
+.mat-mdc-text-field-wrapper {
+padding: 0;
+}
+
+//job-category
+.mat-mdc-tab-labels{
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+
+
+}
+
+//Employers Who are Hiring
+.employers{
+position: sticky;
+top: 5px;
+
+}
+.job-item{
+  background-color: #FDEFEB;
 }

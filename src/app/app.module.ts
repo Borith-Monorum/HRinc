@@ -5,7 +5,6 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -32,7 +31,9 @@ import { JobDetailComponent } from './page/home/more/job-detail/job-detail.compo
 import { HttpClientModule } from '@angular/common/http';
 import { JobCategoryComponent } from './page/home/more/job-category/job-category.component';
 import { PopupComponent } from './sharepage/popup/popup.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { AllJobsComponent } from './page/home/more/all-jobs/all-jobs.component';
+import { EmployerComponent } from './sharepage/popup/employer/employer.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,8 @@ import { PopupComponent } from './sharepage/popup/popup.component';
     JobDetailComponent,
     JobCategoryComponent,
     PopupComponent,
+    AllJobsComponent,
+    EmployerComponent,
 
   ],
 
@@ -74,7 +77,7 @@ import { PopupComponent } from './sharepage/popup/popup.component';
     MatCardModule,
     MatTooltipModule,
     HttpClientModule,
-
+    MatDialogModule
 
   ],
   providers: [],

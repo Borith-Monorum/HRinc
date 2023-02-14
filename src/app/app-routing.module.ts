@@ -6,18 +6,21 @@ import { MenuComponent } from './page/menu/menu.component';
 import { JobDetailComponent } from './page/home/more/job-detail/job-detail.component';
 import { RouterModule, Routes } from '@angular/router';
 import { JobCategoryComponent } from './page/home/more/job-category/job-category.component';
-// import { PopupComponent} from './sharepage/popup/popup.component'; 
+import { AllJobsComponent} from './page/home/more/all-jobs/all-jobs.component';
+import { EmployerComponent } from './sharepage/popup/employer/employer.component';
 const routes: Routes = [
-  // {path: '',component:HomeComponent},
+
   {path:'', redirectTo: 'home',pathMatch: 'full' },
-  // {path: 'popup',component:PopupComponent},
+
   {path: 'home',component:HomeComponent},
-  {path: 'aboutus',component:MenuComponent},
-  {path: 'contactus',component:AboutComponent},
+  {path: 'about-us',component:MenuComponent},
+  {path: 'contact-us',component:AboutComponent},
   {path: 'asean',component:ContactComponent},
   //Home/job-detail
   {path: 'home/job-detail',component:JobDetailComponent},
   {path: 'home/job-category',component:JobCategoryComponent},
+  {path: 'home/all-jobs',component:AllJobsComponent},
+  {path: 'home/employer',component:EmployerComponent},
 ];
 
 @NgModule({
