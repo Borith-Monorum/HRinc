@@ -1,29 +1,37 @@
 
 
-
-
+<div class="container-xxl">
 <!-- slide  -->
 <swiper
-  [slidesPerView]="1"
-  [spaceBetween]="50"
-  [navigation]="true"
-  [pagination]="{ clickable: true }"
+[spaceBetween]="100"
+[centeredSlides]="true"
+[autoplay]="{
+  delay: 3000,
+  disableOnInteraction: false
+}"
+[loopFillGroupWithBlank]="false"
+[loop]="true"
+[pagination]="{
+  dynamicBullets: true
+}"
+
+[navigation]="true"
+class="mySwiper"
   >
   <ng-template swiperSlide><img src="assets/image/slide/fortune.jpg" height="400px" alt="" ></ng-template>
   <ng-template swiperSlide><img src="assets/image/slide//hrinc.jpg" height="400px" alt=""></ng-template>
   <ng-template swiperSlide><img src="assets/image/slide/hrinctac.png" height="400px" alt=""></ng-template>
   <ng-template swiperSlide><img src="assets/image/slide/investing.jpg" height="400px" alt=""></ng-template>
   <ng-template swiperSlide><img src="assets/image/slide/trust.jpg" height="400px" alt=""></ng-template>
-  
+
 </swiper>
 <!--end slide  -->
 
-
-
+<!-- Job Search Layout  -->
 <div class="content p-3 pt-4 mt-3">
-  <div class="row mb-3">
+  <div class="row ">
     <!-- Keywords, job titles, company name -->
-    <div class="col-lg-4 col-md-6">
+    <div class="col-lg-4 col-md-6 py-3">
       <mat-form-field appearance="outline"class="w-100" >
         <mat-label>Keywords, job titles, company name</mat-label>
         <input matInput placeholder="Job Title, Company">
@@ -31,7 +39,7 @@
     </div>
 
     <!-- job Function  -->
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-3 col-md-6 py-3">
       <mat-form-field appearance="outline"class="w-100" >
         <mat-label>Job Function</mat-label>
         <mat-select>
@@ -64,7 +72,7 @@
     </div>
 
     <!-- Job's location -->
-    <div class="col-lg-3 col-md-6">
+    <div class="col-lg-3 col-md-6 py-3">
       <mat-form-field appearance="outline"class="w-100 p-0" >
         <mat-label>Job's Location</mat-label>
         <mat-select>
@@ -74,13 +82,12 @@
         </mat-select>
       </mat-form-field>
     </div>
-    
+
     <!-- Search Jobs  -->
-    <div class="col-lg-2 col-md-6 d-flex align-items-center">
+    <div class="col-lg-2 col-md-6  py-3  d-grid align-items-center">
       <a class="nav-link " ><button mat-flat-button class="border text-light py-2 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
     </div>
   </div>
-
 <!-- Category-job  -->
       <mat-tab-group fitInkBarToContent mat-stretch-tabs="false" mat-align-tabs="center" >
             <!-- function  -->
@@ -323,7 +330,7 @@
             <!-- location  -->
             <mat-tab label="Location">
               <div class="row overflow-hidden w-100 ">
-                  
+
                     <h6>Cambodia</h6>
                     <div class="hj-list  col-sm-6 col-md-4 col-lg-3" *ngFor="let hj of jobData">
                         <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Siem Reap</a> <span class="hj-badge">{{hj.badge}}</span>
@@ -356,10 +363,10 @@
                       <a href="" routLink="job-category" class="d-inline hj-clickable nav-link ">Hong Kong</a> <span class="hj-badge">{{hj.badge}}</span>
                     </div>
                   </div>
-            
 
 
-                    
+
+
               </div>
             </mat-tab>
 
@@ -394,7 +401,7 @@
 
               </div>
             </mat-tab>
-            
+
             <!-- Period  -->
             <mat-tab label="Period">
               <div class="row overflow-hidden w-100 ">
@@ -412,6 +419,7 @@
       </mat-tab-group>
 <!-- end Category-job  -->
 </div>
+<!--end Job Search Layout  -->
 
 <!-- quote  -->
   <div class="content mx-0 my-4 row py-3 px-3" *ngFor="let hj_quote of quote">
@@ -427,32 +435,25 @@
       <p class="col-12 px-3">Premium Employers</p>
     </div>
       <mat-divider class="mb-4"></mat-divider>
-      <div class="row hj-img px-3">
-        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block mt-2">
-          <img src="https://ad.hrincjob.com/www/images/2bed9162e2a880bb7af4de26ed14f09b.png" width="100%" alt="">
-        </div>
-        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
 
-          <img src="https://ad.hrincjob.com/www/images/fbec46197c5308f913fa7eda2c199d2a.png" width="100%" alt="">
-        </div>
-        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
+      <swiper
+      [slidesPerView]="5"
+      [spaceBetween]="0"
+      [slidesPerGroup]="5"
+      [loop]="true"
+      [loopFillGroupWithBlank]="false"
+      [pagination]="{
+        dynamicBullets: true
+      }"
+      [navigation]="true"
+      class="mySwiper">
+      <ng-template swiperSlide><a href="https://www.hrincjobs.com/company-profile/5997"><img src="https://ad.hrincjob.com/www/images/2bed9162e2a880bb7af4de26ed14f09b.png" width="100%" alt=""></a> </ng-template>
+      <ng-template swiperSlide><a href="https://www.hrincjobs.com/company-profile/5137"><img src="https://ad.hrincjob.com/www/images/fbec46197c5308f913fa7eda2c199d2a.png" width="100%" alt=""> </a> </ng-template>
+      <ng-template swiperSlide><a href="https://www.hrincjobs.com/company-profile/165"><img src="https://ad.hrincjob.com/www/images/45517f55127773f501f2adf27e91ba8a.jpg" width="100%" alt=""></a></ng-template>
+      <ng-template swiperSlide><a href="https://www.hrincjobs.com/company-profile/6047"><img src="https://ad.hrincjob.com/www/images/4bf25385a644b221bcdc158102aad404.png" width="100%" alt=""></a></ng-template>
+      <ng-template swiperSlide><a href="https://www.hrincjobs.com/company-profile/6150"><img src="https://ad.hrincjob.com/www/images/1d3f388dc51afee7ce6e42f771d78b55.png" width="100%" alt=""></a></ng-template>
+    </swiper>
 
-          <img src="https://ad.hrincjob.com/www/images/8ea09ddfb6b233997c66f3469c9edf0a.png" width="100%" alt="">
-        </div>
-        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
-          <img src="https://ad.hrincjob.com/www/images/45517f55127773f501f2adf27e91ba8a.jpg" width="100%" alt="">
-
-        </div>
-        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
-
-          <img src="https://ad.hrincjob.com/www/images/4bf25385a644b221bcdc158102aad404.png" width="100%" alt="">
-        </div>
-        <div class="hj-hover-img col-xl-2 col-lg-3 col-md-4 d-md-block d-none mt-2">
-
-          <img src="https://ad.hrincjob.com/www/images/1d3f388dc51afee7ce6e42f771d78b55.png" width="100%" alt="">
-        </div>
-
-      </div>
   </div>
   <!-- End Premium Employers  -->
 
@@ -460,12 +461,12 @@
 <div class=" row  my-4">
     <!-- Employers Who are Hiring -->
     <div class="col-md-5 d-none d-md-block ">
-      <div class="content ">
+      <div class="content employers">
         <p class="px-4 pt-3">Employers Who are Hiring</p>
         <mat-divider></mat-divider>
         <div class="row hj-img p-3">
-          <div class="col-3 hj-hover-img mt-4" *ngFor="let hj1 of jobData1">
-            <img src="{{hj1.sponsor}}" width="100%" alt="">
+          <div class="col-3 hj-hover-img mt-4"  *ngFor="let hj2 of showAllData">
+            <img  src="{{hj2.logo_profile}}" width="100%" alt="">
           </div>
         </div>
       </div>
@@ -485,29 +486,30 @@
           </div>
         </div>
         <mat-divider></mat-divider>
-                <div class="row  ms-1 m-0">
+                <div class="row m-0 job-item">
                   <div class="col-xl-6 col-12 p-0 job-list overflow-hidden" *ngFor="let hj2 of showAllData">
                     <div class=" d-flex py-2 border-end border-bottom px-0">
                       <div class="d-flex job-title flex-grow-1">
-                        <div class="border-img ms-3 m-2" >
-                          <img src="{{hj2.logo_profile}}" class=" img-fluid  img-job" alt="">
+                        <div class=" border-img ms-3 m-2 bg-white" >
+                          <img src="{{hj2.logo_profile}}" class=" img-job" alt="">
                         </div>
                         <div class="mx-2">
-                          <a class="nav-link" href="" routerLink="job-detail"><h5 class="card-title overflow-hidden"matTooltipClass="example-tooltip"  matTooltipPosition="above" matTooltip="{{hj2.job_name}}">{{hj2.job_name}} </h5></a>
-                          <h6 class="card-subtitle overflow-hidden text-truncate "matTooltipClass="example-tooltip" style="max-width: 170px;" matTooltipPosition="below" matTooltip="Click to view {{hj2.job_profile}} profile">{{hj2.job_profile}} </h6>
+                          <a class="nav-link" href="" routerLink="job-detail"><h5 class="card-title overflow-hidden text-truncate" style="max-width: 170px" matTooltipClass="example-tooltip"  matTooltipPosition="above" matTooltip="{{hj2.job_name}}">{{hj2.job_name}} </h5></a>
+                            <h6 class="card-subtitle overflow-hidden text-truncate "matTooltipClass="example-tooltip" style="width: 180px ;" matTooltipPosition="below" matTooltip="Click to view {{hj2.job_profile}} profile">{{hj2.job_profile}} </h6>
                           <div class="card-text navbar">
-                                <a href="" class="nav-link"><i class="bi bi-calendar"></i> {{hj2.month}} {{hj2.day}}, {{hj2.year}}</a>&nbsp;&nbsp;&nbsp;
-                                <a href="" class="nav-link"> <span class=""><i class="bi bi-currency-dollar"> </i> Login to see salary</span></a>
+                                <a href="" class="nav-link"><i class="bi bi-calendar"></i> {{hj2.date}}</a>&nbsp;
+                                <a href="" class="nav-link"> <span class="text-lg-truncate" style="max-width: 80%;"><i class="bi bi-currency-dollar"> </i> Login to see salary</span></a>
                           </div>
                         </div>
                       </div>
-                      <li class="nav-item navbar-nav btn-job">
-                        <a class="nav-link " routerLink="contact" ><button matTooltipClass="example-tooltip"  matTooltip="Apply directly to Employers by uploading your applications" mat-flat-button class="border text-light py-2 rounded-pill" style="background-color: var(--primary-color); font-size:12px;" >Apply Directly</button></a>
-                      </li>
+                          <li class="nav-item navbar-nav btn-job">
+                            <a class="nav-link " routerLink="contact" ><button matTooltipClass="example-tooltip"  matTooltip="Apply directly to Employers by uploading your applications" mat-flat-button class="border text-light py-2 rounded-pill" style="background-color: var(--primary-color); font-size:12px;" >Apply Directly</button></a>
+                          </li>
                       <div class="special-job">
                         <span>Premium</span>
                       </div>
 
+                      <!-- menu  -->
                       <button [matMenuTriggerFor]="menu" mat-icon-button class="">
                         <mat-icon>more_vert</mat-icon>
                       </button>
@@ -542,19 +544,22 @@
                           <span>Copy Link</span>
                         </button>
                       </mat-menu>
+                        <!--end menu  -->
                     </div>
                   </div>
                 </div>
 
-              
+
+  <!-- all Vacancies  -->
+              <div class="d-grid">
+                <button routerLink="all-jobs" mat-flat-button color="primary" class=" text-white rounded-pill m-3 my-4">All Vacancies</button>
+              </div>
             </div>
-         </div>
+          </div>
     <!-- end Vacancies List -->
-</div>
-
-<div class="row">
-  <div class="col-lg-3 col-12" *ngfor="let item of showAllData">
-  <p>{{item.name}}</p>
-  </div>
-</div>
-
+        </div>
+      </div>
+      <h1 class="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+<app-footer></app-footer>

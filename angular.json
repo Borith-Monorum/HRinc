@@ -99,13 +99,13 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/flat-icon-css/css/flag-icon.min.css"
-       
+
 
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "src/assets/popup.js"
-             
+              "src/assets/popup.js",
+              "src/app/javascriptfun.js"
             ]
           }
         }

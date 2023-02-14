@@ -1,0 +1,34 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "node_modules": true,
+        ".angular": true,
+        "db": true,
+        "src\\assets/.gitkeep": true,
+        "**/.gitkeep": true,
+        "src\\assets/*.*": true,
+        ".gitkeep": true,
+        "package-lock.json": true,
+        "tsconfig.app.json": true,
+        "tsconfig.spec.json": true,
+        "README.md": true,
+        ".gitignore": true,
+        "main.ts": true,
+        "app.component.spec.ts": true,
+        "server": true,
+        "tsconfig.json": false,
+        ".editorconfig": true,
+        "favicon.ico": true
+    },
+    "explorerExclude.backup": {},
+    "cSpell.words": [
+        "cambodiashow",
+        "flagcambodia",
+        "javascriptfun"
+    ]
+}

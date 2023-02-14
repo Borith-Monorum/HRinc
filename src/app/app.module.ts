@@ -32,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { JobCategoryComponent } from './page/home/more/job-category/job-category.component';
 import { PopupComponent } from './sharepage/popup/popup.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AllJobsComponent } from './page/home/more/all-jobs/all-jobs.component';
+import { EmployerComponent } from './sharepage/popup/employer/employer.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     JobDetailComponent,
     JobCategoryComponent,
     PopupComponent,
+    AllJobsComponent,
+    EmployerComponent,
 
   ],
 

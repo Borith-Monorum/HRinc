@@ -1,13 +1,18 @@
 .pop-up{
     position: relative;
-
+  // display: none;
   }
-  
+
   .pop-up .close{
-   top: 0;
-   right: 0;
-   position: absolute;
+  top: 0;
+  right: 0;
+  position: absolute;
   }
   .pop-up img{
     width: 100%;
   }
+
+.popup{
+  width: 700px;
+
+}

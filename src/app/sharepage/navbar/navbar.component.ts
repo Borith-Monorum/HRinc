@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
-
 interface FLAG {
   value: string;
   viewValue: string;
@@ -13,16 +12,30 @@ interface FLAG {
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+
   constructor(public dialog: MatDialog){}
-  flag:any=['cambodia','lao','miyanma'];
+  flag:any=['cambodia','lao','Myanmar'];
   openDialog(){
   this.dialog.open(DialogExampleComponent);
   }
-  categoryList:any=['all','hosting','ecommerce','finance','course','product'];
-  flags: FLAG[] = [
-    {value: 'steak-0', viewValue: 'Camobodia'},
-    {value: 'pizza-1', viewValue: 'thai'},
-    {value: 'tacos-2', viewValue: 'Loa'},
-  ];
+
+//language
+cambodiashow = "";
+cambodia(){
+  this.cambodiashow = "cambodia";
+}
+laoshow= "";
+lao(){
+  this.laoshow ="Loa" ;
+}
+// end language
+
+  //toggle
+  expended = false;
+  toggle(){
+    this.expended = !this.expended;
+  }
+
+
   }
 

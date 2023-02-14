@@ -1,14 +1,16 @@
 
 import { Component,ViewEncapsulation } from '@angular/core';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+
 import { JobListService } from 'src/app/cagetory_job/job-list.service';
 import { PopupComponent } from 'src/app/sharepage/popup/popup.component';
 import { MatDialog } from '@angular/material/dialog';
 
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 
-
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, ]);
+SwiperCore.use([Pagination, Navigation]);
+
 
 @Component({
   selector: 'app-home',
@@ -29,7 +31,6 @@ constructor(
 
 
   //api service
-
 showAllData:any=[]
 
   ngOnInit(): void{
@@ -40,8 +41,6 @@ showAllData:any=[]
     this.homeData();
     //api service
   }
-
-
 
     homeData()
     {
@@ -54,6 +53,12 @@ showAllData:any=[]
     }
 
     public show = this.dialog.open(PopupComponent);
+
+    //toggle
+    expanded = false;
+    toggle(){
+      this.expanded = !this.expanded;
+    }
 
   }
   
