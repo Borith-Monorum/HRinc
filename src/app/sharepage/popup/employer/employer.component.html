@@ -1,28 +1,63 @@
 <div class="container">
   <div class="content mt-3 ">
-    <!-- <div class="flex">
-      <div class="">
-        <img src="https://www.hrincjobs.com/assets/images/4test/er.jpg" alt="">
-      </div>
-      <div class="">
-        <p class="fs-3 text-center">Contacts and interests are directly bridged between job seekers and employers</p>
-        <p>Contact our team and get your first job posted!
-        <a href="">sales@hrincjobs.com</a>  or <span>(+855) 23 211 437</span> </p>
-      </div>
-    </div> -->
-    <mat-grid-list cols="4"rowHeight="100px">
 
-      <mat-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="tile.cols"
-      [rowspan]="tile.rows"
-      [style.background]="tile.color">
-      <div class="">
-        <img src="https://www.hrincjobs.com/assets/images/4test/er.jpg" alt="">
+    <!--top banner  -->
+    <div class="top-banner">
+      <div class="hj-banner">
       </div>
-      </mat-grid-tile>
-      
-    </mat-grid-list>
+      <div class="hj-content">
+        <p class="header-3">Contacts and interests are directly bridged between job seekers and employers</p>
+        <p>Contact our team and get your first job posted! <br>
+        <a href="">sales@hrincjobs.com</a>  or <span>(+855) 23 211 437</span> </p>
+        <div class="d-flex gap-1">
+          <a class="nav-link " routerLink="contact" ><button mat-flat-button  class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 ">attach_money</mat-icon> Get Quotations</button></a>
+          <a class="nav-link " routerLink="contact" ><button mat-flat-button  class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 ">attach_money</mat-icon> Learn more</button></a>
+        </div>
+      </div>
+    </div>
+ <!--end top banner  -->
+
+
+
+    <div class="row">
+      <div class="col-8">
+        <!-- Super saving Package  -->
+        <mat-tab-group>
+          <mat-tab label="Super Saving Package ">
+            <div class="row">
+              <app-package class="col-4">
+                <div class="card-title1">90 Days Posting</div>
+                <div class="card-subtitle">standard 1 month</div>
+                <div class="price">$ 40</div>
+              </app-package>
+              <app-package class="col-4">
+                <div class="card-title1">190 Days Posting</div>
+                <div class="card-subtitle">standard 6 months</div>
+                <div class="price">$ 120</div>
+              </app-package>
+              <app-package class="col-4">
+                <div class="card-title1">190 Days Posting</div>
+                <div class="card-subtitle">standard 6 months</div>
+                <div class="price">$ 120</div>
+              </app-package>
+            </div>
+
+          </mat-tab>
+            <!--end Super saving Package  -->
+
+
+        <!-- Employer Brnading Package  -->
+          <mat-tab label="Employer Branding Package"> Content 2 </mat-tab>
+        <!-- end Employer Brnading Package  -->
+        </mat-tab-group>
+      </div>
+      <div class="col-4">
+        <mat-tab-group>
+          <mat-tab label="Package Detail"> Content 1 </mat-tab>
+          <mat-tab label="Package Detail"> Content 2 </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
   </div>
 </div>
 

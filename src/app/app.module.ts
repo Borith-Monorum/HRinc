@@ -34,6 +34,7 @@ import { PopupComponent } from './sharepage/popup/popup.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AllJobsComponent } from './page/home/more/all-jobs/all-jobs.component';
 import { EmployerComponent } from './sharepage/popup/employer/employer.component';
+import { PackageComponent } from './sharepage/popup/employer/package/package.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { EmployerComponent } from './sharepage/popup/employer/employer.component
     PopupComponent,
     AllJobsComponent,
     EmployerComponent,
+    PackageComponent,
 
   ],
 

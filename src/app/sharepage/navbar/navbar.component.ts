@@ -36,6 +36,11 @@ lao(){
     this.expended = !this.expended;
   }
 
+public employer = "employer";
+
+onchange(){
+this.employer = "Job Seeker";
+}
 
   }
 

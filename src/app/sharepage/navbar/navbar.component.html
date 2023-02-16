@@ -24,7 +24,6 @@
                   <mat-menu #menu="matMenu">
                     <button mat-menu-item (click)="cambodia()"><i class="fi fi-kh"></i> Cambodia</button>
                     <button mat-menu-item  (click)="lao()" ><i class="fi fi-la"></i> Lao</button>
-
                   </mat-menu>
                 </a>
               </li>
@@ -44,7 +43,7 @@
             </li>
             <div class="d-flex align-items-center">
               <li class="nav-item ">
-                <a class="nav-link " routerLink="contact" ><button mat-flat-button class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon>shield</mat-icon>Employer</button></a>
+                <a class="nav-link " routerLink="home/employer" ><button mat-flat-button class="border text-light  rounded-pill" style="background-color: var(--primary-color);" (click)=onchange(); ><mat-icon>shield</mat-icon>{{employer}}</button></a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link " routerLink="contact" ><button mat-flat-button (click)="openDialog()" class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 ">attach_money</mat-icon> Get Quotations</button></a>

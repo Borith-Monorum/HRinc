@@ -1,0 +1,67 @@
+*{
+  font-family: Gilroy Regular,Helvetica,Arial,sans-serif,Nokora;
+}
+a{
+  color: var(--secondary-color);
+
+}
+
+.top-banner{
+  overflow: hidden;
+  height: 300px;
+  width:100%;
+  display:flex;
+  position:relative;
+}
+.hj-banner  {
+
+width: 100%;
+background-position:left;
+background-size:cover;
+background-repeat: no-repeat;
+background-image: url(https://www.hrincjobs.com/assets/images/4test/er.jpg);
+height: 300px;
+}
+.header-3{
+  font-size: 24px;
+  font-weight: 600;
+
+}
+.hj-content{
+  display: flex ;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  width: 50%;
+  height: 300px;
+  padding: 20px;
+  text-align:center;
+  gap:10px;
+}
+.card-title1{
+  color:#fff ;
+  font-weight: 700;
+  margin: 5px 0px;
+
+}
+.card-subtitle{
+  color:#fff !important;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.price{
+  color: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  font-weight: 700;
+left: 0;
+right: 0;
+top: 70px;
+padding: 2px 10px;
+margin:  0 60px;
+border-radius: 15px 15px 0 0;
+background-color: whitesmoke;
+position: absolute;
+text-align: center;
+border: 1px solid #ddd;
+
+}
