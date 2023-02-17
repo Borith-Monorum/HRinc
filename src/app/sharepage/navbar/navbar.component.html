@@ -1,57 +1,63 @@
-<nav class="navbar navbar-expand-md bg-white border-bottom ">
+<nav class="navbar navbar-expand-lg bg-white border-bottom ">
   <div class="container ">
         <a class="navbar-brand" href="#"><img src="https://www.hrincjobs.com/assets/images/logo.png" width="120px" alt=""></a>
-        <button (click)="toggle()" mat-icon-button  class="navbar-toggler" style="outline:none; border:none"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button (click)="toggle()" mat-icon-button  class="navbar-toggler" style="outline:none; border:none"  >
           <i *ngIf="!expended" class="bi bi-list"></i>
           <i *ngIf="expended" class="bi bi-x"></i>
-        </button>
-    <div class="navbar-collapse row" id="navbarSupportedContent">
+        </button> -->
+
       <!-- left navigation bar  -->
-        <div class="col-lg-7 col-md-12">
-          <ul class="navbar-nav me-auto  mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link " routerLink="home" routerLinkActive [routerLinkActiveOptions]="{exact:true}"><button mat-flat-button >Home</button></a>
-              </li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+        <div class="">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link  " routerLink="home" routerLinkActive [routerLinkActiveOptions]="{exact:true}"><button mat-flat-button >Home</button></a>
+            </li>
 
-              <li class="nav-item">
-                <a class="nav-link" routerLink="about-us" ><button mat-flat-button routerLinkActive="active-link" color="">About Us</button></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link "  routerLink="contact-us" ><button mat-flat-button routerLinkActive="active-link">Contact Us</button></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " ><button mat-flat-button [matMenuTriggerFor]="menu" routerLinkActive="active-link"><span class="fi fi-kh"></span> {{cambodiashow||laoshow}}<i class="bi bi-caret-down-fill"></i></button>
-                  <mat-menu #menu="matMenu">
-                    <button mat-menu-item (click)="cambodia()"><i class="fi fi-kh"></i> Cambodia</button>
-                    <button mat-menu-item  (click)="lao()" ><i class="fi fi-la"></i> Lao</button>
-                  </mat-menu>
-                </a>
-              </li>
-            </ul>
-        </div>
-
-      <!-- right navigation bar  -->
-        <div class="col-lg-5 col-md-12">
-          <ul class="navbar-nav ms-auto  mb-lg-0 ">
-            <li class="nav-item ">
-              <a class="nav-link" routerLink="menu" ><button mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
-                <mat-menu #menu1="matMenu">
-                  <button mat-menu-item>Job Seeker</button>
-                  <button mat-menu-item>Employer</button>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="about-us" ><button mat-flat-button routerLinkActive="active-link" color="">About Us</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  "  routerLink="contact-us" ><button mat-flat-button routerLinkActive="active-link">Contact Us</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  " ><button mat-flat-button [matMenuTriggerFor]="menu" routerLinkActive="active-link"><span class="fi fi-kh"></span> {{cambodiashow||laoshow}}<i class="bi bi-caret-down-fill"></i></button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="cambodia()"><i class="fi fi-kh"></i> Cambodia</button>
+                  <button mat-menu-item  (click)="lao()" ><i class="fi fi-la"></i> Lao</button>
                 </mat-menu>
               </a>
             </li>
+        </ul>
+        </div>
+
+
+
+      <!-- right navigation bar  -->
+        <div class="right">
+          <ul class="navbar-nav me-auto">
             <div class="d-flex align-items-center">
-              <li class="nav-item ">
-                <a class="nav-link " routerLink="home/employer" ><button mat-flat-button class="border text-light  rounded-pill" style="background-color: var(--primary-color);" (click)=onchange(); ><mat-icon>shield</mat-icon>{{employer}}</button></a>
+              <li class="nav-item">
+                <a class="nav-link " routerLink="menu" ><button mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
+                  <mat-menu #menu1="matMenu">
+                    <button mat-menu-item>Job Seeker</button>
+                    <button mat-menu-item>Employer</button>
+                  </mat-menu>
+                </a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link " routerLink="contact" ><button mat-flat-button (click)="openDialog()" class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 ">attach_money</mat-icon> Get Quotations</button></a>
+              <li class=" ">
+                <a class="nav-link  " routerLink="home/employer" ><button mat-flat-button class="border text-light  rounded-pill" style="background-color: var(--primary-color);" (click)=onchange(); ><mat-icon>shield</mat-icon>{{employer}}</button></a>
+              </li>
+              <li class=" ">
+                <a class="nav-link  " routerLink="contact" ><button mat-flat-button (click)="openDialog()" class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 ">attach_money</mat-icon> Get Quotations</button></a>
               </li>
             </div>
           </ul>
         </div>
-      </div>
-  </div>
+    </div>
+
 </nav>
 

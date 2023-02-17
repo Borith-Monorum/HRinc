@@ -17,7 +17,7 @@ SwiperCore.use([Pagination, Navigation]);
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 encapsulation: ViewEncapsulation.None
-})  
+})
 export class HomeComponent {
 constructor(
   private service:JobListService,
@@ -31,7 +31,7 @@ constructor(
 
 
   //api service
-showAllData:any=[]
+  showAllData:(any)=[10]
 
   ngOnInit(): void{
     this.jobData = this.service.jobdetail,
@@ -45,15 +45,14 @@ showAllData:any=[]
     homeData()
     {
       this.service.homeapi().subscribe((result)=>{
-        console.log(result,'result#');
-        if(result.length > 0){
+        // console.log(result,'result#');
+        if(result.length = 10 ){
           this.showAllData = result;
         }
       })
     }
 
     public show = this.dialog.open(PopupComponent);
-
     //toggle
     expanded = false;
     toggle(){
@@ -61,7 +60,7 @@ showAllData:any=[]
     }
 
   }
-  
 
-  
+
+
 
