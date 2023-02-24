@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-xl">
   <div class="content mt-3 ">
 
     <!--top banner  -->
@@ -15,29 +15,39 @@
         </div>
       </div>
     </div>
- <!--end top banner  -->
+<!--end top banner  -->
 
 
 
   <div class="row">
-    <div class="col-8">
+    <div class="col-md-8">
         <div class="section mx-3">
         <!-- Super saving Package  -->
-        <mat-tab-group>
-          <mat-tab label="Super Saving Package ">
-            <div class="row">
-              <app-package class="col-4">
+        <mat-tab-group class="">
+          <mat-tab label="Super Saving Package " class="">
+            <div class="row row-cols-auto justify-content-center mt-2">
+              <app-package class="col p-0 mt-2">
                 <div class="card-title1">90 Days Posting</div>
                 <div class="card-subtitle">standard 1 month</div>
                 <div class="price">$ 40</div>
               </app-package>
-              <app-package class="col-4">
+              <app-package class="col p-0 mt-2">
                 <div class="card-title1">190 Days Posting</div>
                 <div class="card-subtitle">standard 6 months</div>
                 <div class="price">$ 120</div>
               </app-package>
-              <app-package class="col-4">
+              <app-package class="col p-0 mt-2">
                 <div class="card-title1">190 Days Posting</div>
+                <div class="card-subtitle">standard 6 months</div>
+                <div class="price">$ 120</div>
+              </app-package>
+              <app-package class="col p-0 mt-2">
+                <div class="card-title1">365 Days Posting</div>
+                <div class="card-subtitle">standard 6 months</div>
+                <div class="price">$ 120</div>
+              </app-package>
+              <app-package class="col p-0 mt-2">
+                <div class="card-title1">720 Days Posting</div>
                 <div class="card-subtitle">standard 6 months</div>
                 <div class="price">$ 120</div>
               </app-package>
@@ -50,13 +60,7 @@
         <!-- end Employer Brnading Package  -->
         </mat-tab-group>
 
-        <!-- step for souring  -->
-        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-          <mat-tab label="Step for sourcing and hiring!">
 
-          </mat-tab>
-        </mat-tab-group>
-        <!--end step for souring  -->
       </div>
     </div>
 
@@ -65,9 +69,10 @@
 
 
       <!-- package Detail  -->
-      <div class="col-4 ">
+      <div class="col-md-4 ">
         <mat-tab-group>
-          <mat-tab label="Package Detail  " >
+          <mat-tab label="Package Detail " >
+            <div class="pe-md-3">
             <div class="elementor-widget-container p-3 ">
               <div class="standard">
                 <h6 class="py-2">Why Standard Jobs?</h6>
@@ -96,17 +101,25 @@
                 </ul>
               </div>
             </div>
+          </div>
 
-            <div class="elementor-widget-container p-3 ">
-              <div class="hj-card">
-                <img src="https://www.hrincjobs.com/assets/images/4test/flat-devices-mockup.png" alt="">
-              </div>
-            </div>
           </mat-tab>
           <mat-tab label="Package Detail"> Content 2 </mat-tab>
         </mat-tab-group>
       </div>
-       <!--end package Detail  -->
+    <!--end package Detail  -->
+
+          <!-- step for souring  -->
+              <div class="elementor-widget-container p-3 ">
+                  <div class="hj-card">
+                    <img src="https://www.hrincjobs.com/assets/images/4test/flat-devices-mockup.png" alt="">
+                  </div>
+              </div>
+              <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                <mat-tab label="Step for sourcing and hiring!">
+                </mat-tab>
+              </mat-tab-group>
+          <!--end step for souring  -->
     </div>
   </div>
 </div>

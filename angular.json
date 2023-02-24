@@ -99,14 +99,40 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/flat-icon-css/css/flag-icon.min.css"
-
-
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "src/assets/popup.js",
               "src/app/javascriptfun.js"
             ]
+          }
+        },
+        "nightwatch-run": {
+          "builder": "@nightwatch/schematics:nightwatch",
+          "options": {
+            "devServerTarget": "project1:serve",
+            "tsConfig": "../nightwatch/tsconfig.e2e.json",
+            "config": "./nightwatch.conf.js",
+            "env": "chrome"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "project1:serve:production"
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@nightwatch/schematics:nightwatch",
+          "options": {
+            "devServerTarget": "project1:serve",
+            "tsConfig": "../nightwatch/tsconfig.e2e.json",
+            "config": "./nightwatch.conf.js",
+            "env": "chrome"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "project1:serve:production"
+            }
           }
         }
       }

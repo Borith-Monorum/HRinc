@@ -2,11 +2,15 @@ i{
   color: var(--secondary-color);
   font-size: 18px;
   }
+  .bi-check-circle-fill{
+    font-size:10px
+  }
+
 .package{
-  margin: 20px ;
+  margin: 10px ;
   overflow: hidden;
   border-radius: 10px;
-  width: 250px;
+  width: 230px;
 
 }
 
@@ -26,11 +30,14 @@ position: relative;
 
 }
 .package-body{
+
 ul{
+  padding-left: 0px !important;
   margin: 15px;
+  text-align: left;
   li{
-    font-size: 12px;
-    text-align:left;
+    font-size: 13px;
+    list-style-type:none;
   }
 }
 }
