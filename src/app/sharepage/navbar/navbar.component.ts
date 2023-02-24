@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
-
+import {FormControl, Validators} from '@angular/forms';
+interface Animal {
+  name: string;
+  sound: string;
+}
 interface FLAG {
   value: string;
   viewValue: string;
@@ -20,14 +24,22 @@ export class NavbarComponent {
   }
 
 //language
-cambodiashow = "";
-cambodia(){
-  this.cambodiashow = "cambodia";
+langs:boolean = true;
+lang = "Asean";
+laos:boolean = true;
+mys:boolean = true;
+la:{} | undefined;
+cam(){
+this.lang = "Cambodia";
+
 }
-laoshow= "";
 lao(){
-  this.laoshow ="Loa" ;
+  this.lang = "Lao"
 }
+my(){
+  this.lang = "Myanmar";
+}
+
 // end language
 
   //toggle

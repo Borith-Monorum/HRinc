@@ -63,5 +63,47 @@ background-color: whitesmoke;
 position: absolute;
 text-align: center;
 border: 1px solid #ddd;
-
 }
+
+// --------- package Detail -----------
+.elementor-widget-container{
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 10px;
+
+  background-color:#fafafa;
+}
+.standard{
+  text-align: left;
+}
+
+
+.wrapwidget{
+  .widget{
+    background-image: url('https://www.hrincjobs.com/assets/images/4test/free-job-posting.png');
+    background-position: center;
+    background-repeat :no-repeat;
+    background-size:cover;
+    width: 100%;
+    height: 200px;
+
+  }
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 0px;
+}
+
+.remark{
+  text-align: left;
+}
+
+.hj-card{
+  img{
+    border-radius: 10px;
+    width: 100%;
+
+  }
+}
+
+// --------- package Detail -----------
