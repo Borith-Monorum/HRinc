@@ -69,6 +69,9 @@ $project1-theme: mat.define-light-theme((
 @include mat.all-component-themes($project1-theme);
 
 /* You can add global styles to this file, and also import other style files */
+*{
+  // transition: all ease-in 1s;
+}
 .special-job{
   background-color: red;
   position: absolute;
