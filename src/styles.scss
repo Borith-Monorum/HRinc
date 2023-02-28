@@ -72,6 +72,12 @@ $project1-theme: mat.define-light-theme((
 *{
   // transition: all ease-in 1s;
 }
+.hj-title{
+  margin: 5px 0;
+  color: #000000de;
+  font-size:14px;
+  font-weight: bold;
+}
 .special-job{
   background-color: red;
   position: absolute;

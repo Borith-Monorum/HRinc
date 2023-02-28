@@ -40,7 +40,7 @@ p{
 }
 .img-jobs{
   background-color: white;
-width: 100%;
+  width: 75px;
   object-position: center;
   border:1px solid #ddd;
   padding: 5px 5px;
@@ -48,7 +48,7 @@ width: 100%;
   }
 .img-job{
   background-color: white;
-width: 100%;
+  width: 100%;
   object-position: center;
   // border:1px solid #ddd;
   padding: 5px 5px;
@@ -128,9 +128,9 @@ li{
   font-size: 15px;
 }
 .img-job{
-  // width: 100px;
+  // width: 100%;
   object-position: center;
-  }z
+  }
   .job-item{
     background-color: #FDEFEB;
   }
@@ -138,16 +138,17 @@ li{
     background-color: #FAFAFA;
   }
   .job-title{
-    // padding: 50px;
-  // text-overflow: ellipsis;
-    // overflow: hidden;
-  }
-  .truncate{
-    white-space: nowrap;
-    overflow:hidden ;
-    text-overflow: ellipsis;
 
-    // padding: 10px;
+  }
+  .hj-api{
+ width: 100%;
+  }
+  .text-truncate{
+    width: 100%;
+    padding-right: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 @media only screen and (max-width: 768px) {
 .border_b{

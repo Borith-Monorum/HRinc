@@ -25,6 +25,7 @@
     "@ngneat/tailwind": "^7.0.3",
     "bootstrap": "^5.3.0-alpha1",
     "bootstrap-icons": "^1.10.3",
+    "bulma": "^0.9.4",
     "faker": "^6.6.6",
     "flag-icon-css": "^4.1.7",
     "json-server": "^0.17.1",

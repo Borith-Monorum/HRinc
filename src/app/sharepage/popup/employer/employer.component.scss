@@ -143,7 +143,6 @@ background-color: var(--primary-color)!important;
   justify-content:center;
   align-items:center;
   padding: 10px 0;
-
   button{
     color:white;
     border-radius: 100px;
@@ -159,17 +158,40 @@ background-color: var(--primary-color)!important;
 .hj-content-image{
   width: 300px;
   height: auto;
-  border: 1px solid #ddd;
+
 }
     .hj-content-image .bg-content{
       background-position: center;
       background-size:cover;
       background-repeat:no-repeat;
       width: 100%;
-
+      border: 1px solid #ddd;
       height: 150px;
 
     }
 // HRINC Jobs's free resources and tools template!
 
 
+// join today
+.join-today{
+  background-image: url('https://www.hrincjobs.com/assets/images/hj-footer-bg.jpg');
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding: 10px 0;
+  border-radius: 10px;
+  p{
+    margin: 10px 0 15px 0;
+  }
+  button{
+    color:white;
+    border-radius: 100px;
+    padding: 5px 15px;
+    background-color: var(--primary-color);
+
+  }
+}
+// join today
