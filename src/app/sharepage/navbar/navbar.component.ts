@@ -31,7 +31,6 @@ mys:boolean = true;
 la:{} | undefined;
 cam(){
 this.lang = "Cambodia";
-
 }
 lao(){
   this.lang = "Lao"
@@ -55,5 +54,10 @@ this.employer = "Job Seeker";
 }
 
 // isOpen = false;
-  }
+ShowMessage(){
+this.inStock = !this.inStock;
+}
+  public inStock = true;
+  public availableSoon = true;
 
+}

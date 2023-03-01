@@ -1,0 +1,105 @@
+.hj-bg-about{
+  background-image: url("https://www.hrincjobs.com/assets/images/about-us.png");
+  width: 100%;
+  height: 300px;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+.hj-wrap{
+  width: 500px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+    .hj-about-banner{
+
+      h1{
+        span{
+          font-weight: 300;
+        }
+        color:white;
+
+      }
+      p{
+        color: white;
+        font-size: 18px;
+      }
+      button{
+        margin:0 5px;
+        color: white;
+        background-color: transparent;
+        border: 1px solid #fff;
+      }
+    }
+  }
+}
+
+
+.hj-content{
+  width: 100%;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-image:url('https://www.hrincjobs.com/assets/images/hj-footer-bg.jpg');
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  .hj-card-item{
+    border:1px solid #ddd;
+    height: 141px;
+    width: 216px;
+    border-radius: 10px;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 5px;
+    margin: 10px;
+
+    h1{
+      font-size: 30px;
+      color: var(--secondary-color);
+    }
+  }
+}
+
+
+.hj-about-us-wrapper{
+
+  .hj-card-title
+  {
+    h2{
+      font-size: 18px;
+    }
+    .border-bottom{
+      border-color: var(--primary-color) !important;
+    }
+  }
+
+  .hj-item-list{
+    margin: 20px 0;
+    column-gap: 20px;
+    display: flex ;
+    justify-content: space-between;
+    .hj-image{
+
+      img{
+        width: 300px;
+        border-radius: 10px;
+      }
+    }
+    div{
+      p{
+        font-weight: lighter;
+        font-size: 15px;
+      }
+      span{
+        font-weight: lighter;
+        font-size: 15px;
+      }
+    }
+  }
+
+}

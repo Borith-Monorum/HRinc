@@ -24,11 +24,11 @@
           </li>
           <li class="nav-item">
             <a class="nav-link  " >
-              <button mat-button [matMenuTriggerFor]="menu"  >  <i class="fi fi-my"[ngClass]="{my:mys}"></i> <i class="fi fi-la"[ngClass]="{la:laos}"></i>  {{lang}}<mat-icon>arrow_drop_down  </mat-icon></button>
+              <button mat-button [matMenuTriggerFor]="menu"  >{{lang}}<mat-icon>arrow_drop_down  </mat-icon></button>
               <mat-menu  #menu="matMenu">
                     <button mat-menu-item (click)="cam()"><i class="fi fi-kh"></i> Cambodia</button>
                     <button mat-menu-item (click)="lao()"><i class="fi fi-la"></i> Lao</button>
-                    <button mat-menu-item (click)="my()"><i class="fi fi-my"></i> Myanmar</button>
+                    <button mat-menu-item (click)="my()"> <i class="fi fi-my"></i> Myanmar</button>
               </mat-menu>
             </a>
           </li>
@@ -52,6 +52,9 @@
                 <a class="nav-link  " routerLink="contact" ><button mat-flat-button (click)="openDialog()" class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 ">attach_money</mat-icon> Get Quotations</button></a>
               </li>
             </div>
+
+
+
           </ul>
         </div>
     </div>
