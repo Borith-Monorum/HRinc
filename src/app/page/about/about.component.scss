@@ -6,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
-  padding: 30px;
+  padding: 40px;
   position: relative;
 .hj-wrap{
   width: 500px;
@@ -40,27 +40,33 @@
 
 .hj-content{
   width: 100%;
-  background-repeat:no-repeat;
-  background-size: cover;
-  background-image:url('https://www.hrincjobs.com/assets/images/hj-footer-bg.jpg');
-  margin: 10px;
+  
   display: flex;
   justify-content: center;
-  .hj-card-item{
-    border:1px solid #ddd;
-    height: 141px;
-    width: 216px;
-    border-radius: 10px;
-    text-align:center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 5px;
-    margin: 10px;
 
-    h1{
-      font-size: 30px;
-      color: var(--secondary-color);
+  .bg-content{
+    width: 100%;
+    // background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    // background-repeat: repeat;
+    background-position: center;
+    background-image:url('https://www.hrincjobs.com/assets/images/hj-footer-bg.jpg');
+    .hj-card-item{
+      border:1px solid #ddd;
+      height: 141px;
+      width: 216px;
+      border-radius: 10px;
+      text-align:center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px 5px;
+      margin: 10px;
+
+      h1{
+        font-size: 30px;
+        color: var(--secondary-color);
+      }
     }
   }
 }
@@ -80,9 +86,10 @@
 
   .hj-item-list{
     margin: 20px 0;
-    column-gap: 20px;
-    display: flex ;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns:300px 1fr  ;
+    gap: 20px;
+
     .hj-image{
 
       img{
@@ -102,4 +109,80 @@
     }
   }
 
+}
+@media screen and (max-width:768px)
+{
+  .hj-item-list{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .hj-image img{
+    width: 100% !important;
+
+  }
+}
+@media screen and (max-width: 576px){
+
+  .hj-card-item{
+    width: 70% !important;
+  }
+
+  .hj-bg-about::before{
+    content: "" !important;
+    position: absolute!important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0,0,0,0.2);
+    z-index: -1 !important;
+
+  }
+  .hj-bg-about{
+    height: 350px;
+    z-index: 1;
+  .hj-wrap{
+    width: 100% !important;
+      .hj-about-banner{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        h1{
+          span{
+            font-weight: 300;
+          }
+          color:white;
+
+        }
+        p{
+          color: white;
+          font-size: 18px;
+        }
+        div{
+          width: 100%;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap:10px;
+          align-items:center;
+          justify-content: center;
+          button{
+            background-color: white !important;
+            color: black !important;
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            margin:0 auto ;
+            color: white;
+            background-color: transparent;
+            border: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
 }
