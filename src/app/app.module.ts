@@ -36,6 +36,7 @@ import { AllJobsComponent } from './page/home/more/all-jobs/all-jobs.component';
 import { EmployerComponent } from './sharepage/popup/employer/employer.component';
 import { PackageComponent } from './sharepage/popup/employer/package/package.component';
 import {OverlayModule} from '@angular/cdk/overlay';
+
 @NgModule({
   declarations: [
     AppComponent,

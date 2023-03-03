@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import {FormControl, Validators} from '@angular/forms';
+import { Observable } from 'rxjs';
 interface Animal {
   name: string;
   sound: string;
@@ -10,11 +11,18 @@ interface FLAG {
   value: string;
   viewValue: string;
 }
+
+export interface Asean{
+  flag: string;
+  country: string;
+}
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+
+
 export class NavbarComponent {
 
   constructor(public dialog: MatDialog){}
@@ -60,4 +68,24 @@ this.inStock = !this.inStock;
   public inStock = true;
   public availableSoon = true;
 
+
+
+
+
+
+
+  aseans: Asean[] = [
+    {
+      country: 'Arkansas',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg',
+    },
+    {
+      country: 'Arkansas',
+      flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg',
+    },
+
+  ];
+
 }
+
+

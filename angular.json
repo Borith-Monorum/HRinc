@@ -104,6 +104,7 @@
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "src/assets/popup.js",
               "src/app/javascriptfun.js"
+
             ]
           }
         },

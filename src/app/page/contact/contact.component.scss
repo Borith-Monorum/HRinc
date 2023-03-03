@@ -1,3 +1,7 @@
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+
 .hj-contact-banner{
   background-image : url('https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/35/ea/35ea58bd-115f-47ba-acb4-a632364642e9/contactus.jpg');
   width: 100%;
@@ -40,7 +44,60 @@
     }
   }
 
-@media screen and (max-width: 768px){
+
+// ----------ADDRESS & MAP-------------
+  .hj-contact-us-wrapper{
+    .cambodia{
+      padding:10px 30px;
+
+      // justify-content:center;
+    }
+    .hj-title {
+      margin: 20px 20px;
+      font-size: 20px;
+      border-bottom: 1px solid var(--primary-color);
+    }
+    .hj-office-list{
+
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 100%;
+
+      margin: 0 auto;
+
+      ul{
+        padding-left:0;
+        padding: 15px;
+        .list{
+          font-size: 16px !important;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          mat-icon{
+            overflow: visible ;
+            color: #555 !important ;
+            font-size: 26px !important;
+          }
+          .map{
+            width: 100%;
+
+            iframe{
+              width: 97%;
+            }
+          }
+        }
+      }
+    }
+  }
+// ----------ADDRESS & MAP-------------
+
+
+@media only screen and (max-width: $small-screen){
+
+}
+
+@media screen and (max-width: $medium-screen) {
   .hj-card-item{
     width: 70% !important;
   }
@@ -49,3 +106,8 @@
   background-size: cover;
 }
 }
+
+@media only screen and (max-width: $small-screen){
+
+}
+
