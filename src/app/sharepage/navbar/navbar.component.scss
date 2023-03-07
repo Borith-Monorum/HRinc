@@ -20,33 +20,34 @@ element.style {
 nav{
     z-index: 10;
 }
+ul{
+
+
+}
 li{
   list-style-type:none;
+  margin: 0 0px;
+  padding: 0;
+
 }
 a{
   text-decoration:none;
+  margin:0;
+  padding: 0;
 }
-.navbar{
-top: 0;
-height: 60px;
-position: sticky;
-}
-.fades{
-background-color: red;
-}
-.la{
-  display: none;
-}
-.my{
-  display: none;
-}
+
+
+@media  (max-width: $small_display){
+  ul{
+    width: 100% !important;
+  }
+
+  }
 @media  (min-width: $small_display){
 
+  mat-divider{
+  display: none;
 }
-
-@media (min-width: $medium_display){
-
-
 }
 
 @media (max-width: $large_display){
@@ -82,4 +83,28 @@ background-color: red;
 
 .example-list > li:last-child {
   border-bottom: none;
+}
+
+.navbar {
+  /* your regular navbar styles here */
+  transition: all 0.3s ease-in-out;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.sticky + .content {
+  margin-top: 70px;
+}
+
+/* hide the navbar when it's not sticky */
+:not(.sticky) {
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
 }
