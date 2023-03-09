@@ -1,12 +1,7 @@
-<nav [ngClass]="{'sticky': isSticky}" class="navbar navbar-expand-sm bg-white border-bottom ">
+<nav #navbar class="navbar navbar-expand-md bg-white border-bottom ">
 <div class="container-xl">
-
     <!-- left-navigation bar-->
         <a class="navbar-brand  mt-auto " href="#"><img src="https://www.hrincjobs.com/assets/images/logo.png" width="120px" alt=""></a>
-        <!-- <button (click)=toggle() class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs- target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i *ngIf="!expended" class="bi bi-list"></i>
-        <i *ngIf="expended" class="bi bi-x"></i>
-      </button> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,8 +45,8 @@
           <ul class="navbar-nav  ms-auto bg-white">
             <div class="d-flex align-items-center">
               <li class="nav-item">
-                <a class="nav-link text-nowrap" routerLink="menu"><button mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
-                 <mat-menu #menu1="matMenu">
+                <a class="nav-link text-nowrap" routerLink="menu"><button class="text-nowrap" mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
+                  <mat-menu #menu1="matMenu">
                     <button mat-menu-item>Job Seeker</button>
                     <button mat-menu-item>Employer</button>
                   </mat-menu>
