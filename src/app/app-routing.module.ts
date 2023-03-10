@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'about-us', component: AboutComponent, data: { title: 'About Us' } },
   { path: 'contact-us', component: ContactComponent, data: { title: 'Contact Us' } },
   { path: 'asean', component: MenuComponent, data: { title: 'Asean' } },
-  { path: 'job-detail', component: JobDetailComponent, data: { title: 'Job Detail' } },
-  { path: 'job-category', component: JobCategoryComponent, data: { title: 'Job Category' } },
+  { path: 'home/job-detail', component: JobDetailComponent, data: { title: 'Job Detail' } },
+  { path: 'home/job-category', component: JobCategoryComponent, data: { title: 'Job Category' } },
   { path: 'all-jobs', component: AllJobsComponent, data: { title: 'All Jobs' } },
   { path: 'employer', component: EmployerComponent, data: { title: 'Employer' } },
   { path: '**', component: Error404Component }

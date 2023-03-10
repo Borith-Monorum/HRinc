@@ -22,7 +22,7 @@ export class JobCategoryComponent {
   {
     this.service.homeapi().subscribe((result)=>{
       console.log(result,'result#');
-      if(result.length > 0){
+      if(result.length = 10){
         this.showAllData = result;
       }
     })

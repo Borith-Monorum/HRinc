@@ -71,20 +71,19 @@
                     </button>
                   </mat-menu>
                 </button>
-              <div>
-                <div class="special-job">Premium</div>
-              </div>
+                <div>
+                  <div class="special-job">Premium</div>
+                </div>
             </div>
           </div>
         </div>
             <!-- end job-info  -->
 
           <mat-tab-group fitInkBarToContent>
+            <!--Job Overview  -->
             <mat-tab label="Job Description" class="">
               <div class="p-5">
                 <p class="hj-label-header">Job Overview</p>
-
-              <!--Job Overview  -->
                 <div class="row border rounded mx-1  ">
                   <div class="col-md-6 col-sm-12 border-bottom py-1 pb-2">
                     <span class="hj-label">#Hring</span><br>
@@ -179,30 +178,53 @@
                   </div>
 
                 </div>
-
-
               </div>
             </mat-tab>
+             <!--end Job Overview  -->
 
             <!-- benefits package  -->
-            <mat-tab label="Benefits Package">
-              <div class="row">
-                  <div class="col-12 col-md-4">Financial</div>
-                  <div class="col-12 col-md-4">Financial</div>
-                  <div class="col-12 col-md-4">Financial</div>
+            <mat-tab label="Benefits Package" class="">
+              <div class="row row-cols-auto justify-content-around m-0 mt-3 mb-5" style="color:var(--secondary-color)">
+                  <div class="col">Financial</div>
+                  <div class="col">Financial</div>
+                  <div class="col">Financial</div>
               </div>
             </mat-tab>
             <!-- end benefits package   -->
 
             <!-- Company Profile -->
-            <mat-tab label="Company Profile">
-
+            <mat-tab label="Company Profile" class="company_profile">
+              <div class="row row-cols-3 ">
+                <div class="col">
+                  <span class="hj-label d-block">Name in Local Language</span>
+                  <span class="hj-desc">អេច អ អាយ អិន ស៊ី (ខេមបូឌា) ខូអិលធីឌី</span>
+                </div>
+                <div class="col">
+                  <span class="hj-label d-block">Country of Origin</span>
+                  <span class="hj-desc">Cambodia</span>
+                </div>
+                <div class="col">
+                  <span class="hj-label d-block">Employee Number</span>
+                  <span class="hj-desc">101-200</span>
+                </div>
+                <div class="col">
+                  <span class="hj-label">Company Type</span>
+                  <span class="hj-desc">Private Sector</span>
+                </div>
+                <div class="col">
+                  <span class="hj-label d-block">Industry</span>
+                  <span class="hj-desc">Human Resource Consultancy</span>
+                </div>
+                <div class="col">
+                  <span class="hj-label d-block">Sub-industry</span>
+                  <span class="hj-desc">Consultancy</span>
+                </div>
+              </div>
             </mat-tab>
             <!-- end company profile -->
 
             <!-- company contact -->
             <mat-tab label="Company Contact">
-
             </mat-tab>
             <!-- end company contact  -->
           </mat-tab-group>
@@ -226,7 +248,7 @@
                     <!-- content  -->
                     <div class="mx-2 hj-api ">
                         <a class="nav-link " href="" routerLink="job-detail"><h5 class="card-title  text-nowrap text-truncate"  matTooltipClass="example-tooltip"  matTooltipPosition="above" matTooltip="{{hj2.job_name}}">{{hj2.job_name}} </h5></a>
-                        <p class="col-6 subtitle text-nowrap text-truncate"matTooltipClass="example-tooltip"  matTooltipPosition="below" matTooltip="Click to view {{hj2.job_profile}} profile"><span class="">{{hj2.job_profile}}</span> </p>
+                        <p class=" subtitle text-nowrap text-truncate"matTooltipClass="example-tooltip"  matTooltipPosition="below" matTooltip="Click to view {{hj2.job_profile}} profile"><span class="">{{hj2.job_profile}}</span> </p>
                         <div class="card-text navbar">
                           <a href="" class="nav-link"><i class="bi bi-calendar"></i> {{hj2.date}}</a>&nbsp;
                         </div>

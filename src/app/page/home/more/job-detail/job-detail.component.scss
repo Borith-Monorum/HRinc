@@ -2,10 +2,8 @@
   background-image: url(https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/2f/ff/2fffa053-9bd4-4611-8188-8f542ffc7c1f/employer_profile_cover.jpg);
   width: 100%;
   height: 160px;
-
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 .content{
   margin: 0 auto;
@@ -141,7 +139,7 @@ li{
 
   }
   .hj-api{
- width: 100%;
+  width: 100%;
   }
   .text-truncate{
     width: 100%;
@@ -150,6 +148,15 @@ li{
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .subtitle{
+    margin: 0 !important;
+
+  }
+  .company_profile{
+    
+  }
+
+
 @media only screen and (max-width: 768px) {
 .border_b{
   border-bottom:1px solid #ddd;
