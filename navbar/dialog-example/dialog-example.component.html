@@ -1,0 +1,59 @@
+
+<div class="px-3">
+
+  <p class="example-full-width px-3 mt-3 fs-3">Get Quotations</p>
+  <mat-divider></mat-divider>
+</div>
+
+<div class="container p-3">
+<form class="example-form">
+  <mat-form-field appearance="outline" class="example-full-width">
+    <mat-label>Company Name </mat-label>
+    <input type="email" value="accent"  matInput [formControl]="emailFormControl" >
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter company name
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      This field is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="example-full-width mt-3">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+
+  <mat-form-field appearance="outline" class="example-full-width mt-3">
+    <mat-label>Telephone</mat-label>
+    <input type="email"  matInput [formControl]="emailFormControl2" >
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl2.hasError('required')">
+      Please enter company nameng
+    </mat-error>
+    <mat-error *ngIf="emailFormControl2.hasError('required')">
+      This field is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <section class="example-section" [formGroup]="toppings">
+    <p class="text-secondary">Quotation For</p>
+   <mat-checkbox formControlName="Job_Posting">Job Posting</mat-checkbox>
+   <mat-checkbox formControlName="Advertising_Blocks">Advertising Blocks</mat-checkbox>
+   <mat-checkbox formControlName="All_Available_Products">All</mat-checkbox>
+  </section>
+
+  <section class="example-section" [formGroup]="toppings">
+    <p class="text-secondary">Quotation For</p>
+
+  </section>
+<mat-form-field appearance="outline" class="mt-4 w-100">
+  <mat-label>Message</mat-label>
+  <textarea matInput name="" id="" cols="30" rows="2">I would like to get quotation for Job   {{toppings.value | json}}</textarea>
+</mat-form-field>
+</form>
+</div>
+<mat-divider></mat-divider>
+<button mat-flat-button class="border rounded-pill text-light m-3" style="background-color: var(--primary-color);">submit</button>
+<button mat-flat-button mat-dialog-close class="border border-info rounded-pill text-secondary my-3" style="border: 1px solid blue">Close</button>

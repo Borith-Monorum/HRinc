@@ -1,0 +1,75 @@
+
+<div class="container-xl">
+  <div class="row ">
+    <!-- Keywords, job titles, company name -->
+    <div class="col-lg-4 col-md-6 py-3">
+      <mat-form-field appearance="outline"class="w-100" >
+        <mat-label>Keywords, job titles, company name</mat-label>
+        <input matInput placeholder="Job Title, Company">
+      </mat-form-field>
+    </div>
+
+    <!-- job Function  -->
+    <div class="col-lg-3 col-md-6 py-3">
+      <mat-form-field (click)="focusInput()" appearance="outline"class="example-form-field w-100" >
+        <mat-label>Job Function</mat-label>
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-select [(ngModel)]="value">
+
+            <input #myInput matInput placeholder="Search">
+
+          <mat-option value="one">Agriculture & Forestry</mat-option>
+          <mat-option value="two">Call for Proposal / Bidding</mat-option>
+          <mat-option value="three">Clearance</mat-option>
+          <mat-option value="four">Operations Compliance</mat-option>
+          <mat-option value="four">Vendor Management</mat-option>
+          <mat-option value="four">Managerial Positions</mat-option>
+          <mat-option value="four">Accounting / Finance</mat-option>
+          <mat-option value="four">Administrative / Support</mat-option>
+          <mat-option value="four">Architect / Design</mat-option>
+          <mat-option value="four">Banking / Financial Service</mat-option>
+          <mat-option value="four">Business Development</mat-option>
+          <mat-option value="four">Call Center / Customer Care</mat-option>
+          <mat-option value="four">Cleaning / Safeguard</mat-option>
+          <mat-option value="four">Community and Social Services</mat-option>
+          <mat-option value="four">Consulting / Freelancing</mat-option>
+          <mat-option value="four">Driving / Delivery</mat-option>
+          <mat-option value="four">Education / Training</mat-option>
+          <mat-option value="four">Engineering</mat-option>
+          <mat-option value="four">Food and beverage</mat-option>
+          <mat-option value="four">Healthcar services</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Job's location -->
+    <div class="col-lg-3 col-md-6 py-3">
+      <mat-form-field (click)="focusInput()" appearance="outline"class="example-form-field w-100 p-0" >
+        <mat-label>Job's Location</mat-label>
+        <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+          <mat-icon >close</mat-icon>
+        </button>
+        <mat-select [(ngModel)]="value1">
+          <input #myInput1 matInput placeholder="Search" (keyup)="0">
+          <div class="job" *ngFor="let job of jobs | filter:'name':value1">
+            <mat-option [value]="job.name">{{ job.name }}</mat-option>
+            <span>{{ job.country }}</span>
+          </div>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Search Jobs  -->
+    <div class="col-lg-2 col-md-6  py-3  d-grid align-items-center">
+      <a class="nav-link " ><button mat-flat-button class="border text-light py-2 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
+    </div>
+
+
+
+
+  </div>
+</div>
+
