@@ -35,6 +35,7 @@ export class JobSearchComponent {
     { name: "Amnat Charoen", country: "Thailand" },
     { name: "Amstetten", country: "Ancona" },
     { name: "Ancona", country: "Italy" },
+    { name: "Ancona", country: "Italy" },
     // ... add more items here
   ];
 }
