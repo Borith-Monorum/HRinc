@@ -56,7 +56,7 @@ export class JobSearchComponent {
     { name: "Ancona", country: "Italy" },
     // ... add more items here
   ];
-
+// a 
   filteredJobs: any[] = [];
   filteredJob: any[] = [];
 
