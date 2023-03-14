@@ -1,0 +1,54 @@
+
+<div class="container-xl">
+  <div class="row ">
+    <!-- Keywords, job titles, company name -->
+    <div class="col-lg-4 col-md-6 py-3">
+      <mat-form-field appearance="outline"class="w-100" >
+        <mat-label>Keywords, job titles, company name</mat-label>
+        <input matInput placeholder="Job Title, Company">
+      </mat-form-field>
+    </div>
+
+    <!-- job Function  -->
+    <div class="col-lg-3 col-md-6 py-3">
+      <mat-form-field (click)="focusInput()" appearance="outline"class="example-form-field w-100" >
+        <mat-label>Job Function</mat-label>
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-select>
+            <input  [(ngModel)]="value" #myInput placeholder="Search" class="job_search" type="text" (keyup)="0">
+          <div class="job"  *ngFor="let jobJ of job_function | filter:'name':value">
+            <mat-option [value]="jobJ.name">{{jobJ.name}}</mat-option>
+          </div>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Job's location -->
+    <div class="col-lg-3 col-md-6 py-3">
+      <mat-form-field (click)="focusInput()" appearance="outline"class="example-form-field w-100 p-0" >
+        <mat-label>Job's Location</mat-label>
+        <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+          <mat-icon >close</mat-icon>
+        </button>
+        <mat-select >
+            <input [(ngModel)]="value1" #myInput1  placeholder="Search" class="job_search" type="text" (keyup)="0">
+          <div class="job" *ngFor="let job of jobs | filter:'name':value1">
+            <mat-option [value]="job.name">{{ job.name }}</mat-option>
+            <span>{{ job.country }}</span>
+          </div>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Search Jobs  -->
+    <div class="col-lg-2 col-md-6  py-3  d-grid align-items-center">
+      <a class="nav-link " ><button mat-flat-button class="border text-light py-2 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
+    </div>
+
+  </div>
+</div>
+
+
+

@@ -1,0 +1,26 @@
+
+.job{
+  position: relative !important;
+
+  span{
+    position: absolute;
+    top: 32px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: thin;
+  }
+}
+.job_search{
+  width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 15px  !important;
+    margin: 10px 0 0 0 !important;
+  border-bottom: 1px solid #ddd !important;
+}
+.no-job-found span{
+  padding: 10 15px ;
+  margin: 10 15px ;
+  color: #777 ;
+  font-weight: 300 ;
+}

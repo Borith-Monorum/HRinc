@@ -2,8 +2,8 @@
 <div class="container-xl">
     <!-- left-navigation bar-->
         <a class="navbar-brand  mt-auto " href="#"><img src="https://www.hrincjobs.com/assets/images/logo.png" width="120px" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <button (click)="onToggle()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <mat-icon>{{toggle ? 'menu' : 'close'}}</mat-icon>
     </button>
 
   <div class="collapse navbar-collapse  " id="navbarSupportedContent">
@@ -45,15 +45,15 @@
           <ul class="navbar-nav  ms-auto bg-white">
             <div class="d-flex align-items-center">
               <li class="nav-item">
-                <a class="nav-link text-nowrap" routerLink="menu"><button class="text-nowrap" mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
+                <a class="nav-link text-nowrap" routerLink=""><button class="text-nowrap" mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
                   <mat-menu #menu1="matMenu">
                     <button mat-menu-item>Job Seeker</button>
-                    <button mat-menu-item>Employer</button>
+                    <button mat-menu-item routerLink="employer">Employer</button>
                   </mat-menu>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  " routerLink="home/employer" ><button mat-flat-button class="border text-light  rounded-pill" style="background-color: var(--primary-color);" (click)=onchange(); ><mat-icon>shield</mat-icon>{{employer}}</button></a>
+                <a class="nav-link  " [routerLink]="employer ?   'employer' : 'jobseekers'" ><button mat-flat-button class="border text-light  rounded-pill" style="background-color: var(--primary-color);" (click)=onchange(); ><mat-icon>{{iconEmployer? 'shield':'school'}}</mat-icon>{{employer ? 'Job Seeker' : 'Employer'  }}</button></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-nowrap " routerLink="contact" ><button mat-flat-button (click)="openDialog()" class="border text-light  rounded-pill" style="background-color: var(--primary-color);" ><mat-icon class="fs-5 ">attach_money</mat-icon> Get Quotations</button></a>

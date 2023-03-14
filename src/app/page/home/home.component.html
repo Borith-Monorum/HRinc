@@ -29,65 +29,10 @@ class="mySwiper"
 
 <!-- Job Search Layout  -->
 <div class="content p-3 pt-4 mt-3">
-  <div class="row ">
-    <!-- Keywords, job titles, company name -->
-    <div class="col-lg-4 col-md-6 py-3">
-      <mat-form-field appearance="outline"class="w-100" >
-        <mat-label>Keywords, job titles, company name</mat-label>
-        <input matInput placeholder="Job Title, Company">
-      </mat-form-field>
-    </div>
 
-    <!-- job Function  -->
-    <div class="col-lg-3 col-md-6 py-3">
-      <mat-form-field appearance="outline"class="w-100" >
-        <mat-label>Job Function</mat-label>
-        <mat-select>
-          <mat-form-field appearance="fill" class="w-100">
-            <mat-label>Search</mat-label>
-            <input matInput placeholder="Search">
-          </mat-form-field>
-          <mat-option value="one">Agriculture & Forestry</mat-option>
-          <mat-option value="two">Call for Proposal / Bidding</mat-option>
-          <mat-option value="three">Clearance</mat-option>
-          <mat-option value="four">Operations Compliance</mat-option>
-          <mat-option value="four">Vendor Management</mat-option>
-          <mat-option value="four">Managerial Positions</mat-option>
-          <mat-option value="four">Accounting / Finance</mat-option>
-          <mat-option value="four">Administrative / Support</mat-option>
-          <mat-option value="four">Architect / Design</mat-option>
-          <mat-option value="four">Banking / Financial Service</mat-option>
-          <mat-option value="four">Business Development</mat-option>
-          <mat-option value="four">Call Center / Customer Care</mat-option>
-          <mat-option value="four">Cleaning / Safeguard</mat-option>
-          <mat-option value="four">Community and Social Services</mat-option>
-          <mat-option value="four">Consulting / Freelancing</mat-option>
-          <mat-option value="four">Driving / Delivery</mat-option>
-          <mat-option value="four">Education / Training</mat-option>
-          <mat-option value="four">Engineering</mat-option>
-          <mat-option value="four">Food and beverage</mat-option>
-          <mat-option value="four">Healthcar services</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
+  <app-job-search></app-job-search>
 
-    <!-- Job's location -->
-    <div class="col-lg-3 col-md-6 py-3">
-      <mat-form-field appearance="outline"class="w-100 p-0" >
-        <mat-label>Job's Location</mat-label>
-        <mat-select>
-          <input matInput placeholder="Search">
-          <mat-option value="one">First option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
 
-    <!-- Search Jobs  -->
-    <div class="col-lg-2 col-md-6  py-3  d-grid align-items-center">
-      <a class="nav-link " ><button mat-flat-button class="border text-light py-2 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
-    </div>
-  </div>
 <!-- Category-job  -->
       <mat-tab-group fitInkBarToContent mat-stretch-tabs="false" mat-align-tabs="center" >
             <!-- function  -->

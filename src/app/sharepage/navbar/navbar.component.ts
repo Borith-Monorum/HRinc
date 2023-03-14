@@ -41,15 +41,25 @@ asean(){
   this.dialog.open(DialogExampleComponent);
   }
   //toggle
-  expended = false;
-  toggle(){
-    this.expended = !this.expended;
-  }
-  public employer = "employer";
-  onchange(){
-  this.employer = "Job Seeker";
-  }
+public toggle:boolean = true;
+onToggle(){
+  this.toggle = !this.toggle;
+}
 
+
+  // employer & jobseekers
+  public employer:boolean = false;
+  public iconEmployer = true;
+
+onchange(){
+if(this.employer){
+  this.employer = false;
+
+}else{
+  this.employer = true;
+}
+this.iconEmployer = !this.iconEmployer;
+}
 
 // sticky navbar that hides when scrolling up in TypeScript:
 

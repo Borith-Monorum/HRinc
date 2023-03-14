@@ -37,6 +37,11 @@ import { EmployerComponent } from './sharepage/popup/employer/employer.component
 import { PackageComponent } from './sharepage/popup/employer/package/package.component';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { Error404Component } from './sharepage/error404/error404.component';
+import { JobseekerComponent } from './sharepage/navbar/jobseeker/jobseeker.component';
+import { JobSearchComponent } from './sharepage/job-search/job-search.component';
+import { FilterPipe } from './sharepage/job-search/filter.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -55,6 +60,10 @@ import { Error404Component } from './sharepage/error404/error404.component';
     EmployerComponent,
     PackageComponent,
     Error404Component,
+    JobseekerComponent,
+    JobSearchComponent,
+    FilterPipe
+
 
   ],
 
@@ -84,6 +93,7 @@ import { Error404Component } from './sharepage/error404/error404.component';
     HttpClientModule,
     MatDialogModule,
     OverlayModule,
+    FormsModule,
 
   ],
   providers: [],
