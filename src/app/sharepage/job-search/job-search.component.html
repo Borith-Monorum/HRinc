@@ -1,17 +1,17 @@
 
-<div class="container-xl">
-  <div class="row ">
+
+  <div class="row job-wrap bg-white">
     <!-- Keywords, job titles, company name -->
-    <div class="col-lg-4 col-md-6 py-3">
-      <mat-form-field appearance="outline"class="w-100" >
+    <div class="col-lg-4 col-md-6 py-2">
+      <mat-form-field class="mat-mdc-form-field-bottom-align" appearance="outline"class="w-100" >
         <mat-label>Keywords, job titles, company name</mat-label>
         <input matInput placeholder="Job Title, Company">
       </mat-form-field>
     </div>
 
     <!-- job Function  -->
-    <div class="col-lg-3 col-md-6 py-3">
-      <mat-form-field (click)="focusInput()" appearance="outline"class="example-form-field w-100" >
+    <div class="col-lg-3 col-md-6  py-2 ">
+      <mat-form-field class="mat-mdc-form-field-bottom-align" (click)="focusInput()" appearance="outline"class="example-form-field w-100 " >
         <mat-label>Job Function</mat-label>
         <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
           <mat-icon>close</mat-icon>
@@ -26,9 +26,9 @@
     </div>
 
     <!-- Job's location -->
-    <div class="col-lg-3 col-md-6 py-3">
-      <mat-form-field (click)="focusInput()" appearance="outline"class="example-form-field w-100 p-0" >
-        <mat-label>Job's Location</mat-label>
+    <div class="col-lg-3 col-md-6 py-2 ">
+      <mat-form-field class="mat-mdc-form-field-bottom-align" (click)="focusInput()" appearance="outline"class="example-form-field w-100 p-0" >
+          <mat-label>Job's Location</mat-label>
         <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
           <mat-icon >close</mat-icon>
         </button>
@@ -43,12 +43,12 @@
     </div>
 
     <!-- Search Jobs  -->
-    <div class="col-lg-2 col-md-6  py-3  d-grid align-items-center">
-      <a class="nav-link " ><button mat-flat-button class="border text-light py-2 rounded-pill w-100" style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Search Jobs</button></a>
+    <div class="col-lg-2 col-md-6 d-grid align-self-center">
+      <a class="nav-link fs-6" ><button mat-flat-button class="border text-light py-2 rounded-pill w-100 text-nowrap" style="background-color: var(--primary-color);" ><mat-icon class="fs-4">search</mat-icon>Search Jobs</button></a>
     </div>
-
   </div>
-</div>
+
+
 
 
 

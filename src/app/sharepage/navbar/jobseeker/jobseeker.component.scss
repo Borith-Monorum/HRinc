@@ -1,0 +1,115 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+.bg-banner{
+  background-image: url('https://www.hrincjobs.com/assets/images/4test/jr.jpg');
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:cover;
+
+  h2{
+    text-align:center;
+    padding: 50px;
+    color: var(--secondary-color);
+    }
+}
+.job-wrap{
+  border-radius: 10px;
+  position: relative;
+  top: 10%;
+  width: 90%;
+  margin: 0 auto;
+  .job-search{
+    border-radius: 10px !important;
+    width: 95%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+  }
+  .bg-search{
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px  #00000018;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255,255,255,.1);
+    height: 120px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+
+    z-index: 1;
+  }
+}
+
+.hj-jr-content{
+  padding: 20px;
+  .hj-grid{
+    .grid-left img{
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .grid-right{
+      justify-content: space-between;
+      flex-direction: column;
+      display: flex;
+
+
+      .hj-title{
+        font-family:'khmer os siemreap', Arial, Helvetica, sans-serif;
+        width:100%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit the number of lines */
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+      }
+
+
+      .hj-img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+// join today
+.join-today{
+  background-image: url('https://www.hrincjobs.com/assets/images/hj-footer-bg.jpg');
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding: 10px 0;
+  border-radius: 10px;
+  p{
+    margin: 10px 0 15px 0;
+  }
+  button{
+    color:white;
+    border-radius: 100px;
+    padding: 5px 15px;
+    background-color: var(--primary-color);
+
+  }
+}
+// join today
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Styles for medium-sized screens here */
+  job-wrap{
+
+  }
+}
