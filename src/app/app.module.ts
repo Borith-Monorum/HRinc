@@ -40,6 +40,8 @@ import { Error404Component } from './sharepage/error404/error404.component';
 import { JobseekerComponent } from './sharepage/navbar/jobseeker/jobseeker.component';
 import { JobSearchComponent } from './sharepage/job-search/job-search.component';
 import { FilterPipe } from './sharepage/job-search/filter.pipe';
+import { JobCategoryParentComponent } from './sharepage/job-category-parent/job-category-parent.component';
+import { AllNewComponent } from './sharepage/popup/employer/all-new/all-new.component';
 
 
 
@@ -62,7 +64,9 @@ import { FilterPipe } from './sharepage/job-search/filter.pipe';
     Error404Component,
     JobseekerComponent,
     JobSearchComponent,
-    FilterPipe
+    FilterPipe,
+    JobCategoryParentComponent,
+      AllNewComponent,
 
 
   ],
@@ -94,7 +98,7 @@ import { FilterPipe } from './sharepage/job-search/filter.pipe';
     MatDialogModule,
     OverlayModule,
     FormsModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

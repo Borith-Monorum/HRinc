@@ -87,25 +87,28 @@
 .join-today{
   background-image: url('https://www.hrincjobs.com/assets/images/hj-footer-bg.jpg');
   width: 100%;
-  height: 170px;
+  height: 100px;
   display: flex;
-  flex-direction:column;
+  font-weight: 300;
+  font-size: 18px !important;
+  // flex-direction:column;
   justify-content:center;
   align-items:center;
   padding: 10px 0;
   border-radius: 10px;
-  p{
-    margin: 10px 0 15px 0;
   }
-  button{
-    color:white;
-    border-radius: 100px;
-    padding: 5px 15px;
-    background-color: var(--primary-color);
-
-  }
-}
 // join today
+
+  .btn-register{
+    border:1px solid var(--secondary-color);
+    padding: 10px 50px;
+    color: red;
+    background-color:transparent;
+    border-radius: 99px;
+  }
+
+
+
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   /* Styles for medium-sized screens here */

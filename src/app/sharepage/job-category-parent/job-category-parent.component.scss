@@ -1,0 +1,51 @@
+
+@keyframes badge_float {50%{top:-5px;}
+100%{top:1px;}};
+.hj-badge{
+position:relative;
+background-color: var(--primary-color);
+padding: 0px 7px;
+border-radius: 99px;
+color: white;
+// animation: badge_float ease 1s infinite;
+top: 0px;
+height: 100px;
+margin: 0 5px;
+}
+.hj-list{
+font-size: 14px;
+}
+.hj-list:hover .hj-badge{
+animation: badge_float ease .7s infinite;
+}
+.hj-clickable{
+color: var(--secondary-color);
+cursor: pointer;
+line-height: 2.5;
+}
+.hj-clickable:hover{
+text-decoration: underline;
+color: var(--primary-color);
+}
+.example-tooltip{
+font-size: 12px;
+}
+
+//job-category
+.mat-mdc-tab-labels{
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.mat-tab-group {
+  position: relative !important;
+}
+
+.mat-ink-bar {
+  position: absolute ;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: black;
+  width: auto; /* This will make the width of the ink bar adjust to the width of the active tab */
+}

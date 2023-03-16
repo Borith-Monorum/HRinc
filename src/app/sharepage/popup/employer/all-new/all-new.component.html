@@ -1,0 +1,34 @@
+<div class="content mt-4 ">
+  <div class="hj-er-last-content "  >
+    <p class="border-bottom p-3 px-4 fw-bold">Job Tools and Templates</p>
+    <div *ngFor="let news of ShowNewsData" class="row row-cols-auto g-3   justify-content-center">
+      <div class="col ">
+        <div class="hj-content-image " >
+          <div class="bg-content" style='background-image: url("{{news.hj_content_image}}");'></div>
+          <p class="hj-title">{{news.hj_title}}</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hj-content-image" >
+          <div class="bg-content"style="background-image: url('https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/f7/f6/f7f6d23f-6e05-4211-b05a-feaabf437594/management-accountingtop-interview-q.jpg');">
+          </div>
+          <p class="hj-title">{{news.hj_title}}</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hj-content-image" >
+          <div class="bg-content" style="background-image: url('https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/96/49/96495962-1e7d-4ee5-ad4e-37aab56f3bcb/interview_questions_for_payroll_clerks.jpg');">
+          </div>
+          <p class="hj-title">{{news.hj_title}}</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="hj-content-image" >
+          <div class="bg-content img-fluid" style='background-image: url("https://hrincjobs-pro.s3.amazonaws.com/media/public/filer_public/43/f0/43f0f96d-5402-4c11-9b53-2e8165bb62a7/top-10-bank-interview-q.jpg");'>
+          </div>
+          <p class="hj-title">{{news.hj_title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

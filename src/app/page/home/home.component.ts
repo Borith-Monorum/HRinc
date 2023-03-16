@@ -1,10 +1,8 @@
 
 import { Component,ViewEncapsulation } from '@angular/core';
-
-import { JobListService } from 'src/app/cagetory_job/job-list.service';
+import { JobListService } from 'src/app/service_shared/job-list.service';
 import { PopupComponent } from 'src/app/sharepage/popup/popup.component';
 import { MatDialog } from '@angular/material/dialog';
-
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
@@ -42,8 +40,7 @@ constructor(
     //api service
   }
 
-    homeData()
-    {
+    homeData(){
       this.service.homeapi().subscribe((result)=>{
         // console.log(result,'result#');
         if(result.length = 10 ){

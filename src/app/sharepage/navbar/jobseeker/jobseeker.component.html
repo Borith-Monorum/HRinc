@@ -45,18 +45,27 @@
       </div>
 
       <div class="text-center p-3">
-        <input type="submit" value="Register Job Seeker Account" class="btn btn-danger rounded-pill px-5" >
+        <button  class="btn-register">Register Job Seeker Account</button>
         <p class="title mt-4">If you have any questions/inquiries, please contact to our team via</p>
-       <p> <a href="">jobseeker.cam@hrincjobs.com</a></p>
+       <p> <a href="" class="nav-link" style="color:var(--secondary-color);">jobseeker.cam@hrincjobs.com</a></p>
         <p>+855 (23) 211 437 / (11) 992 190</p>
       </div>
     </div>
   </div>
       <div class="content">
         <!-- -------------------  get started ------------------- -->
-        <div class=" join-today my-4">
-          <span class="fs-5 fs-thin d-inline">If you are ready for a more challenging job opportunity, you certainly will see on </span><a class="nav-link" style="color: var(--primary-color)" href="">HRINC Jobs</a>
+        <div class="join-today my-4">
+          <span class="fs-5 fs-thin join-today ">If you are ready for a more challenging job opportunity, you certainly will see on  <a class="nav-link ms-2" style="color: var(--secondary-color)" href="">  HRINC Jobs</a></span>
         </div>
         <!-- -------------------  get started ------------------- -->
       </div>
-</div>
+      <div class="content p-3 pt-4 mt-3 mx-auto">
+        <app-job-category-parent></app-job-category-parent>
+      </div>
+      <div class="mb-4">
+        <app-all-new></app-all-new>
+      </div>
+
+
+  </div>
+  <app-footer></app-footer>

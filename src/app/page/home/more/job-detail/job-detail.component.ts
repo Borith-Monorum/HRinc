@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { JobListService } from 'src/app/cagetory_job/job-list.service';
+import { JobListService } from 'src/app/service_shared/job-list.service';
 
 @Component({
   selector: 'app-job-detail',
