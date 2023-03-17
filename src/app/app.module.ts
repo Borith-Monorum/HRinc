@@ -42,6 +42,8 @@ import { JobSearchComponent } from './sharepage/job-search/job-search.component'
 import { FilterPipe } from './sharepage/job-search/filter.pipe';
 import { JobCategoryParentComponent } from './sharepage/job-category-parent/job-category-parent.component';
 import { AllNewComponent } from './sharepage/popup/employer/all-new/all-new.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 
 
@@ -98,7 +100,9 @@ import { AllNewComponent } from './sharepage/popup/employer/all-new/all-new.comp
     MatDialogModule,
     OverlayModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressBarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

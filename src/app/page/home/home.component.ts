@@ -1,10 +1,10 @@
 
-import { Component,ViewEncapsulation } from '@angular/core';
+import { Component,OnInit,ViewEncapsulation } from '@angular/core';
 import { JobListService } from 'src/app/service_shared/job-list.service';
 import { PopupComponent } from 'src/app/sharepage/popup/popup.component';
 import { MatDialog } from '@angular/material/dialog';
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-
+import {FormBuilder, FormGroup} from '@angular/forms';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
@@ -16,10 +16,11 @@ SwiperCore.use([Pagination, Navigation]);
   styleUrls: ['./home.component.scss'],
 encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 constructor(
   private service:JobListService,
-  private dialog:MatDialog
+  private dialog:MatDialog,
+  private _formBuilder: FormBuilder
   ){}
 
   jobData:any;
@@ -29,7 +30,22 @@ constructor(
 
 
   //api service
-  showAllData:(any)=[10]
+  showAllData:(any)=[]
+  homeData(){
+    this.service.homeapi().subscribe((result)=>{
+      // console.log(result,'result#');
+      if(result.length > 0 ){
+        this.showAllData = result;
+      }
+    })
+  }
+  public show = this.dialog.open(PopupComponent);
+  //toggle
+  expanded = false;
+  toggle(){
+    this.expanded = !this.expanded;
+  }
+
 
   ngOnInit(): void{
     this.jobData = this.service.jobdetail,
@@ -38,26 +54,20 @@ constructor(
     this.quote = this.service.quote_detail,
     this.homeData();
     //api service
-  }
 
-    homeData(){
-      this.service.homeapi().subscribe((result)=>{
-        // console.log(result,'result#');
-        if(result.length = 10 ){
-          this.showAllData = result;
-        }
-      })
-    }
-
-    public show = this.dialog.open(PopupComponent);
-    //toggle
-    expanded = false;
-    toggle(){
-      this.expanded = !this.expanded;
-    }
 
   }
 
-
-
-
+  toppings = this._formBuilder.group({
+    Facebook: false,
+    Job_Portal: false,
+    LinkedIn: false,
+    Recruitment_Agency: false,
+    Telegram: false,
+  });
+  OnHideSubmit:boolean = false;
+  OnSubmit(){
+    this.OnHideSubmit = true;
+  }
+  
+}

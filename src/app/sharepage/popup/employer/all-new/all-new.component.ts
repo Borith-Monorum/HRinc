@@ -7,13 +7,13 @@ import { HjNewsService } from 'src/app/service_shared/component/hj-news.service'
 })
 export class AllNewComponent {
 constructor(private service:HjNewsService){}
-ShowNewsData:(any)=[10]
+ShowNewsData:(any)
 ngOnInit(): void {
 this.NewsData();
 }
 NewsData(){
   this.service.NewsApi().subscribe((result)=>{
-    if(result.length = 6){
+    if(result.length > 0){
       this.ShowNewsData= result;
     }
   })
