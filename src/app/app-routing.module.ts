@@ -10,6 +10,7 @@ import { AllJobsComponent} from './page/home/more/all-jobs/all-jobs.component';
 import { EmployerComponent } from './sharepage/popup/employer/employer.component';
 import { JobseekerComponent} from './sharepage/navbar/jobseeker/jobseeker.component';
 import { Error404Component } from './sharepage/error404/error404.component';
+import { JobSeekerComponent } from './sharepage/navbar/sign_in/job-seeker/job-seeker.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { title: 'Home' } },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'all-jobs', component: AllJobsComponent, data: { title: 'All Jobs' } },
   { path: 'employer', component: EmployerComponent, data: { title: 'Employer' } },
   { path: 'jobseekers' , component: JobseekerComponent, data: { title: 'Job Seeker'}},
+  { path: 'jobseeker' , component: JobSeekerComponent, data: { title: 'Job Seeker'}},
   { path: '**', component: Error404Component }
 ];
 const extraOptions: ExtraOptions = {

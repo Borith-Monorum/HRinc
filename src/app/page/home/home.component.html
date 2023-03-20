@@ -34,8 +34,8 @@ class="mySwiper">
 <!--end job-category  -->
 
 <!-- quote  -->
-  <div class="content mx-0 my-4 row py-3 px-3" *ngFor="let hj_quote of quote">
-      <span class="col-xl-10 col-lg-9 col-md-8 col-sm-7  fs-5 text-center align-self-center ">"{{hj_quote.quote_letter}}" <span class="fw-bold">-{{hj_quote.quote_name}}</span> </span>
+  <div class="content mx-0 my-4 row py-3 px-3" >
+      <span class="col-xl-10 col-lg-9 col-md-8 col-sm-7  fs-5 text-center align-self-center ">{{quotesLetter}}</span>
       <button mat-flat-button class="quote col-xl-2 col-lg-3 gy-3   gy-sm-0 col-md-4 col-sm-5 border  text-light  rounded-pill " style="background-color: var(--primary-color);" ><mat-icon>search</mat-icon>Get Quotations</button>
   </div>
 <!--end quote  -->
@@ -90,8 +90,8 @@ class="mySwiper">
           <mat-divider></mat-divider>
           <div class="p-3" [formGroup]="toppings">
             <p>How do you mostly search for job opportunities?</p>
-            <p class="m-0"><mat-checkbox color="md-hrinc" formControlName="Facebook">Facebook </mat-checkbox></p>
-            <p class="m-0"><mat-checkbox color="md-hrinc" formControlName="Job_Portal"> Job Portal</mat-checkbox></p>
+            <p class="m-0"><mat-checkbox color="md-hrinc" formControlName="Facebook">Company website </mat-checkbox></p>
+            <p class="m-0"><mat-checkbox color="md-hrinc" formControlName="Job_Portal">Facebook</mat-checkbox></p>
             <p class="m-0"><mat-checkbox color="md-hrinc" formControlName="LinkedIn"> LinkedIn</mat-checkbox></p>
             <p class="m-0"><mat-checkbox color="md-hrinc" formControlName="Recruitment_Agency"> Recruitment_Agency</mat-checkbox></p>
             <p class="m-0"><mat-checkbox color="md-hrinc" formControlName="Telegram">Telegram </mat-checkbox></p>
@@ -114,29 +114,33 @@ class="mySwiper">
           <mat-divider></mat-divider>
           <div class="p-3">
             <p>How do you mostly search for job opportunities?</p>
+
             <div class="mt-3">
-            <label for="" style="font-size: 15px !important;">Company Website</label>
-              <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+            <label for="" style="font-size: 15px !important;">Company website</label>
+            <label for="" class="" style="font-size: 15px !important; float:right;">{{progressBar.value_facebook}}</label>
+
+              <mat-progress-bar mode="determinate" [value]="progressBar.value_facebook"></mat-progress-bar>
             </div>
             <div class="mt-3">
             <label for="" style="font-size: 15px !important;">Facebook</label>
-              <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
-            </div>
-            <div class="mt-3">
-            <label for="" style="font-size: 15px !important;">Job Portal</label>
-              <mat-progress-bar mode="determinate" value="34"></mat-progress-bar>
+            <label for="" class="" style="font-size: 15px !important; float:right;">{{progressBar.value_portal}}</label>
+              <mat-progress-bar mode="determinate" [value]="progressBar.value_portal"></mat-progress-bar>
             </div>
             <div class="mt-3">
             <label for="" style="font-size: 15px !important;">LinkedIn</label>
-              <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+            <label for="" class="" style="font-size: 15px !important; float:right;">{{progressBar.value_linkedin}}</label>
+
+              <mat-progress-bar mode="determinate" [value]="progressBar.value_linkedin"></mat-progress-bar>
             </div>
             <div class="mt-3">
             <label for="" style="font-size: 15px !important;">Recruitment Agency</label>
-              <mat-progress-bar mode="determinate" value="20"> </mat-progress-bar>
+            <label for="" class="" style="font-size: 15px !important; float:right;">{{progressBar.value_recruitment}}</label>
+              <mat-progress-bar mode="determinate" [value]="progressBar.value_recruitment"> </mat-progress-bar>
             </div>
             <div class="mt-3">
             <label for="" style="font-size: 15px !important;">Telegram</label>
-              <mat-progress-bar mode="determinate" value="55"> </mat-progress-bar>
+            <label for="" class="" style="font-size: 15px !important; float:right;">{{progressBar.value_telegram}}</label>
+              <mat-progress-bar mode="determinate" [value]="progressBar.value_telegram"> </mat-progress-bar>
             </div>
           </div>
         </div>
