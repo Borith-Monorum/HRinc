@@ -43,9 +43,11 @@ import { FilterPipe } from './sharepage/job-search/filter.pipe';
 import { JobCategoryParentComponent } from './sharepage/job-category-parent/job-category-parent.component';
 import { AllNewComponent } from './sharepage/popup/employer/all-new/all-new.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { JobSeekerComponent } from './sharepage/navbar/sign_in/job-seeker/job-seeker.component';
+import { JobSeekerComponent } from './sharepage/navbar/sign_in/job-seeker-signin/job-seeker.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
+import { JobSeekerRegisterComponent } from './sharepage/navbar/sign_in/job-seeker-register/job-seeker-register.component';
+import { ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,8 @@ import { MatListModule } from '@angular/material/list';
     JobCategoryParentComponent,
       AllNewComponent,
       JobSeekerComponent,
+      JobSeekerRegisterComponent,
+      ForgotPasswordComponent,
 
 
   ],

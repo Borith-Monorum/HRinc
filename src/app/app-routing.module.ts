@@ -10,7 +10,10 @@ import { AllJobsComponent} from './page/home/more/all-jobs/all-jobs.component';
 import { EmployerComponent } from './sharepage/popup/employer/employer.component';
 import { JobseekerComponent} from './sharepage/navbar/jobseeker/jobseeker.component';
 import { Error404Component } from './sharepage/error404/error404.component';
-import { JobSeekerComponent } from './sharepage/navbar/sign_in/job-seeker/job-seeker.component';
+import { JobSeekerComponent } from './sharepage/navbar/sign_in/job-seeker-signin/job-seeker.component';
+import { ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-password/forgot-password.component';
+import { JobSeekerRegisterComponent } from './sharepage/navbar/sign_in/job-seeker-register/job-seeker-register.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { title: 'Home' } },
@@ -23,7 +26,10 @@ const routes: Routes = [
   { path: 'employer', component: EmployerComponent, data: { title: 'Employer' } },
   { path: 'jobseekers' , component: JobseekerComponent, data: { title: 'Job Seeker'}},
   { path: 'jobseeker' , component: JobSeekerComponent, data: { title: 'Job Seeker'}},
-  { path: '**', component: Error404Component }
+  { path: 'jobseeker/forgot-password' , component: ForgotPasswordComponent, data: { title: 'Forgot Password'}},
+  { path: 'jobseeker/jobseeker-register' , component: JobSeekerRegisterComponent, data: { title: 'jobseeker register'}},
+
+  { path: '**', component: Error404Component },
 ];
 const extraOptions: ExtraOptions = {
   useHash:true,
