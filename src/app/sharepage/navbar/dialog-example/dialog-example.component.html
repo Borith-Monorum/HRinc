@@ -1,6 +1,4 @@
-
 <div class="px-3">
-
   <p class="example-full-width px-3 mt-3 fs-3">Get Quotations</p>
   <mat-divider></mat-divider>
 </div>
@@ -30,7 +28,7 @@
     <mat-label>Telephone</mat-label>
     <input type="email"  matInput [formControl]="emailFormControl2" >
     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl2.hasError('required')">
-      Please enter company nameng
+      Please enter company name
     </mat-error>
     <mat-error *ngIf="emailFormControl2.hasError('required')">
       This field is <strong>required</strong>
@@ -39,9 +37,9 @@
 
   <section class="example-section" [formGroup]="toppings">
     <p class="text-secondary">Quotation For</p>
-   <mat-checkbox formControlName="Job_Posting">Job Posting</mat-checkbox>
-   <mat-checkbox formControlName="Advertising_Blocks">Advertising Blocks</mat-checkbox>
-   <mat-checkbox formControlName="All_Available_Products">All</mat-checkbox>
+    <mat-checkbox formControlName="Job_Posting">Job Posting</mat-checkbox>
+    <mat-checkbox formControlName="Advertising_Blocks">Advertising Blocks</mat-checkbox>
+    <mat-checkbox formControlName="All_Available_Products">All</mat-checkbox>
   </section>
 
   <section class="example-section" [formGroup]="toppings">

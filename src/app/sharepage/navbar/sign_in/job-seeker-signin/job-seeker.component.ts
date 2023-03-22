@@ -5,7 +5,6 @@ import { ChangeDetectorRef } from '@angular/core';
 interface Country {
   value: string;
   viewValue: string;
-
 }
 @Component({
   selector: 'app-job-seeker',
@@ -43,7 +42,6 @@ this.onHidePhone = true;
 
   onCountryChange(event: any) {
     const countryCode = event.value.split('-')[0];
-
     switch (countryCode) {
       case 'Cambodia':
         this.phonePrefix = '+855';

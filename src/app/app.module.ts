@@ -47,8 +47,8 @@ import { JobSeekerComponent } from './sharepage/navbar/sign_in/job-seeker-signin
 import {MatRadioModule} from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { JobSeekerRegisterComponent } from './sharepage/navbar/sign_in/job-seeker-register/job-seeker-register.component';
-import { ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-password/forgot-password.component';
-
+import { DialogDataExampleDialog, ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-password/forgot-password.component';
+import {MatStepperModule} from '@angular/material/stepper';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +74,7 @@ import { ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-passw
       JobSeekerComponent,
       JobSeekerRegisterComponent,
       ForgotPasswordComponent,
+      DialogDataExampleDialog,
 
 
   ],
@@ -109,7 +110,9 @@ import { ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-passw
     MatProgressBarModule,
     MatRadioModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    MatStepperModule,
+
 
   ],
   providers: [],
