@@ -25,107 +25,58 @@
 
           <!-- steper  -->
 
-          <button mat-raised-button (click)="isEditable = !isEditable">
-            {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
-          </button>
+
 
           <mat-stepper linear #stepper>
-            <!-- step 1 -->
+<!-- step 1 -->
             <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
-              <form [formGroup]="firstFormGroup">
-                <ng-template matStepLabel>Fill out your name</ng-template>
-                <mat-form-field appearance="fill">
-                  <mat-label>Name</mat-label>
-                  <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
-                </mat-form-field>
-
+              <h4 class="text-center">Create an Official Account</h4>
+              <mat-radio-group [(ngModel)]="selectedOption" class="" style="position:relative; left:-10px;">
+                <mat-radio-button (click)="onEmail()" color="primary" value="email" checked>Email</mat-radio-button>
+                <mat-radio-button (click)="onPhone()" color="primary" value="phone" >Phone</mat-radio-button>
+              </mat-radio-group>
+              <form [formGroup]="firstFormGroup ">
+                <ng-template matStepLabel>Account</ng-template>
                  <!-- Email -->
-        <div class="email" [ngClass]="{'d-none':selectedOption !== 'email'}">
-          <div class="example-container mt-3" >
-            <mat-form-field style="background-color: transparent; " class="mat-form-example" appearance="outline">
-              <mat-label>Enter your email</mat-label>
-              <input matInput placeholder="pat@example.com" [formControl]="email" required>
-              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-            </mat-form-field>
-          </div>
-          <!-- Email -->
-          <!-- Password -->
-          <div class=" example-container mt-3">
-            <mat-form-field class="mat-form-example" appearance="outline" >
-              <mat-label>Enter your password</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'" >
-              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-              </button>
-            </mat-form-field>
-          </div>
-        </div>
-          <!-- Password -->
-          <button mat-button matStepperNext>Next</button>
+                <div class="email" [ngClass]="{'d-none':selectedOption !== 'email'}">
+                  <div class="example-container mt-3" >
+                    <mat-form-field style="background-color: transparent; " class="mat-form-example" appearance="outline">
+                      <mat-label>Enter your email</mat-label>
+                      <input [(ngModel)]="user" formControlName="firstCtrl" matInput placeholder="pat@example.com" [formControl]="email" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                  </div>
+                  <!-- Email -->
+                  <!-- Password -->
+                  <div [formGroup]="secondFormGroup" class=" example-container mt-3">
+                    <mat-form-field class="mat-form-example" appearance="outline" >
+                      <mat-label>Enter your password</mat-label>
+                      <input formControlName="secondCtrl" matInput [type]="hide ? 'password' : 'text'" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
 
-              </form>
-            </mat-step>
-            <!-- step 1 -->
-
-            <!-- step 2 -->
-            <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
-              <form [formGroup]="secondFormGroup">
-                <ng-template matStepLabel>Fill out your address</ng-template>
-                <mat-form-field appearance="fill">
-                  <mat-label>Address</mat-label>
-                  <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                        required>
-                </mat-form-field>
-                <div>
-                  <button mat-button matStepperPrevious>Back</button>
-                  <button mat-button matStepperNext>Next</button>
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </div>
                 </div>
-              </form>
-            </mat-step>
-            <!-- step 2 -->
-
-            <!-- step 3 -->
-            <mat-step>
-              <ng-template matStepLabel>Done</ng-template>
-              <p>You are now done.</p>
-              <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button (click)="stepper.reset()">Reset</button>
-              </div>
-            </mat-step>
-          </mat-stepper>
-            <!-- step 3 -->
+          <!-- Password -->
 
 
-          <!-- steper  -->
+          <!-- Phone button check  -->
+          <div class="phone"[ngClass]="{'d-none': selectedOption !== 'phone'}">
+            <div class="example-container">
+              <mat-form-field class="mat-form-example my-3" appearance="outline">
+                <mat-label>Country</mat-label>
+                <mat-select (selectionChange)="onCountryChange($event)">
+                  <mat-option *ngFor="let country of countries" [value]="country.value">
+                    {{country.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
 
-
-
-
-          <mat-radio-group [(ngModel)]="selectedOption">
-            <mat-radio-button (click)="onEmail()" color="primary" value="email" checked>Email</mat-radio-button>
-            <mat-radio-button (click)="onPhone()" color="primary" value="phone" >Phone</mat-radio-button>
-          </mat-radio-group>
-<!-- email radio  -->
-
-<!--end email radio  -->
-
-
-<!-- phone radio  -->
-
-            <!-- country -->
-          <div class="phone" [ngClass]="{'d-none': selectedOption !== 'phone'}">
-            <mat-form-field class="mat-form-example my-3" appearance="outline">
-              <mat-label>Country</mat-label>
-              <mat-select (selectionChange)="onCountryChange($event)">
-                <mat-option *ngFor="let country of countries" [value]="country.value">
-                  {{country.viewValue}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-
-            <form class="mat-form-example">
+            <form class="example-container">
               <mat-form-field class="mat-form-example" appearance="outline">
                   <mat-label class="px-5">Phone</mat-label>
                 <span matPrefix class="px-1">{{phonePrefix}}</span>
@@ -146,16 +97,146 @@
             <!-- password -->
             </div>
           </div>
+          <!-- Phone button check  -->
+
+          <div class="text-center my-4">
+            <button matStepperNext  mat-fab extended class="px-5 w-25" style="white-space:nowrap; background-color: var(--primary-color)">Next Step</button>
+          </div>
+              </form>
+      </mat-step>
+<!-- step 1 -->
+
+<!-- step 2 -->
+            <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+              <form [formGroup]="secondFormGroup">
+
+                <div class="text-center">
+                  <img class="my-2" src="https://www.hrincjobs.com/assets/images/avatar.png" alt="" width="100px">
+                  <h4>{{user}}</h4>
+                </div>
+                <ng-template matStepLabel>Profile</ng-template>
+                <div class="example-container mt-3" >
+                  <mat-form-field style="background-color: transparent; " class="mat-form-example" appearance="outline">
+                    <mat-label>Family Name</mat-label>
+                    <input formControlName="secondCtrl" matInput placeholder="Family Name" required>
+                  </mat-form-field>
+                </div>
+                <div class="example-container mt-3" >
+                  <mat-form-field style="background-color: transparent; " class="mat-form-example" appearance="outline">
+                    <mat-label>Given Name</mat-label>
+                    <input formControlName="secondCtrl" matInput placeholder="Given Name" required>
+                  </mat-form-field>
+                </div>
+                <mat-form-field class="example-container mt-3" appearance="outline">
+                  <mat-label>Gender</mat-label>
+                      <mat-select>
+                        <mat-option value="male">Male</mat-option>
+                        <mat-option value="male">Female</mat-option>
+                        <mat-option value="male">Other</mat-option>
+                      </mat-select>
+                </mat-form-field>
+
+
+                  <form class="example-container mt-3">
+                    <mat-form-field class="example-chip-list" appearance="outline">
+                      <mat-label>Favorite Fruits</mat-label>
+                      <mat-chip-grid #chipGrid aria-label="Fruit selection">
+                        <mat-chip-row *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+                          {{fruit}}
+                          <button matChipRemove [attr.aria-label]="'remove ' + fruit">
+                            <mat-icon>cancel</mat-icon>
+                          </button>
+                        </mat-chip-row>
+                      </mat-chip-grid>
+                      <input placeholder="New Fruit..." #fruitInput [formControl]="fruitCtrl"
+                        [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        (matChipInputTokenEnd)="add($event)"/>
+                      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                        <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+                          {{fruit}}
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </form>
+
+                <div class="example-container mt-3" >
+                  <mat-form-field style="background-color: transparent; " class="mat-form-example" appearance="outline">
+                    <mat-label>Family Name</mat-label>
+                    <input formControlName="secondCtrl" matInput placeholder="Family Name" required>
+                  </mat-form-field>
+                </div>
+
+                <!-- Phone button check  -->
+        <div class="phone"[ngClass]="{'d-none': selectedOption !== 'phone'}">
+          <div class="example-container">
+            <mat-form-field class="mat-form-example my-3" appearance="outline">
+              <mat-label>Country</mat-label>
+              <mat-select (selectionChange)="onCountryChange($event)">
+                <mat-option *ngFor="let country of countries" [value]="country.value">
+                  {{country.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <form class="example-container">
+            <mat-form-field class="mat-form-example" appearance="outline">
+                <mat-label class="px-5">Phone</mat-label>
+              <span matPrefix class="px-1">{{phonePrefix}}</span>
+              <input class="" type="tel" matInput placeholder="555-555-1234" [(ngModel)]="phoneNumber">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+          </form>
+          <!-- phone -->
+          <!-- password -->
+          <div class="example-container mt-3">
+            <mat-form-field class="mat-form-example" appearance="outline">
+              <mat-label>Enter your password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          <!-- password -->
+          </div>
+        </div>
+        <!-- Phone button check  -->
+                <div class="text-center my-4">
+                  <button matStepperPrevious  mat-fab extended class="px-5 w-25 bg-light text-dark" style="white-space:nowrap;">Back</button>
+                  <button matStepperNext  mat-fab extended class="px-5 w-25 bg-light text-dark" style="white-space:nowrap;">Register</button>
+                </div>
+
+
+              </form>
+            </mat-step>
+<!-- step 2 -->
+
+            <!-- step 3 -->
+            <mat-step>
+              <ng-template matStepLabel>Done</ng-template>
+              <p>You are now done.</p>
+            </mat-step>
+          </mat-stepper>
+            <!-- step 3 -->
+          <!-- steper  -->
+
+
+
+
+
+
+
+
+<!-- phone radio  -->
+            <!-- country -->
+
 <!--end phone radio  -->
 <!-- login  -->
+
         <div class="text-center my-4">
-
-          <button mat-button matStepperNext>Next</button>
-
-
-          <button  mat-fab extended class="px-5 w-25" style="white-space:nowrap; background-color: var(--primary-color)">Next</button>
-            <a href="" routerLink="forgot-password" class="nav-link my-2 mt-3" style="color:var(--primary-color);">Forgot your password</a>
-          <span class="d-flex justify-content-center ">Don't have an account? <a routerLink="jobseeker-register" class="nav-link mx-1" style="color:var(--primary-color);" href="">Sign Up</a></span>
+          <span class="or my-2 mt-3">Or</span>
+          <span class="d-flex justify-content-center ">Already have an account? <a routerLink="/jobseeker" class="nav-link mx-1" style="color:var(--primary-color);" href="">Sign In</a></span>
         </div>
         <!-- login  -->
 

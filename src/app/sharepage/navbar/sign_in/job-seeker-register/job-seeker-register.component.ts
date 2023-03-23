@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild,ElementRef } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {MatDividerHarness} from '@angular/material/divider/testing';
 import { ChangeDetectorRef } from '@angular/core';
 import {FormBuilder} from '@angular/forms';
+import { MatStepper } from '@angular/material/stepper';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
+import {MatChipEditedEvent, MatChipInputEvent} from '@angular/material/chips';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
 interface Country {
   value: string;
   viewValue: string;
+}
+export interface Fruit {
+  name: string;
 }
 @Component({
   selector: 'app-job-seeker-register',
@@ -14,10 +23,18 @@ interface Country {
 })
 export class JobSeekerRegisterComponent {
   selectedOption: string= 'email';
+
   constructor(
     private cdr: ChangeDetectorRef,
-    private _formBuilder: FormBuilder
-    ) {}
+    private _formBuilder: FormBuilder,
+
+    ) {
+      this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => (fruit ? this._filter(fruit) : this.allFruits.slice())),
+      );
+    }
+
   onHideEmail:boolean = true;
   onEmail(){
     this.onHideEmail = false;
@@ -107,12 +124,62 @@ this.onHidePhone = true;
 
 
   // steper
+
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
   });
-  isEditable = false;
+  isEditable = true;
 
+
+
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+  fruitCtrl = new FormControl('');
+  filteredFruits: Observable<string[]>;
+  fruits:string[]=[];
+  allFruits: string[] = ['Agriculture & Forestry', 'Call for Proposal/Bidding', 'Clearance', 'Operations Compliance', 'Vendor Management','Managerial Positions','Accounting / Finance','Administrative/Support','Architect/Financial Service',];
+
+  @ViewChild('fruitInput')
+  fruitInput!: ElementRef<HTMLInputElement>;
+  add(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    // Add our fruit
+    if (value) {
+      this.fruits.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+
+    this.fruitCtrl.setValue(null);
+  }
+
+  remove(fruit: string): void {
+    const index = this.fruits.indexOf(fruit);
+
+    if (index >= 0) {
+      this.fruits.splice(index, 1);
+    }
+  }
+
+  selected(event: MatAutocompleteSelectedEvent): void {
+    this.fruits.push(event.option.viewValue);
+    this.fruitInput.nativeElement.value = '';
+    this.fruitCtrl.setValue(null);
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.allFruits.filter(fruit => fruit.toLowerCase().includes(filterValue));
+  }
+
+
+
+
+
+ user
 }

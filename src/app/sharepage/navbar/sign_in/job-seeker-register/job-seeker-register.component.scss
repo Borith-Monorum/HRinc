@@ -1,0 +1,36 @@
+.or{
+
+  display: flex;
+  justify-content: center;
+  // margin: 0 auto;
+  text-align: center;
+  position: relative !important;
+  }
+  .or::before {
+    content:"";
+    border-bottom:1px solid #ddd;
+    position: absolute;
+    left: 50%; /* shift the left-edge of the line to the middle */
+    top: 50%; /* shift the top-edge of the line to the middle */
+    transform: translate(5%, 0); /* move the line up by half its height, so it's centered vertically */
+    width: 45%;
+  }
+  .or::after{
+    content:"";
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 45%;
+    transform: translate(-105%, 0);
+  }
+  .example-container {
+
+    width: 100% !important;
+    }
+    .mat-form-example,.example-chip-list{
+      width: 100%;
+    }
+    .example-container input{
+      width: 100% !important;
+    }

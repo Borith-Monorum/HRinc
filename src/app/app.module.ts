@@ -49,6 +49,8 @@ import { MatListModule } from '@angular/material/list';
 import { JobSeekerRegisterComponent } from './sharepage/navbar/sign_in/job-seeker-register/job-seeker-register.component';
 import { DialogDataExampleDialog, ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-password/forgot-password.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import {CdkStepperModule} from '@angular/cdk/stepper';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 @NgModule({
   declarations: [
     AppComponent,
@@ -112,8 +114,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatInputModule,
     MatListModule,
     MatStepperModule,
-
-
+    CdkStepperModule,
+    MatChipsModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
