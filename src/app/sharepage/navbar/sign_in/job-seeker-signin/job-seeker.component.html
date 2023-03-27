@@ -1,108 +1,120 @@
 <div class="container-lg">
-    <div class="row">
-      <div class="col-lg-5 col-12">
-        <div class="content mt-3">
-          <p class="p-3 fw-bold">Corporate Partners</p>
-        </div>
-      </div>
-      <div class="col-lg-7 col-12">
-        <div class="content mt-3">
-
-          <mat-list>
-            <mat-list-item class="p-2 px-3 fw-bold">Sign In</mat-list-item>
-            <mat-divider></mat-divider>
-          </mat-list>
-
-
-          <div class="p-3 px-5 ">
-            <h4 class="text-center">Sign In with your Job Seeker Account</h4>
-            <div class="d-flex flex-column flex-md-row justify-content-around gap-5 px-5 py-3">
-              <button mat-fab extended class="bg-primary px-5" style="white-space: nowrap;">
-                <mat-icon><img class="mb-3 w-100" src="https://www.hrincjobs.com/assets/images/facebook-w.svg" alt=""></mat-icon>
-                with Facebook
-              </button>
-              <button mat-fab extended class="bg-white text-secondary px-5 " >
-                <mat-icon><img class="mb-3 w-100" src="https://www.hrincjobs.com/assets/images/google.svg" alt=""></mat-icon>
-                with Google
-              </button>
-            </div>
-            <span class="or ">Or</span>
-            <mat-radio-group [(ngModel)]="selectedOption">
-              <mat-radio-button (click)="onEmail()" color="primary" value="email" checked>Email</mat-radio-button>
-              <mat-radio-button (click)="onPhone()" color="primary" value="phone" >Phone</mat-radio-button>
-            </mat-radio-group>
-<!-- email radio  -->
-            <!-- Email -->
-          <div class="email" [ngClass]="{'d-none':selectedOption !== 'email'}">
-            <div class="example-container mt-3" >
-              <mat-form-field style="background-color: transparent; " class="mat-form-example" appearance="outline">
-                <mat-label>Enter your email</mat-label>
-                <input matInput placeholder="pat@example.com" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-              </mat-form-field>
-            </div>
-            <!-- Email -->
-            <!-- Password -->
-            <div class=" example-container mt-3">
-              <mat-form-field class="mat-form-example" appearance="outline" >
-                <mat-label>Enter your password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" >
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-              </mat-form-field>
-            </div>
+  <div class="row">
+<!-- Corporate Partners  -->
+        <div class="col-lg-5 col-12">
+          <div class="content mt-3">
+            <p class="p-3 fw-bold">Corporate Partners</p>
           </div>
-            <!-- Password -->
-<!--end email radio  -->
+        </div>
+<!-- Corporate Partners  -->
+    <div class="col-lg-7 col-12">
+      <div class="content mt-3">
 
+            <mat-list>
+              <mat-list-item class="p-2 px-3 fw-bold">Sign In</mat-list-item>
+              <mat-divider></mat-divider>
+            </mat-list>
+
+
+        <div class="p-3 px-5 ">
+              <h4 class="text-center">Sign In with your Job Seeker Account</h4>
+<!-- sign in with ...  -->
+              <div class="d-flex flex-column flex-md-row justify-content-around gap-5 px-5 py-3">
+                <button mat-fab extended class="bg-primary px-5" style="white-space: nowrap;">
+                  <mat-icon><img class="mb-3 w-100" src="https://www.hrincjobs.com/assets/images/facebook-w.svg" alt=""></mat-icon>
+                  with Facebook
+                </button>
+                <button mat-fab extended class="bg-white text-secondary px-5 " >
+                  <mat-icon><img class="mb-3 w-100" src="https://www.hrincjobs.com/assets/images/google.svg" alt=""></mat-icon>
+                  with Google
+                </button>
+              </div>
+<!-- sign in with ...  -->
+
+              <span class="or ">Or</span>
+
+              <mat-radio-group [(ngModel)]="selectedOption">
+                <mat-radio-button (click)="onEmail()" color="primary" value="email" checked>Email</mat-radio-button>
+                <mat-radio-button (click)="onPhone()" color="primary" value="phone" >Phone</mat-radio-button>
+              </mat-radio-group>
+
+<!-- email radio  -->
+                <div class="email" [ngClass]="{'d-none':selectedOption !== 'email'}">
+                    <!-- Email -->
+                    <div class="example-container mt-3" >
+                      <mat-form-field style="background-color: transparent; " class="mat-form-example" appearance="outline">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                      </mat-form-field>
+                    </div>
+                    <!-- Email -->
+
+                    <!-- Password -->
+                    <div class=" example-container mt-3">
+                      <mat-form-field class="mat-form-example" appearance="outline" >
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" >
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field>
+                    </div>
+                    <!-- Password -->
+                </div>
+<!--email radio  -->
 
 <!-- phone radio  -->
+                <div class="phone" [ngClass]="{'d-none': selectedOption !== 'phone'}">
+                    <!-- country -->
+                    <mat-form-field class="mat-form-example my-3" appearance="outline">
+                      <mat-label>Country</mat-label>
+                      <mat-select (selectionChange)="onCountryChange($event)">
+                        <mat-option *ngFor="let country of countries" [value]="country.value">
+                          {{country.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    <!-- country -->
 
-              <!-- country -->
-            <div class="phone" [ngClass]="{'d-none': selectedOption !== 'phone'}">
-              <mat-form-field class="mat-form-example my-3" appearance="outline">
-                <mat-label>Country</mat-label>
-                <mat-select (selectionChange)="onCountryChange($event)">
-                  <mat-option *ngFor="let country of countries" [value]="country.value">
-                    {{country.viewValue}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
+                    <!-- phone  -->
+                    <form class="mat-form-example">
+                      <mat-form-field class="mat-form-example" appearance="outline">
+                          <mat-label class="px-5">Phone</mat-label>
+                        <span matPrefix class="px-1">{{phonePrefix}}</span>
+                        <input class="" type="tel" matInput placeholder="555-555-1234" [(ngModel)]="phoneNumber">
+                        <mat-icon matSuffix>mode_edit</mat-icon>
+                      </mat-form-field>
+                    </form>
+                    <!-- phone -->
 
-              <form class="mat-form-example">
-                <mat-form-field class="mat-form-example" appearance="outline">
-                    <mat-label class="px-5">Phone</mat-label>
-                  <span matPrefix class="px-1">{{phonePrefix}}</span>
-                  <input class="" type="tel" matInput placeholder="555-555-1234" [(ngModel)]="phoneNumber">
-                  <mat-icon matSuffix>mode_edit</mat-icon>
-                </mat-form-field>
-              </form>
-              <!-- phone -->
-              <!-- password -->
-              <div class="example-container mt-3">
-                <mat-form-field class="mat-form-example" appearance="outline">
-                  <mat-label>Enter your password</mat-label>
-                  <input matInput [type]="hide ? 'password' : 'text'">
-                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                  </button>
-                </mat-form-field>
-              <!-- password -->
-              </div>
-            </div>
-<!--end phone radio  -->
+                    <!-- password -->
+                    <div class="example-container mt-3">
+                      <mat-form-field class="mat-form-example" appearance="outline">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field>
+                    <!-- password -->
+                    </div>
+                    <!-- password -->
+                </div>
+<!--phone radio  -->
+
 <!-- login  -->
-          <div class="text-center my-4">
-            <button mat-fab extended class="px-5 w-25" style="white-space:nowrap; background-color: var(--primary-color)">Log in</button>
-              <a href="" routerLink="forgot-password" class="nav-link my-2 mt-3" style="color:var(--primary-color);">Forgot your password</a>
-            <span class="d-flex justify-content-center ">Don't have an account? <a routerLink="jobseeker-register" class="nav-link mx-1" style="color:var(--primary-color);" href="">Sign Up</a></span>
-          </div>
-          <!-- login  -->
-
+                <div class="text-center my-4">
+                  <button  (click)="openDialog()" mat-fab extended class="px-5 w-25" style="white-space:nowrap; background-color: var(--primary-color); height: 35px;">Log in</button>
+                    <a href="" routerLink="forgot-password" class="nav-link my-2 mt-3" style="color:var(--primary-color);">Forgot your password</a>
+                  <span class="d-flex justify-content-center ">Don't have an account? <a routerLink="jobseeker-register" class="nav-link mx-1" style="color:var(--primary-color);" href="">Sign Up</a></span>
+                </div>
+<!-- login  -->
         </div>
       </div>
     </div>
   </div>
+</div>
+
 

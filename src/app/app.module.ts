@@ -43,7 +43,7 @@ import { FilterPipe } from './sharepage/job-search/filter.pipe';
 import { JobCategoryParentComponent } from './sharepage/job-category-parent/job-category-parent.component';
 import { AllNewComponent } from './sharepage/popup/employer/all-new/all-new.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { JobSeekerComponent } from './sharepage/navbar/sign_in/job-seeker-signin/job-seeker.component';
+import { JobSeekerComponent, logindialog } from './sharepage/navbar/sign_in/job-seeker-signin/job-seeker.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { JobSeekerRegisterComponent } from './sharepage/navbar/sign_in/job-seeker-register/job-seeker-register.component';
@@ -51,6 +51,9 @@ import { DialogDataExampleDialog, ForgotPasswordComponent } from './sharepage/na
 import {MatStepperModule} from '@angular/material/stepper';
 import {CdkStepperModule} from '@angular/cdk/stepper';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { ChipJobfuntionComponent } from './sharepage/navbar/sign_in/job-seeker-register/chip-jobfuntion/chip-jobfuntion.component';
+import { ChipJobpositionComponent } from './sharepage/navbar/sign_in/job-seeker-register/chip-jobposition/chip-jobposition.component';
+import { ChipIndustryComponent } from './sharepage/navbar/sign_in/job-seeker-register/chip-industry/chip-industry.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +80,10 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
       JobSeekerRegisterComponent,
       ForgotPasswordComponent,
       DialogDataExampleDialog,
-
+      logindialog,
+      ChipJobfuntionComponent,
+      ChipJobpositionComponent,
+      ChipIndustryComponent
 
   ],
 

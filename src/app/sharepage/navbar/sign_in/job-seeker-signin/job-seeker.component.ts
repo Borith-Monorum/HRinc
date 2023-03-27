@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {MatDividerHarness} from '@angular/material/divider/testing';
 import { ChangeDetectorRef } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 interface Country {
   value: string;
   viewValue: string;
@@ -13,7 +14,10 @@ interface Country {
 })
 export class JobSeekerComponent {
   selectedOption: string= 'email';
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+  private cdr: ChangeDetectorRef,
+  public dialog: MatDialog
+  ) {}
   onHideEmail:boolean = true;
   onEmail(){
     this.onHideEmail = false;
@@ -103,4 +107,15 @@ this.onHidePhone = true;
   // password
 
 
+  // Dialog login
+  openDialog() {
+    this.dialog.open(logindialog);
+  }
 }
+
+// Dialog login
+@Component({
+  selector: 'login-dialog',
+  templateUrl: 'login-dialog.html',
+})
+export class logindialog {}

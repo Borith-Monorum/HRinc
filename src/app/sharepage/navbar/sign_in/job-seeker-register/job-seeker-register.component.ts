@@ -13,9 +13,7 @@ interface Country {
   value: string;
   viewValue: string;
 }
-export interface Fruit {
-  name: string;
-}
+
 @Component({
   selector: 'app-job-seeker-register',
   templateUrl: './job-seeker-register.component.html',
@@ -27,13 +25,7 @@ export class JobSeekerRegisterComponent {
   constructor(
     private cdr: ChangeDetectorRef,
     private _formBuilder: FormBuilder,
-
-    ) {
-      this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
-        startWith(null),
-        map((fruit: string | null) => (fruit ? this._filter(fruit) : this.allFruits.slice())),
-      );
-    }
+) {}
 
   onHideEmail:boolean = true;
   onEmail(){
@@ -135,51 +127,9 @@ this.onHidePhone = true;
 
 
 
-  separatorKeysCodes: number[] = [ENTER, COMMA];
-  fruitCtrl = new FormControl('');
-  filteredFruits: Observable<string[]>;
-  fruits:string[]=[];
-  allFruits: string[] = ['Agriculture & Forestry', 'Call for Proposal/Bidding', 'Clearance', 'Operations Compliance', 'Vendor Management','Managerial Positions','Accounting / Finance','Administrative/Support','Architect/Financial Service',];
 
-  @ViewChild('fruitInput')
-  fruitInput!: ElementRef<HTMLInputElement>;
-  add(event: MatChipInputEvent): void {
-    const value = (event.value || '').trim();
-
-    // Add our fruit
-    if (value) {
-      this.fruits.push(value);
-    }
-
-    // Clear the input value
-    event.chipInput!.clear();
-
-    this.fruitCtrl.setValue(null);
-  }
-
-  remove(fruit: string): void {
-    const index = this.fruits.indexOf(fruit);
-
-    if (index >= 0) {
-      this.fruits.splice(index, 1);
-    }
-  }
-
-  selected(event: MatAutocompleteSelectedEvent): void {
-    this.fruits.push(event.option.viewValue);
-    this.fruitInput.nativeElement.value = '';
-    this.fruitCtrl.setValue(null);
-  }
-
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.allFruits.filter(fruit => fruit.toLowerCase().includes(filterValue));
-  }
+  user
 
 
 
-
-
- user
 }

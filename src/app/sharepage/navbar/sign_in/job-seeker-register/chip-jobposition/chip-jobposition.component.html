@@ -1,0 +1,20 @@
+<mat-form-field class="example-chip-list mt-3" appearance="outline">
+  <mat-label>Open for Position (Press Enter or Comma to Seperate)</mat-label>
+  <mat-chip-grid #chipGrid aria-label="Enter fruits">
+    <mat-chip-row *ngFor="let fruit of fruits"
+                  (removed)="remove(fruit)"
+                  [editable]="true"
+                  (edited)="edit(fruit, $event)"
+                  [aria-label]="'press enter to edit ' + fruit.name">
+      {{fruit.name}}
+      <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip-row>
+    <input
+           [matChipInputFor]="chipGrid"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur"
+           (matChipInputTokenEnd)="add($event)"/>
+  </mat-chip-grid>
+</mat-form-field>

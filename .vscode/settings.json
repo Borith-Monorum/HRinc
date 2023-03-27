@@ -31,7 +31,10 @@
         "dialogforgotpassword",
         "flagcambodia",
         "javascriptfun",
+        "Jobfuntion",
         "jobseeker",
+        "logindialog",
         "signin"
-    ]
+    ],
+    "CodeGPT.model": "gpt-4"
 }
