@@ -47,6 +47,7 @@
               <li class="nav-item">
                 <a class="nav-link text-nowrap" routerLink=""><button class="text-nowrap" mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
                   <mat-menu #menu1="matMenu">
+                    <button mat-menu-item routerLink="login-test">Sign in</button>
                     <button routerLink="jobseeker" mat-menu-item>Job Seeker</button>
                     <button mat-menu-item routerLink="employer">Employer</button>
                   </mat-menu>

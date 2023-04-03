@@ -54,6 +54,12 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ChipJobfuntionComponent } from './sharepage/navbar/sign_in/job-seeker-register/chip-jobfuntion/chip-jobfuntion.component';
 import { ChipJobpositionComponent } from './sharepage/navbar/sign_in/job-seeker-register/chip-jobposition/chip-jobposition.component';
 import { ChipIndustryComponent } from './sharepage/navbar/sign_in/job-seeker-register/chip-industry/chip-industry.component';
+import {ToastrModule} from 'ngx-toastr';
+
+import { RegisterTestComponent } from './sharepage/navbar/sign_in/test/register-test/register-test.component';
+import { LoginTestComponent } from './sharepage/navbar/sign_in/test/login-test/login-test.component';
+import { UpdatepopupComponent } from './sharepage/navbar/sign_in/test/updatepopup/updatepopup.component';
+import { UserlistingComponent } from './sharepage/navbar/sign_in/test/userlisting/userlisting.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +89,12 @@ import { ChipIndustryComponent } from './sharepage/navbar/sign_in/job-seeker-reg
       logindialog,
       ChipJobfuntionComponent,
       ChipJobpositionComponent,
-      ChipIndustryComponent
+      ChipIndustryComponent,
+
+      RegisterTestComponent,
+        LoginTestComponent,
+        UpdatepopupComponent,
+        UserlistingComponent
 
   ],
 
@@ -123,6 +134,7 @@ import { ChipIndustryComponent } from './sharepage/navbar/sign_in/job-seeker-reg
     CdkStepperModule,
     MatChipsModule,
     MatAutocompleteModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,7 +13,8 @@ import { Error404Component } from './sharepage/error404/error404.component';
 import { JobSeekerComponent } from './sharepage/navbar/sign_in/job-seeker-signin/job-seeker.component';
 import { ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-password/forgot-password.component';
 import { JobSeekerRegisterComponent } from './sharepage/navbar/sign_in/job-seeker-register/job-seeker-register.component';
-
+import { LoginTestComponent} from './sharepage/navbar/sign_in/test/login-test/login-test.component';
+import { RegisterTestComponent} from './sharepage/navbar/sign_in/test/register-test/register-test.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { title: 'Home' } },
@@ -28,6 +29,8 @@ const routes: Routes = [
   { path: 'jobseeker' , component: JobSeekerComponent, data: { title: 'Job Seeker'}},
   { path: 'jobseeker/forgot-password' , component: ForgotPasswordComponent, data: { title: 'Forgot Password'}},
   { path: 'jobseeker/jobseeker-register' , component: JobSeekerRegisterComponent, data: { title: 'jobseeker register'}},
+  { path: 'login-test' , component: LoginTestComponent, data: { title: 'Login test'}},
+  { path: 'login-test/register-test' , component: RegisterTestComponent, data: { title: 'Register Test'}},
 
   { path: '**', component: Error404Component },
 ];
