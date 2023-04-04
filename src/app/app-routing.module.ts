@@ -15,9 +15,11 @@ import { ForgotPasswordComponent } from './sharepage/navbar/sign_in/forgot-passw
 import { JobSeekerRegisterComponent } from './sharepage/navbar/sign_in/job-seeker-register/job-seeker-register.component';
 import { LoginTestComponent} from './sharepage/navbar/sign_in/test/login-test/login-test.component';
 import { RegisterTestComponent} from './sharepage/navbar/sign_in/test/register-test/register-test.component';
+import { AuthGuard } from './sharepage/navbar/sign_in/test/guard/auth.guard';
+import { UserlistingComponent } from './sharepage/navbar/sign_in/test/userlisting/userlisting.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, data: { title: 'Home' } },
+  { path: 'home', component: HomeComponent,canActivate:[AuthGuard] , data: { title: 'Home' } },
   { path: 'about-us', component: AboutComponent, data: { title: 'About Us' } },
   { path: 'contact-us', component: ContactComponent, data: { title: 'Contact Us' } },
   { path: 'asean', component: MenuComponent, data: { title: 'Asean' } },
@@ -31,7 +33,7 @@ const routes: Routes = [
   { path: 'jobseeker/jobseeker-register' , component: JobSeekerRegisterComponent, data: { title: 'jobseeker register'}},
   { path: 'login-test' , component: LoginTestComponent, data: { title: 'Login test'}},
   { path: 'login-test/register-test' , component: RegisterTestComponent, data: { title: 'Register Test'}},
-
+  {path:'user' ,component:UserlistingComponent,canActivate:[AuthGuard], data: { title:'User' }},
   { path: '**', component: Error404Component },
 ];
 const extraOptions: ExtraOptions = {
@@ -42,3 +44,4 @@ const extraOptions: ExtraOptions = {
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+ 

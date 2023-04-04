@@ -1,2 +1,36 @@
-<p>register-test works!</p>
+
+<mat-card-header>
+  <h1>User Registeration</h1>
+</mat-card-header>
+<form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregisteration()">
+  <mat-form-field class="example-full-width">
+    <mat-label>User Name</mat-label>
+    <input matInput formControlName="id">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+  <div>
+    <mat-radio-group  aria-label="Gender" class="example-full-width">
+      <mat-radio-button value="male">male</mat-radio-button>
+      <mat-radio-button value="female">female</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="example-button-width">
+    <button mat-raised-button   color="primary" class="text-light mx-2">Submit</button>
+    <button mat-raised-button routerLink="/login-test" color="primary" class="text-light mx-2">back to login</button>
+  </div>
+
+</form>
+
+
 <app-footer></app-footer>

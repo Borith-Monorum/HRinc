@@ -7,7 +7,7 @@ import { HttpClient} from '@angular/common/http';
 export class AuthService {
 
   constructor(private http:HttpClient) { }
-  apiurl='';
+  apiurl='http://localhost:3000/user';
   GetAll(){
     return this.http.get(this.apiurl);
   }
@@ -15,10 +15,18 @@ export class AuthService {
     return this.http.get(this.apiurl+'/'+code);
   }
 
-  Proceedregister(inputdata:any){
+  Proceedregister(inputdata: any){
     return this.http.post(this.apiurl, inputdata);
   }
   Updateuser(code:any,inputdata: any){
     return this.http.put(this.apiurl+'/'+code, inputdata);
   }
+
+  IsloggedIn(){
+    return sessionStorage.getItem('username')!=null;
+  }
+  GetUserrole(){
+    return sessionStorage.getItem('userrole')!=null?sessionStorage.getItem('userrole')?.toString():'';
+  }
 }
+

@@ -1,0 +1,72 @@
+<nav #navbar class="navbar navbar-expand-md bg-white border-bottom ">
+  <div class="container-xl">
+      <!-- left-navigation bar-->
+          <a class="navbar-brand  mt-auto " href="#"><img src="https://www.hrincjobs.com/assets/images/logo.png" width="120px" alt=""></a>
+        <button (click)="onToggle()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <mat-icon>{{toggle ? 'menu' : 'close'}}</mat-icon>
+      </button>
+
+    <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+      <div class="d-flex flex-wrap-reverse w-100">
+
+        <ul class="navbar-nav mt-auto bg-white w-0">
+
+            <li class="nav-item ">
+              <a class="" routerLink="home" routerLinkActive [routerLinkActiveOptions]="{exact:true}"><button mat-flat-button >Home</button></a>
+            </li>
+            <mat-divider></mat-divider>
+            <li class="nav-item">
+              <a class=" text-nowrap" routerLink="about-us" ><button mat-flat-button routerLinkActive="active-link" color="">Jobs</button></a>
+            </li>
+            <mat-divider></mat-divider>
+
+            <li class="nav-item">
+              <a class=" text-nowrap"  routerLink="contact-us" ><button mat-flat-button routerLinkActive="active-link">Admin</button></a>
+            </li>
+            <mat-divider></mat-divider>
+
+            <li class="nav-item">
+              <a class=" text-nowrap"  routerLink="contact-us" ><button mat-flat-button routerLinkActive="active-link">Accounting</button></a>
+            </li>
+            <mat-divider></mat-divider>
+
+            <li class="nav-item" style="display:flex; align-items:center; gap: 5px; cursor: pointer;">
+                <img alt="" width="20px" src="{{ImgShow}}">
+                <div style="display: flex;"  [matMenuTriggerFor]="menu" > {{country}} <mat-icon>arrow_drop_down</mat-icon></div>
+            </li>
+
+
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="cam()"><img [src]="ImgCam" width="20px" alt=""> Cambodia</button>
+              <button mat-menu-item (click)="la()"><img  [src]="ImgLa" width="20px" alt=""> Lao</button>
+              <button mat-menu-item (click)="mm()"><img  [src]="ImgMm" width="20px" alt=""> Myanmar</button>
+              <button mat-menu-item (click)="asean()"><img  [src]="ImgAsean" width="20px" alt=""> Asean</button>
+            </mat-menu>
+        </ul>
+
+      <!-- left-navigation bar -->
+
+        <!-- right navigation bar  -->
+            <ul class="navbar-nav  ms-auto bg-white">
+              <div class="d-flex align-items-center">
+                <li class="nav-item">
+                  <a class="nav-link text-nowrap" routerLink=""><button class="text-nowrap" mat-flat-button [matMenuTriggerFor]="menu1" class="py-4"><mat-icon>person</mat-icon>Sign in</button>
+                    <mat-menu #menu1="matMenu">
+                      <button mat-menu-item routerLink="login-test">Sign in</button>
+                      <button routerLink="jobseeker" mat-menu-item>Job Seeker</button>
+                      <button mat-menu-item routerLink="employer">Employer</button>
+                    </mat-menu>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  " [routerLink]="employer ?   'employer' : 'jobseekers'" ><button mat-flat-button class="border text-light  rounded-pill" style="background-color: var(--primary-color);" (click)=onchange(); ><mat-icon>{{iconEmployer? 'shield':'school'}}</mat-icon>{{employer ? 'Job Seeker' : 'Employer'  }}</button></a>
+                </li>
+
+              </div>
+            </ul>
+     <!-- right navigation bar  -->
+          </div>
+        </div>
+      </div>
+    </nav>
+

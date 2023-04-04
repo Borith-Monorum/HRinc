@@ -60,6 +60,7 @@ import { RegisterTestComponent } from './sharepage/navbar/sign_in/test/register-
 import { LoginTestComponent } from './sharepage/navbar/sign_in/test/login-test/login-test.component';
 import { UpdatepopupComponent } from './sharepage/navbar/sign_in/test/updatepopup/updatepopup.component';
 import { UserlistingComponent } from './sharepage/navbar/sign_in/test/userlisting/userlisting.component';
+import { NavbarEmployerComponent } from './sharepage/navbar/sign_in/test/navbar-employer/navbar-employer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +95,8 @@ import { UserlistingComponent } from './sharepage/navbar/sign_in/test/userlistin
       RegisterTestComponent,
         LoginTestComponent,
         UpdatepopupComponent,
-        UserlistingComponent
+        UserlistingComponent,
+        NavbarEmployerComponent
 
   ],
 

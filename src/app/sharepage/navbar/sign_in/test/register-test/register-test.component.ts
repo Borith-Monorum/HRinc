@@ -16,7 +16,7 @@ export class RegisterTestComponent {
   registerform=this.builder.group({
     id:this.builder.control('',Validators.compose([Validators.required,Validators.minLength(5)])),
     name:this.builder.control('',Validators.required),
-    password:this.builder.control('',Validators.compose([Validators.required,Validators.pattern('/^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{4,20}$/')])),
+    password:this.builder.control('',Validators.compose([Validators.required,Validators.pattern('')])),
     email:this.builder.control('',Validators.compose([Validators.required,Validators.email])),
     gender:this.builder.control('male'),
     role:this.builder.control(''),
