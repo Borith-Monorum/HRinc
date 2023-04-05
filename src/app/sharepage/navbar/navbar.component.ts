@@ -4,14 +4,25 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
 import {FormControl, Validators} from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Component, ViewChild, ElementRef, OnInit, HostListener} from '@angular/core';
+import { Router} from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-
 export class NavbarComponent  {
 
+
+  isLoggedIn(): boolean {
+    return sessionStorage.getItem('username') !== null;
+    this.router.navigate(['login-test']);
+  }
+
+  logout(): void {
+    sessionStorage.clear();
+    this.router.navigate(['login-test']);
+  }
+public isAuthenticated: boolean =true;
 
 public ImgShow:string = 'https://www.hrincjobs.com/kh.45d67420b01d8d8c.svg';
 public ImgCam = 'https://www.hrincjobs.com/kh.45d67420b01d8d8c.svg';
@@ -35,7 +46,8 @@ asean(){
   this.country = "Asean";
   this.ImgShow = this.ImgAsean;
 }
-  constructor(public dialog: MatDialog){}
+  constructor(public dialog: MatDialog,
+    private router: Router){}
   flag:any=['cambodia','lao','Myanmar'];
   openDialog(){
   this.dialog.open(DialogExampleComponent);

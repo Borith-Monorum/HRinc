@@ -9,9 +9,11 @@ import { Router} from '@angular/router';
   styleUrls: ['./register-test.component.scss']
 })
 export class RegisterTestComponent {
-  constructor(private builder: FormBuilder, private toastr: ToastrService,
-      private service:AuthService, private router:Router) {
-
+  constructor(
+    private builder: FormBuilder,
+    private toastr: ToastrService,
+    private service:AuthService,
+    private router:Router) {
   }
   registerform=this.builder.group({
     id:this.builder.control('',Validators.compose([Validators.required,Validators.minLength(5)])),
@@ -20,7 +22,7 @@ export class RegisterTestComponent {
     email:this.builder.control('',Validators.compose([Validators.required,Validators.email])),
     gender:this.builder.control('male'),
     role:this.builder.control(''),
-    isactive:this.builder.control(false)
+    isactive:this.builder.control(true)
   });
 
     proceedregisteration(){

@@ -2,19 +2,20 @@
 <form class="example-form"  [formGroup]="loginform" (ngSubmit)="proceedlogin()">
 
   <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
     <mat-label>Password</mat-label>
     <input type="password" matInput formControlName="password">
   </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email">
-  </mat-form-field>
-
   <div class="example-button-width">
     <button mat-raised-button   color="primary" class="text-light mx-2">Login</button>
     <button mat-raised-button routerLink="register-test" color="primary" class="text-light mx-2">Sign up</button>
   </div>
 
 </form>
+
+
 
 <app-footer></app-footer>

@@ -1,27 +1,8 @@
 {
   "user": [
-    {},
     {
-      "id": "Monorom Borith",
-      "name": "Monorom Borith",
-      "password": "123monorum@gmail.com",
-      "email": "borithmonorom@gmail.comjj",
-      "gender": "male",
-      "role": "",
-      "isactive": false
-    },
-    {
-      "id": "HRINC",
-      "name": "Monorom Borith",
-      "password": "monorum",
-      "email": "borithmonorom@gmail.comjj",
-      "gender": "male",
-      "role": "",
-      "isactive": false
-    },
-    {
-      "id": "borithmonorom@gmail.com",
-      "name": "Monorom Borith",
+      "id": "Monorom",
+      "name": "Borith",
       "password": "123",
       "email": "borithmonorom@gmail.com",
       "gender": "male",
