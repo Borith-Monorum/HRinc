@@ -55,7 +55,7 @@ import { ChipJobfuntionComponent } from './sharepage/navbar/sign_in/job-seeker-r
 import { ChipJobpositionComponent } from './sharepage/navbar/sign_in/job-seeker-register/chip-jobposition/chip-jobposition.component';
 import { ChipIndustryComponent } from './sharepage/navbar/sign_in/job-seeker-register/chip-industry/chip-industry.component';
 import {ToastrModule} from 'ngx-toastr';
-
+import {MatTableModule} from '@angular/material/table';
 import { RegisterTestComponent } from './sharepage/navbar/sign_in/test/register-test/register-test.component';
 import { LoginTestComponent } from './sharepage/navbar/sign_in/test/login-test/login-test.component';
 import { UpdatepopupComponent } from './sharepage/navbar/sign_in/test/updatepopup/updatepopup.component';
@@ -101,6 +101,7 @@ import { NavbarEmployerComponent } from './sharepage/navbar/sign_in/test/navbar-
   ],
 
   imports: [
+    MatTableModule,
     MatSelectModule,
     BrowserModule,
     AppRoutingModule,

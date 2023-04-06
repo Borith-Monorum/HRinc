@@ -3,15 +3,25 @@ import {MatDialog} from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 import {FormControl, Validators} from '@angular/forms';
 import { Observable } from 'rxjs';
-import { Component, ViewChild, ElementRef, OnInit, HostListener} from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, HostListener, DoCheck} from '@angular/core';
 import { Router} from '@angular/router';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent  {
+export class NavbarComponent implements DoCheck {
+ismenurequired=false;
 
+ngDoCheck(): void {
+    let currenturl=this.router.url;
+    if(currenturl=='/login' || currenturl=='/register'){
+      this.ismenurequired=false;
+    }else{
+      this.ismenurequired=true;
+    }
+}
 
   isLoggedIn(): boolean {
     return sessionStorage.getItem('username') !== null;
@@ -46,7 +56,8 @@ asean(){
   this.country = "Asean";
   this.ImgShow = this.ImgAsean;
 }
-  constructor(public dialog: MatDialog,
+  constructor(
+    public dialog: MatDialog,
     private router: Router){}
   flag:any=['cambodia','lao','Myanmar'];
   openDialog(){

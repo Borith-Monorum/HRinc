@@ -40,7 +40,7 @@ const extraOptions: ExtraOptions = {
   useHash:true,
 };
 @NgModule({
-  imports: [RouterModule.forRoot(routes,extraOptions)],
+   imports: [RouterModule.forRoot(routes,extraOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
