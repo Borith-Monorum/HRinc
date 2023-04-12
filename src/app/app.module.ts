@@ -61,6 +61,7 @@ import { LoginTestComponent } from './sharepage/navbar/sign_in/test/login-test/l
 import { UpdatepopupComponent } from './sharepage/navbar/sign_in/test/updatepopup/updatepopup.component';
 import { UserlistingComponent } from './sharepage/navbar/sign_in/test/userlisting/userlisting.component';
 import { NavbarEmployerComponent } from './sharepage/navbar/sign_in/test/navbar-employer/navbar-employer.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,6 +102,7 @@ import { NavbarEmployerComponent } from './sharepage/navbar/sign_in/test/navbar-
   ],
 
   imports: [
+    MatPaginatorModule,
     MatTableModule,
     MatSelectModule,
     BrowserModule,
