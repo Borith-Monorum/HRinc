@@ -1,1 +1,29 @@
-<p>menu works!</p>
+
+<div class="row ">
+  <div class="col-12 ">
+    <mat-tab-group class="m-3 m-5 border rounded p-4">
+      <mat-tab label="Output">
+        <mat-form-field appearance="outline" class="m-3 w-100">
+          <input type="text" matInput [(ngModel)]="test">
+        </mat-form-field>
+        <h1 class="m-3">Result is:{{test}}</h1>
+      </mat-tab>
+
+      <mat-tab label="HTML">
+        <pre><code class="language-html">
+          &lt;input type=&quot;text&quot; matInput [(ngModel)]=&quot;test&quot;&gt;
+          &lt;h1 class=&quot;m-3&quot;&gt;Result is:{{test}}&lt;/h1&gt;
+        </code></pre>
+
+      </mat-tab>
+
+      <mat-tab label="TS">
+        ts
+       </mat-tab>
+
+    </mat-tab-group>
+
+  </div>
+
+</div>
+

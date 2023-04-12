@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent , data: { title: 'Home' } },
   { path: 'about-us', component: AboutComponent, data: { title: 'About Us' } },
   { path: 'contact-us', component: ContactComponent, data: { title: 'Contact Us' } },
-  { path: 'asean', component: MenuComponent, data: { title: 'Asean' } },
+  { path: 'menu', component: MenuComponent, data: { title: 'tutorial' } },
   { path: 'home/job-detail', component: JobDetailComponent, data: { title: 'Job Detail' } },
   { path: 'home/job-category', component: JobCategoryComponent, data: { title: 'Job Category' } },
   { path: 'all-jobs', component: AllJobsComponent, data: { title: 'All Jobs' } },
