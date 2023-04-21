@@ -24,6 +24,7 @@ import { FooterComponent } from './sharepage/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogExampleComponent } from './sharepage/navbar/dialog-example/dialog-example.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
