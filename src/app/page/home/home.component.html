@@ -24,6 +24,21 @@ class="mySwiper">
   <ng-template swiperSlide><img src="assets/image/slide/trust.jpg" height="400px" alt=""></ng-template>
 
 </swiper>
+
+<!-- <swiper
+[slidesPerView]="1"
+[loop]="true"
+[navigation]="true"
+[speed]="500"
+[autoplay]="{
+  delay: 6000,
+  disableOnInteraction: false
+}">
+<ng-template swiperSlide *ngFor="Let v of getObjProperty(zoneResult)" class="slide">
+  <div class="hj-container" [innerHTML]="zoneResult[v]"></div>
+</ng-template>
+
+</swiper> -->
 <!--end slide  -->
 
 <!-- job-category -->

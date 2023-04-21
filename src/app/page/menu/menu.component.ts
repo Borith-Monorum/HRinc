@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import hljs from 'highlight.js';
 
 @Component({
   selector: 'app-menu',
@@ -9,6 +10,13 @@ export class MenuComponent implements OnInit  {
 test:string = "";
 
 ngOnInit(): void {
+
+}
+ngAfterViewInit() {
+  // Get the code block element
+  const codeBlock = document.getElementById('code-block');
+
+  // Highlight the code block
 
 }
 }

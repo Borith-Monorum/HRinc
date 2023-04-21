@@ -18,6 +18,11 @@ SwiperCore.use([Pagination, Navigation]);
 encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit{
+v: any;
+zoneResult: any;
+
+
+
 constructor(
   private service:JobListService,
   private dialog:MatDialog,
