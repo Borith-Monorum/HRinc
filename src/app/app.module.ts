@@ -1,6 +1,5 @@
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { SwiperModule } from 'swiper/angular';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatInputModule} from '@angular/material/input';
@@ -10,7 +9,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips'; //chips
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button'; //button
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +23,7 @@ import { FooterComponent } from './sharepage/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogExampleComponent } from './sharepage/navbar/dialog-example/dialog-example.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { SwiperModule } from 'swiper/angular';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
@@ -104,6 +103,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
   imports: [
     MatPaginatorModule,
+    MatFormFieldModule,
     MatTableModule,
     MatSelectModule,
     BrowserModule,

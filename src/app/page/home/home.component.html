@@ -1,7 +1,37 @@
+<style>
 
-
+</style>
+<!-- <script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script> -->
 <div class="container-xxl">
 <!-- slide  -->
+
+<!-- <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    <div class="swiper-slide">Slide 4</div>
+    <div class="swiper-slide">Slide 5</div>
+    <div class="swiper-slide">Slide 6</div>
+    <div class="swiper-slide">Slide 7</div>
+    <div class="swiper-slide">Slide 8</div>
+    <div class="swiper-slide">Slide 9</div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div> -->
+
+
 <swiper
 [spaceBetween]="100"
 [centeredSlides]="true"
@@ -22,7 +52,6 @@ class="mySwiper">
   <ng-template swiperSlide><img src="assets/image/slide/hrinctac.png" height="400px" alt=""></ng-template>
   <ng-template swiperSlide><img src="assets/image/slide/investing.jpg" height="400px" alt=""></ng-template>
   <ng-template swiperSlide><img src="assets/image/slide/trust.jpg" height="400px" alt=""></ng-template>
-
 </swiper>
 
 <!-- <swiper
@@ -37,10 +66,20 @@ class="mySwiper">
 <ng-template swiperSlide *ngFor="Let v of getObjProperty(zoneResult)" class="slide">
   <div class="hj-container" [innerHTML]="zoneResult[v]"></div>
 </ng-template>
-
 </swiper> -->
-<!--end slide  -->
 
+<!-- <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="4"
+centered-slides="true" space-between="30" grab-cursor="true">
+<swiper-slide>Slide 1</swiper-slide>
+<swiper-slide>Slide 2</swiper-slide>
+<swiper-slide>Slide 3</swiper-slide>
+<swiper-slide>Slide 4</swiper-slide>
+<swiper-slide>Slide 5</swiper-slide>
+<swiper-slide>Slide 6</swiper-slide>
+<swiper-slide>Slide 7</swiper-slide>
+<swiper-slide>Slide 8</swiper-slide>
+<swiper-slide>Slide 9</swiper-slide>
+</swiper-container> -->
 <!-- job-category -->
 <div class="content p-3 pt-4 mt-3">
 <app-job-search></app-job-search>
@@ -63,7 +102,7 @@ class="mySwiper">
     </div>
       <mat-divider class="mb-4"></mat-divider>
 
-      <swiper
+      <!-- <swiper
       [slidesPerView]="5"
       [spaceBetween]="0"
       [slidesPerGroup]="5"
@@ -79,7 +118,7 @@ class="mySwiper">
       <ng-template swiperSlide><a href="https://www.hrincjobs.com/company-profile/165"><img src="https://ad.hrincjob.com/www/images/45517f55127773f501f2adf27e91ba8a.jpg" width="100%" alt=""></a></ng-template>
       <ng-template swiperSlide><a href="https://www.hrincjobs.com/company-profile/6047"><img src="https://ad.hrincjob.com/www/images/4bf25385a644b221bcdc158102aad404.png" width="100%" alt=""></a></ng-template>
       <ng-template swiperSlide><a href="https://www.hrincjobs.com/company-profile/6150"><img src="https://ad.hrincjob.com/www/images/1d3f388dc51afee7ce6e42f771d78b55.png" width="100%" alt=""></a></ng-template>
-    </swiper>
+    </swiper> -->
 
   </div>
   <!-- End Premium Employers  -->
@@ -252,5 +291,4 @@ class="mySwiper">
     <!-- end Vacancies List -->
         </div>
       </div>
-
 <app-footer></app-footer>

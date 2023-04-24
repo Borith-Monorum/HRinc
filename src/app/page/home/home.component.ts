@@ -6,6 +6,10 @@ import { MatDialog } from '@angular/material/dialog';
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {MatProgressBar} from '@angular/material/progress-bar';
+// import function to register Swiper custom elements
+// import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+// register();
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
