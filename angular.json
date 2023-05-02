@@ -99,7 +99,8 @@
               "src/styles.css",
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/flat-icon-css/css/flag-icon.min.css"
+              "node_modules/flat-icon-css/css/flag-icon.min.css",
+              "node_modules/highlight.js/styles/github.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",

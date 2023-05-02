@@ -3,13 +3,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatInputModule} from '@angular/material/input';
+import {CommonModule} from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips'; //chips
-import {NgModule} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button'; //button
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +23,7 @@ import { FooterComponent } from './sharepage/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogExampleComponent } from './sharepage/navbar/dialog-example/dialog-example.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { SwiperModule } from 'swiper/angular';
+// import { SwiperModule } from 'swiper/angular';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
@@ -62,6 +62,16 @@ import { UpdatepopupComponent } from './sharepage/navbar/sign_in/test/updatepopu
 import { UserlistingComponent } from './sharepage/navbar/sign_in/test/userlisting/userlisting.component';
 import { NavbarEmployerComponent } from './sharepage/navbar/sign_in/test/navbar-employer/navbar-employer.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+// import { PrismModule } from '@ngx-prism/rxjs';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {
+  HighlightModule,
+  HIGHLIGHT_OPTIONS,
+  HighlightOptions,
+} from 'ngx-highlightjs';
+
+import { register } from 'swiper/element/bundle';
+register()
 @NgModule({
   declarations: [
     AppComponent,
@@ -102,6 +112,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   ],
 
   imports: [
+    // PrismModule,
+    HighlightModule,
     MatPaginatorModule,
     MatFormFieldModule,
     MatTableModule,
@@ -120,7 +132,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    SwiperModule,
+    CommonModule,
+    // SwiperModule,
     MatMenuModule,
     MatButtonToggleModule,
     MatGridListModule,
@@ -142,7 +155,23 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatAutocompleteModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: <HighlightOptions>{
+        lineNumbers: true,
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        lineNumbersLoader: () => import('highlightjs-line-numbers.js'),
+        themePath: 'node_modules/highlight.js/styles/github.css',
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          css: () => import('highlight.js/lib/languages/css'),
+          xml: () => import('highlight.js/lib/languages/xml'),
+        },
+      },
+    },
+  ],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA ],
 })
 export class AppModule { }

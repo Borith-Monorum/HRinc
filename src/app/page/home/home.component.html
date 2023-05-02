@@ -14,20 +14,26 @@
   });
 </script> -->
 <div class="container-xxl">
-<!-- slide  -->
 
-<!-- <div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    <div class="swiper-slide">Slide 4</div>
-    <div class="swiper-slide">Slide 5</div>
-    <div class="swiper-slide">Slide 6</div>
-    <div class="swiper-slide">Slide 7</div>
-    <div class="swiper-slide">Slide 8</div>
-    <div class="swiper-slide">Slide 9</div>
-  </div>
+
+
+
+
+
+
+
+  <!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
   <div class="swiper-pagination"></div>
 </div> -->
 
@@ -54,7 +60,41 @@ class="mySwiper">
   <ng-template swiperSlide><img src="assets/image/slide/trust.jpg" height="400px" alt=""></ng-template>
 </swiper> -->
 
-<swiper
+
+<swiper-container
+    pagination="true"
+    pagination-clickable="true"
+    navigation="true"
+    loop="true"
+    autoplay-delay="2500"
+    autoplay-disable-on-interaction="false">
+    <swiper-slide><img src="assets/image/slide/fortune.jpg" height="400px" alt="" ></swiper-slide>
+    <swiper-slide><img src="assets/image/slide//hrinc.jpg" height="400px" alt=""></swiper-slide>
+    <swiper-slide><img src="assets/image/slide/hrinctac.png" height="400px" alt=""></swiper-slide>
+  </swiper-container>
+
+
+
+
+
+
+
+
+<!--
+<swiper-container fmSwiper [config]="config" init="false" class="w-full">
+  <swiper-slide class="w-[310px] sm:w-[450px] pb-6"
+       *ngFor="let slider of sliders">
+    <fm-stream-item></fm-stream-item>
+  </swiper-slide>
+</swiper-container> -->
+
+
+
+
+
+
+
+<!-- <swiper
 [slidesPerView]="1"
 [loop]="true"
 [navigation]="true"
@@ -63,11 +103,44 @@ class="mySwiper">
   delay: 6000,
   disableOnInteraction: false
 }">
+-->
 
-<ng-template swiperSlide *ngFor="Let v of getObjProperty(zoneResult)" class="slide">
-  <div class="hj-container" [innerHTML]="zoneResult[v]"></div>
-</ng-template>
-</swiper>
+
+    <!-- <ng-template swiperSlide *ngFor="let v of getObjProperty(zoneResult)" class="slide">
+      <div class="hj-container" [innerHTML]="zoneResult[v]"></div>
+    </ng-template> -->
+
+<!-- example 1  -->
+          <!-- <ng-template swiperSlide *ngFor="let image of images" class="slide">
+            <img src="{{ image.src }}" alt="{{ image.alt }}" class="hj-container" />
+          </ng-template> -->
+<!-- example 1  -->
+
+
+<!-- example 2  -->
+          <!-- <ng-template swiperSlide *ngFor="let v of getObjProperty(zoneResult)" class="slide">
+            <img src="{{zoneResult[v]}}" alt="Slide {{v}}" class="hj-container" />
+          </ng-template> -->
+<!-- example 2  -->
+
+
+<!-- example 3  -->
+          <!-- <ng-template swiperSlide *ngFor="let v of getObjProperty(zoneResult)" class="slide">
+            <img [src]="zoneResult[v]" [alt]="'Slide ' + v" class="hj-container" />
+          </ng-template> -->
+<!-- example 3  -->
+
+
+<!-- example 4  -->
+              <!-- <ng-template swiperSlide *ngFor="let v of zoneResult | keyvalue" class="slide">
+                <div class="hj-container">
+                  <img [src]="v.value" alt="Slide Image">
+                </div>
+              </ng-template>   -->
+<!-- example 4 -->
+
+
+<!-- </swiper> -->
 
 <!-- <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="4"
 centered-slides="true" space-between="30" grab-cursor="true">

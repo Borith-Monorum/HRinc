@@ -1,22 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import hljs from 'highlight.js';
+
+
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit  {
-test:string = "";
+export class MenuComponent  {
+  // language = 'html';
+  // content = '<p>test</p>';
+  // constructor() { }
 
-ngOnInit(): void {
 
+  code = `.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-ngAfterViewInit() {
-  // Get the code block element
-  const codeBlock = document.getElementById('code-block');
 
-  // Highlight the code block
+.container {
+  flex: 1;
+  margin: 1em;
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}`;
 
-}
+  test:string = "";
+
 }
