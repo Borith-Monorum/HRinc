@@ -35,7 +35,7 @@ export class NavbarEmployerComponent {
   }
     constructor(public dialog: MatDialog){}
     flag:any=['cambodia','lao','Myanmar'];
- 
+
     //toggle
   public toggle:boolean = true;
   onToggle(){

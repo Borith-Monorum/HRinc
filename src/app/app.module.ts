@@ -62,7 +62,7 @@ import { UpdatepopupComponent } from './sharepage/navbar/sign_in/test/updatepopu
 import { UserlistingComponent } from './sharepage/navbar/sign_in/test/userlisting/userlisting.component';
 import { NavbarEmployerComponent } from './sharepage/navbar/sign_in/test/navbar-employer/navbar-employer.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-// import { PrismModule } from '@ngx-prism/rxjs';
+
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {
   HighlightModule,
@@ -112,7 +112,7 @@ register()
   ],
 
   imports: [
-    // PrismModule,
+
     HighlightModule,
     MatPaginatorModule,
     MatFormFieldModule,
